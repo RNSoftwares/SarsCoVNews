@@ -4,13 +4,13 @@ Autores:
 
     Rafael Henrique Lisot,
     Natãn Gabriel Trennepohl Zanella Da Costa,
-    Murilo Ferrari Angeli(Caso a parte...Ainda não nos procurou...).
+    Murilo Ferrari Angeli.
 
 Solicitantes:
 
     Profº Roberson Junior Fernandes Alves,
     Profª Otilia Donato Barbosa,
-    Profª Francieli Carla Petry.
+    Profª Franciele Carla Petry.
 
 Descrição:
 
