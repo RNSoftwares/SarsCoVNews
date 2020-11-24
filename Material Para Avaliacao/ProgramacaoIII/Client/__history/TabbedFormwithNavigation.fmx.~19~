@@ -1,0 +1,422 @@
+object TabbedwithNavigationForm: TTabbedwithNavigationForm
+  Left = 0
+  Top = 0
+  Caption = 'Form56'
+  ClientHeight = 784
+  ClientWidth = 1014
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Touch.GestureManager = GestureManager1
+    OnGesture = GestureDone
+    Align = Client
+    FullSize = True
+    Size.Width = 1014.000000000000000000
+    Size.Height = 784.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = Dots
+    Sizes = (
+      1014s
+      784s
+      1014s
+      784s
+      1014s
+      784s
+      1014s
+      784s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemfavorites'
+      TabOrder = 0
+      Text = 'TabItem1'
+      ExplicitSize.cx = 101.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object TabControl2: TTabControl
+        Touch.GestureManager = GestureManager1
+        OnGesture = GestureDone
+        Align = Client
+        FullSize = True
+        Size.Width = 1014.000000000000000000
+        Size.Height = 784.000000000000000000
+        Size.PlatformDefault = False
+        TabHeight = 49.000000000000000000
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = None
+        Sizes = (
+          1014s
+          784s
+          1014s
+          784s)
+        object TabItem5: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'TabItem5'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object ToolBar1: TToolBar
+            Size.Width = 1014.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Rectangle2: TRectangle
+              Fill.Kind = Gradient
+              Fill.Gradient.Points = <
+                item
+                  Color = xFFA9B8BF
+                  Offset = 0.000000000000000000
+                end
+                item
+                  Color = xFF0EC2D6
+                  Offset = 1.000000000000000000
+                end>
+              Fill.Gradient.StopPosition.X = 1.000000000000000000
+              Size.Width = 1017.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claNull
+              object lblTitle1: TLabel
+                Align = Client
+                StyledSettings = []
+                Size.Width = 1017.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'toollabel'
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 30.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'SarsCov News'
+                TabOrder = 0
+              end
+            end
+          end
+          object Rectangle1: TRectangle
+            Fill.Kind = Gradient
+            Fill.Gradient.Points = <
+              item
+                Color = xFFA9B8BF
+                Offset = 0.006211180239915848
+              end
+              item
+                Color = xFF06E0F9
+                Offset = 1.000000000000000000
+              end>
+            Fill.Gradient.StopPosition.X = 1.000000000000000000
+            Position.X = -8.000000000000000000
+            Position.Y = 48.000000000000000000
+            Size.Width = 1025.000000000000000000
+            Size.Height = 744.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claNull
+          end
+          object Login: TRectangle
+            Align = Center
+            Fill.Color = xFF7E878C
+            Size.Width = 572.000000000000000000
+            Size.Height = 529.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claNull
+            XRadius = 50.000000000000000000
+            YRadius = 50.000000000000000000
+            object Senha: TRectangle
+              Align = Top
+              Fill.Color = xFFEAEEF4
+              Margins.Left = 30.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.X = 30.000000000000000000
+              Position.Y = 287.000000000000000000
+              Size.Width = 512.000000000000000000
+              Size.Height = 42.000000000000000000
+              Size.PlatformDefault = False
+              XRadius = 10.000000000000000000
+              YRadius = 10.000000000000000000
+            end
+            object Usuario: TRectangle
+              Align = Top
+              Fill.Color = xFFEAEEF4
+              Margins.Left = 30.000000000000000000
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.X = 30.000000000000000000
+              Position.Y = 188.000000000000000000
+              Size.Width = 512.000000000000000000
+              Size.Height = 42.000000000000000000
+              Size.PlatformDefault = False
+              XRadius = 10.000000000000000000
+              YRadius = 10.000000000000000000
+            end
+            object Label2: TLabel
+              Align = Top
+              StyledSettings = []
+              Margins.Top = 20.000000000000000000
+              Position.Y = 20.000000000000000000
+              Size.Width = 572.000000000000000000
+              Size.Height = 81.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 50.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Login'
+              TabOrder = 2
+              OnClick = Label2Click
+            end
+            object NomeUsuario: TLabel
+              Align = Top
+              StyledSettings = []
+              Margins.Left = 30.000000000000000000
+              Margins.Top = 50.000000000000000000
+              Position.X = 30.000000000000000000
+              Position.Y = 151.000000000000000000
+              Size.Width = 542.000000000000000000
+              Size.Height = 17.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 18.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = 'Usu'#225'rio'
+              TabOrder = 3
+            end
+            object NomeSenha: TLabel
+              Align = Top
+              StyledSettings = [Family]
+              Margins.Left = 30.000000000000000000
+              Margins.Top = 20.000000000000000000
+              Margins.Bottom = 20.000000000000000000
+              Position.X = 30.000000000000000000
+              Position.Y = 250.000000000000000000
+              Size.Width = 542.000000000000000000
+              Size.Height = 17.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 18.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = 'Senha'
+              TabOrder = 4
+            end
+            object BTNentrar: TRectangle
+              Align = Top
+              Margins.Left = 150.000000000000000000
+              Margins.Top = 75.000000000000000000
+              Margins.Right = 150.000000000000000000
+              Position.X = 150.000000000000000000
+              Position.Y = 404.000000000000000000
+              Size.Width = 272.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              XRadius = 15.000000000000000000
+              YRadius = 15.000000000000000000
+              OnClick = BTNentrarClick
+            end
+          end
+          object ImageControl1: TImageControl
+            Position.X = 816.000000000000000000
+            Position.Y = 576.000000000000000000
+            TabOrder = 3
+            OnChange = ImageControl1Change
+          end
+        end
+        object TabItem6: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'TabItem6'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object ToolBar2: TToolBar
+            Size.Width = 1014.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object lblTitle2: TLabel
+              Align = Contents
+              Size.Width = 1014.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'toollabel'
+              TextSettings.HorzAlign = Center
+              Text = 'Title'
+            end
+            object btnBack: TSpeedButton
+              Action = PreviousTabAction1
+              Align = Left
+              Enabled = True
+              ImageIndex = -1
+              Margins.Left = 5.000000000000000000
+              Position.X = 5.000000000000000000
+              Size.Width = 67.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'backtoolbutton'
+            end
+          end
+        end
+      end
+      object Label1: TLabel
+        StyledSettings = [Family, Size]
+        Position.X = 888.000000000000000000
+        Position.Y = 760.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.HorzAlign = Center
+        Text = 'By RN Softwares'
+        TabOrder = 1
+        OnClick = Label1Click
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemcontacts'
+      TabOrder = 0
+      Text = 'TabItem2'
+      ExplicitSize.cx = 102.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar3: TToolBar
+        Size.Width = 1014.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblTitle3: TLabel
+          Align = Contents
+          Size.Width = 1014.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'Title'
+        end
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemsearch'
+      TabOrder = 0
+      Text = 'TabItem3'
+      ExplicitSize.cx = 101.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar4: TToolBar
+        Size.Width = 1014.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblTitle4: TLabel
+          Align = Contents
+          Size.Width = 1014.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'Title'
+        end
+      end
+    end
+    object TabItem4: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitembookmarks'
+      TabOrder = 0
+      Text = 'TabItem4'
+      ExplicitSize.cx = 99.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar5: TToolBar
+        Size.Width = 1014.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblTitle5: TLabel
+          Align = Contents
+          Size.Width = 1014.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'Title'
+        end
+      end
+    end
+  end
+  object GestureManager1: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 16
+    Top = 177
+    GestureData = <
+      item
+        Control = TabControl1
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end
+      item
+        Control = TabControl2
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end>
+  end
+  object ActionList1: TActionList
+    Left = 16
+    Top = 120
+    object NextTabAction1: TNextTabAction
+      Category = 'Tab'
+      TabControl = TabControl2
+    end
+    object PreviousTabAction1: TPreviousTabAction
+      Category = 'Tab'
+      TabControl = TabControl2
+    end
+  end
+end
