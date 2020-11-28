@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.TabControl, FMX.StdCtrls, FMX.Controls.Presentation,
-  FMX.Gestures, System.Actions, FMX.ActnList, FMX.Objects;
+  FMX.Gestures, System.Actions, FMX.ActnList, FMX.Objects, FMX.Edit;
 
 type
   TTabbedwithNavigationForm = class(TForm)
@@ -32,7 +32,7 @@ type
     ActionList1: TActionList;
     NextTabAction1: TNextTabAction;
     PreviousTabAction1: TPreviousTabAction;
-    Rectangle1: TRectangle;
+    AreaUm: TRectangle;
     Rectangle2: TRectangle;
     Label1: TLabel;
     Usuario: TRectangle;
@@ -41,11 +41,17 @@ type
     Label2: TLabel;
     NomeUsuario: TLabel;
     NomeSenha: TLabel;
+    BTNentrar: TRectangle;
+    Image1: TImage;
+    Label3: TLabel;
+    Edit1: TEdit;
+    EdtSenha: TEdit;
+    Label4: TLabel;
+    Label5: TLabel;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
-    procedure Label1Click(Sender: TObject);
-    procedure Label2Click(Sender: TObject);
+    procedure BTNentrarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -58,6 +64,11 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TTabbedwithNavigationForm.BTNentrarClick(Sender: TObject);
+begin
+  TabControl1.ActiveTab := TabItem2;
+end;
 
 procedure TTabbedwithNavigationForm.FormCreate(Sender: TObject);
 begin

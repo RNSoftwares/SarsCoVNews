@@ -2,8 +2,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
   Left = 0
   Top = 0
   Caption = 'Form56'
-  ClientHeight = 789
-  ClientWidth = 1018
+  ClientHeight = 784
+  ClientWidth = 1014
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -15,27 +15,27 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
     OnGesture = GestureDone
     Align = Client
     FullSize = True
-    Size.Width = 1018.000000000000000000
-    Size.Height = 789.000000000000000000
+    Size.Width = 1014.000000000000000000
+    Size.Height = 784.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 0
     TabPosition = None
     Sizes = (
-      1018s
-      789s
-      1018s
-      789s
-      1018s
-      789s
-      1018s
-      789s)
+      1014s
+      784s
+      1014s
+      784s
+      1014s
+      784s
+      1014s
+      784s)
     object TabItem1: TTabItem
       CustomIcon = <
         item
         end>
-      IsSelected = False
+      IsSelected = True
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -49,18 +49,18 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         OnGesture = GestureDone
         Align = Client
         FullSize = True
-        Size.Width = 1018.000000000000000000
-        Size.Height = 789.000000000000000000
+        Size.Width = 1014.000000000000000000
+        Size.Height = 784.000000000000000000
         Size.PlatformDefault = False
         TabHeight = 49.000000000000000000
         TabIndex = 0
         TabOrder = 0
         TabPosition = None
         Sizes = (
-          1018s
-          789s
-          1018s
-          789s)
+          1014s
+          784s
+          1014s
+          784s)
         object TabItem5: TTabItem
           CustomIcon = <
             item
@@ -75,7 +75,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
           object ToolBar1: TToolBar
-            Size.Width = 1018.000000000000000000
+            Size.Width = 1014.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -125,8 +125,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Offset = 1.000000000000000000
               end>
             Fill.Gradient.StopPosition.X = 1.000000000000000000
-            Size.Width = 1018.000000000000000000
-            Size.Height = 741.000000000000000000
+            Size.Width = 1014.000000000000000000
+            Size.Height = 736.000000000000000000
             Size.PlatformDefault = False
             Stroke.Color = claNull
             object Login: TRectangle
@@ -990,10 +990,10 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 end>
               Locked = True
               MarginWrapMode = Center
-              Position.X = 952.000000000000000000
-              Position.Y = 680.000000000000000000
-              Size.Width = 67.000000000000000000
-              Size.Height = 58.000000000000000000
+              Position.X = 936.000000000000000000
+              Position.Y = 672.000000000000000000
+              Size.Width = 81.000000000000000000
+              Size.Height = 57.000000000000000000
               Size.PlatformDefault = False
             end
           end
@@ -1029,13 +1029,13 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
           object ToolBar2: TToolBar
-            Size.Width = 1018.000000000000000000
+            Size.Width = 1014.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             object lblTitle2: TLabel
               Align = Contents
-              Size.Width = 1018.000000000000000000
+              Size.Width = 1014.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'toollabel'
@@ -1072,7 +1072,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       CustomIcon = <
         item
         end>
-      IsSelected = True
+      IsSelected = False
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -1082,31 +1082,19 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       object ToolBar3: TToolBar
-        Size.Width = 1018.000000000000000000
+        Size.Width = 1014.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object lblTitle3: TLabel
-          Align = Top
-          StyledSettings = []
-          Size.Width = 1018.000000000000000000
+          Align = Contents
+          Size.Width = 1014.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = 'toollabel'
-          TextSettings.Font.Family = 'Roboto'
-          TextSettings.Font.Size = 30.000000000000000000
-          TextSettings.Font.StyleExt = {00070000000000000004000000}
-          TextSettings.FontColor = claWhite
           TextSettings.HorzAlign = Center
-          Text = 'SarsCov News'
-          OnClick = lblTitle3Click
+          Text = 'Title'
         end
-      end
-      object Rectangle1: TRectangle
-        Align = Client
-        Size.Width = 1018.000000000000000000
-        Size.Height = 741.000000000000000000
-        Size.PlatformDefault = False
       end
     end
     object TabItem3: TTabItem
@@ -1123,13 +1111,13 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       ExplicitSize.cx = 101.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       object ToolBar4: TToolBar
-        Size.Width = 1018.000000000000000000
+        Size.Width = 1014.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object lblTitle4: TLabel
           Align = Contents
-          Size.Width = 1018.000000000000000000
+          Size.Width = 1014.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = 'toollabel'
@@ -1152,13 +1140,13 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       ExplicitSize.cx = 99.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       object ToolBar5: TToolBar
-        Size.Width = 1018.000000000000000000
+        Size.Width = 1014.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object lblTitle5: TLabel
           Align = Contents
-          Size.Width = 1018.000000000000000000
+          Size.Width = 1014.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = 'toollabel'

@@ -48,10 +48,12 @@ type
     EdtSenha: TEdit;
     Label4: TLabel;
     Label5: TLabel;
+    Rectangle1: TRectangle;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
     procedure BTNentrarClick(Sender: TObject);
+    procedure lblTitle3Click(Sender: TObject);
   private
     { Private declarations }
   public

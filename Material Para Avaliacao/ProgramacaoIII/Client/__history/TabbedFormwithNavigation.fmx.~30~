@@ -1088,17 +1088,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         TabOrder = 0
         object lblTitle3: TLabel
           Align = Top
-          StyledSettings = []
           Size.Width = 1018.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = 'toollabel'
-          TextSettings.Font.Family = 'Roboto'
-          TextSettings.Font.Size = 30.000000000000000000
-          TextSettings.Font.StyleExt = {00070000000000000004000000}
-          TextSettings.FontColor = claWhite
           TextSettings.HorzAlign = Center
-          Text = 'SarsCov News'
+          Text = 'Title'
           OnClick = lblTitle3Click
         end
       end
