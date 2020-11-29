@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/07/15 19:12:06.000.306,=C:\Users\otili\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/07/31 20:20:34.000.677,=C:\Users\otili\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/08/31 14:39:58.000.406,=C:\Users\otili\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/08/31 19:44:19.000.742,=C:\Users\otili\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/05 19:55:20.000.750,=C:\Users\otili\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/26 16:54:57.000.710,=C:\Users\otili\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/29 10:21:56.000.058,=C:\Users\otili\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/29 10:22:33.000.212,C:\Users\otili\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\dsv\wkspiii\ProjetoJSONServer\Servidor\unitPrincipal.pas</Transaction>
+    <Transaction>2020/10/29 10:22:33.000.212,C:\Users\otili\Documents\Embarcadero\Studio\Projects\Unit1.fmx=D:\dsv\wkspiii\ProjetoJSONServer\Servidor\unitPrincipal.fmx</Transaction>
+    <Transaction>2020/10/29 10:22:39.000.458,C:\Users\otili\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\dsv\wkspiii\ProjetoJSONServer\Servidor\Server.dproj</Transaction>
+    <Transaction>2020/10/29 10:34:51.000.287,=D:\dsv\wkspiii\ProjetoJSONServer\Servidor\Unit1.pas</Transaction>
+    <Transaction>2020/10/29 10:35:35.000.338,D:\dsv\wkspiii\ProjetoJSONServer\Servidor\Unit1.pas=D:\dsv\wkspiii\ProjetoJSONServer\Servidor\unitDM.pas</Transaction>
+    <Transaction>2020/10/29 10:35:35.000.338,D:\dsv\wkspiii\ProjetoJSONServer\Servidor\Unit1.dfm=D:\dsv\wkspiii\ProjetoJSONServer\Servidor\unitDM.dfm</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

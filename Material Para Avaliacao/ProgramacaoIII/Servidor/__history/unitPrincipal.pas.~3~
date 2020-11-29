@@ -1,0 +1,43 @@
+unit unitPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, uDWAbout,
+  uRESTDWBase, FMX.StdCtrls, FMX.Controls.Presentation;
+
+type
+  TfrmPrincipal = class(TForm)
+    Label1: TLabel;
+    Switch1: TSwitch;
+    RESTServicePooler: TRESTServicePooler;
+    procedure FormShow(Sender: TObject);
+    procedure Switch1Switch(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+
+uses unitDM;
+
+procedure TfrmPrincipal.FormShow(Sender: TObject);
+begin
+  RESTServicePooler.ServerMethodClass := TDM;
+  RESTServicePooler.Active := Switch1.IsChecked;
+end;
+
+procedure TfrmPrincipal.Switch1Switch(Sender: TObject);
+begin
+   RESTServicePooler.Active := Switch1.IsChecked;
+end;
+
+end.

@@ -1,0 +1,98 @@
+object DM: TDM
+  OldCreateOrder = False
+  Encoding = esUtf8
+  Height = 393
+  Width = 544
+  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
+    VendorHome = 'D:\dsv\wkspiii\ProjetoJSONServer\Servidor\Win32\Debug'
+    Left = 144
+    Top = 40
+  end
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=BancoTesteAula'
+      'User_Name=postgres'
+      'Password=postgres'
+      'Port=5433'
+      'DriverID=PG')
+    Connected = True
+    Left = 56
+    Top = 40
+  end
+  object DWSEvents: TDWServerEvents
+    IgnoreInvalidParams = False
+    Events = <
+      item
+        Routes = [crAll]
+        DWParams = <
+          item
+            TypeObject = toParam
+            ObjectDirection = odIN
+            ObjectValue = ovString
+            ParamName = 'login'
+            Encoded = False
+          end
+          item
+            TypeObject = toParam
+            ObjectDirection = odIN
+            ObjectValue = ovString
+            ParamName = 'senha'
+            Encoded = False
+          end>
+        JsonMode = jmPureJSON
+        Name = 'ValidarLogin'
+        OnReplyEvent = DWSEventsEventsValidarLoginReplyEvent
+      end
+      item
+        Routes = [crAll]
+        DWParams = <>
+        JsonMode = jmPureJSON
+        Name = 'ListarClientes'
+        OnReplyEvent = DWSEventsEventsListarClientesReplyEvent
+      end
+      item
+        Routes = [crAll]
+        DWParams = <
+          item
+            TypeObject = toParam
+            ObjectDirection = odIN
+            ObjectValue = ovString
+            ParamName = 'nacionalidade'
+            Encoded = True
+          end>
+        JsonMode = jmPureJSON
+        Name = 'ListarPessoas'
+        OnReplyEvent = DWSEventsEventsListarPessoasReplyEvent
+      end
+      item
+        Routes = [crAll]
+        DWParams = <
+          item
+            TypeObject = toParam
+            ObjectDirection = odIN
+            ObjectValue = ovString
+            ParamName = 'nome'
+            Encoded = True
+          end
+          item
+            TypeObject = toParam
+            ObjectDirection = odIN
+            ObjectValue = ovString
+            ParamName = 'filhos'
+            Encoded = True
+          end>
+        JsonMode = jmPureJSON
+        Name = 'AdcionarCliente'
+        OnReplyEvent = DWSEventsEventsAdcionarClienteReplyEvent
+      end>
+    Left = 64
+    Top = 144
+  end
+  object FDQUsuario: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'SELECT * FROM USUARIO')
+    Left = 56
+    Top = 216
+  end
+end
