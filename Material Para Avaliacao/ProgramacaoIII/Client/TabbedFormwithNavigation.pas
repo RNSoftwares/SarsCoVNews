@@ -5,19 +5,20 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.TabControl, FMX.StdCtrls, FMX.Controls.Presentation,
-  FMX.Gestures, System.Actions, FMX.ActnList, FMX.Objects, FMX.Edit, FMX.Layouts;
+  FMX.Gestures, System.Actions, FMX.ActnList, FMX.Objects, FMX.Edit;
 
 type
   TTabbedwithNavigationForm = class(TForm)
     TabControl1: TTabControl;
     TabItem1: TTabItem;
     TabControl2: TTabControl;
-    TabItem5: TTabItem;
+    TabLogin: TTabItem;
     ToolBar1: TToolBar;
     lblTitle1: TLabel;
-    TabItem6: TTabItem;
+    btnNext: TSpeedButton;
+    TabCadastro: TTabItem;
     ToolBar2: TToolBar;
-    lblTitle2: TLabel;
+    lblTitulo: TLabel;
     btnBack: TSpeedButton;
     TabItem2: TTabItem;
     ToolBar3: TToolBar;
@@ -32,36 +33,30 @@ type
     ActionList1: TActionList;
     NextTabAction1: TNextTabAction;
     PreviousTabAction1: TPreviousTabAction;
-    AreaUm: TRectangle;
-    Rectangle2: TRectangle;
-    Label1: TLabel;
-    Usuario: TRectangle;
-    Senha: TRectangle;
-    Login: TRectangle;
+    topo: TRectangle;
+    corpo: TRectangle;
+    InfoLogin: TRectangle;
+    SarsCovOpaco: TLabel;
+    RNSoftwares: TLabel;
+    RecEmail: TRectangle;
+    RecSenha: TRectangle;
+    Email: TLabel;
     Label2: TLabel;
-    NomeUsuario: TLabel;
-    NomeSenha: TLabel;
-    BTNentrar: TRectangle;
-    Image1: TImage;
-    Label3: TLabel;
-    Edit1: TEdit;
+    Senha: TLabel;
+    RecLogin: TRectangle;
+    EdtEmail: TEdit;
     EdtSenha: TEdit;
-    Label4: TLabel;
-    Label5: TLabel;
-<<<<<<< HEAD
-    Rectangle1: TRectangle;
-=======
-    Layout1: TLayout;
->>>>>>> 18b197cda76682b1116e48370c886eee6d4c6426
+    RecEsqueciSenha: TRectangle;
+    LblEsqueciSenha: TLabel;
+    Label3: TLabel;
+    TopoCadastro: TRectangle;
+    CorpoCadastro: TRectangle;
+    InfoCadastro: TRectangle;
+    RecEsquerdo: TRectangle;
+    RecDireito: TRectangle;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
-    procedure BTNentrarClick(Sender: TObject);
-<<<<<<< HEAD
-    procedure lblTitle3Click(Sender: TObject);
-=======
-    procedure Label5Click(Sender: TObject);
->>>>>>> 18b197cda76682b1116e48370c886eee6d4c6426
   private
     { Private declarations }
   public
@@ -75,11 +70,6 @@ implementation
 
 {$R *.fmx}
 
-procedure TTabbedwithNavigationForm.BTNentrarClick(Sender: TObject);
-begin
-  TabControl1.ActiveTab := TabItem2;
-end;
-
 procedure TTabbedwithNavigationForm.FormCreate(Sender: TObject);
 begin
   { This defines the default active tab at runtime }
@@ -90,7 +80,7 @@ procedure TTabbedwithNavigationForm.FormKeyUp(Sender: TObject; var Key: Word; va
 begin
   if Key = vkHardwareBack then
   begin
-    if (TabControl1.ActiveTab = TabItem1) and (TabControl2.ActiveTab = TabItem6) then
+    if (TabControl1.ActiveTab = TabItem1) and (TabControl2.ActiveTab = TabCadastro) then
     begin
       TabControl2.Previous;
       Key := 0;
@@ -116,6 +106,7 @@ begin
       end;
   end;
 end;
+
 
 end.
 
