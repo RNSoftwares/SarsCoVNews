@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.TabControl, FMX.StdCtrls, FMX.Controls.Presentation,
-  FMX.Gestures, System.Actions, FMX.ActnList, FMX.Objects, FMX.Edit;
+  FMX.Gestures, System.Actions, FMX.ActnList, FMX.Objects, FMX.Edit, FMX.Layouts;
 
 type
   TTabbedwithNavigationForm = class(TForm)
@@ -48,12 +48,20 @@ type
     EdtSenha: TEdit;
     Label4: TLabel;
     Label5: TLabel;
+<<<<<<< HEAD
     Rectangle1: TRectangle;
+=======
+    Layout1: TLayout;
+>>>>>>> 18b197cda76682b1116e48370c886eee6d4c6426
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
     procedure BTNentrarClick(Sender: TObject);
+<<<<<<< HEAD
     procedure lblTitle3Click(Sender: TObject);
+=======
+    procedure Label5Click(Sender: TObject);
+>>>>>>> 18b197cda76682b1116e48370c886eee6d4c6426
   private
     { Private declarations }
   public
