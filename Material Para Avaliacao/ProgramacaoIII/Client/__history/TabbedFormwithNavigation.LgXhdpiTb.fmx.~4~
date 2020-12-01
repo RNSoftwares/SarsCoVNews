@@ -315,7 +315,7 @@ inherited TabbedwithNavigationForm_LgXhdpiTb: TTabbedwithNavigationForm_LgXhdpiT
         Size.Height = 732.000000000000000000
       end
     end
-    inherited TabSintomas: TTabItem
+    inherited TabFAQ: TTabItem
       Size.Width = 120.000000000000000000
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000

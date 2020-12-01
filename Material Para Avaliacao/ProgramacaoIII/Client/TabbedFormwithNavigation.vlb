@@ -1,9 +1,6 @@
 ﻿[lblTitle1]
 Coordinates=289,10,60,58
 
-[lblTitle5]
-Coordinates=79,10,60,58
-
 [TabLogin]
 Coordinates=340,192,68,36
 
@@ -13,12 +10,6 @@ Coordinates=245,192,85,36
 [GestureManager1]
 Coordinates=399,1,118,36
 
-[lblTitle3]
-Coordinates=149,10,60,58
-
-[TabItem3]
-Coordinates=166,192,69,36
-
 [ToolBar3]
 Coordinates=89,192,67,36
 
@@ -26,32 +17,14 @@ Coordinates=89,192,67,36
 Coordinates=10,10,59,58
 Visible=True
 
-[TabItem4]
-Coordinates=10,192,69,36
-
-[lblTitle4]
-Coordinates=359,10,60,58
-
-[TabItem1]
-Coordinates=342,146,69,36
-
 [PreviousTabAction1]
 Coordinates=399,56,130,36
-
-[TabItem2]
-Coordinates=263,146,69,36
-
-[ToolBar5]
-Coordinates=186,146,67,36
 
 [ToolBar2]
 Coordinates=109,146,67,36
 
 [TabCadastro]
 Coordinates=10,146,89,36
-
-[ToolBar4]
-Coordinates=343,78,67,36
 
 [ActionList1]
 Coordinates=399,166,78,36
@@ -69,11 +42,17 @@ Coordinates=171,78,67,36
 Coordinates=10,78,61,58
 
 []
-Coordinates=567,1,91,36
+Coordinates=166,192,69,36
 
 [topo]
 Coordinates=81,78,80,36
 
 [lblTitulo]
 Coordinates=219,10,60,58
+
+[TabLoginCadastro]
+Coordinates=342,146,69,36
+
+[TabConsultas]
+Coordinates=263,146,69,36
 

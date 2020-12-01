@@ -14,7 +14,7 @@ inherited TabbedwithNavigationForm_LgXhdpiTb: TTabbedwithNavigationForm_LgXhdpiT
       780s
       480s
       780s)
-    inherited TabLoginCadastro: TTabItem
+    inherited TabItem1: TTabItem
       Size.Width = 120.000000000000000000
       ExplicitSize.cx = 101.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
@@ -42,7 +42,6 @@ inherited TabbedwithNavigationForm_LgXhdpiTb: TTabbedwithNavigationForm_LgXhdpiT
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
               end
               inherited lblTitle1: TLabel
-                Margins.Left = -100.000000000000000000
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
               end
             end
@@ -276,63 +275,37 @@ inherited TabbedwithNavigationForm_LgXhdpiTb: TTabbedwithNavigationForm_LgXhdpiT
         end
       end
     end
-    inherited TabConsultas: TTabItem
+    inherited TabItem2: TTabItem
       Size.Width = 120.000000000000000000
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited ToolBar3: TToolBar
         Size.Width = 480.000000000000000000
-        inherited Rectangle24: TRectangle
+        inherited lblTitle3: TLabel
           Size.Width = 480.000000000000000000
-          inherited TituloConsulta: TLabel
-            Size.Width = 480.000000000000000000
-            TextSettings.Font.StyleExt = {00070000000000000004000000}
-          end
         end
       end
-      inherited Rectangle23: TRectangle
-        Size.Width = 480.000000000000000000
-        Size.Height = 732.000000000000000000
-      end
     end
-    inherited TabDuvidas: TTabItem
+    inherited TabItem3: TTabItem
       Size.Width = 120.000000000000000000
-      ExplicitSize.cx = 102.000000000000000000
+      ExplicitSize.cx = 101.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited ToolBar4: TToolBar
         Size.Width = 480.000000000000000000
-        inherited Rectangle25: TRectangle
+        inherited lblTitle4: TLabel
           Size.Width = 480.000000000000000000
-          inherited Label19: TLabel
-            Size.Width = 480.000000000000000000
-            Size.Height = 17.547599792480470000
-            TextSettings.Font.StyleExt = {00070000000000000004000000}
-          end
         end
       end
-      inherited Rectangle26: TRectangle
-        Size.Width = 480.000000000000000000
-        Size.Height = 732.000000000000000000
-      end
     end
-    inherited TabSintomas: TTabItem
+    inherited TabItem4: TTabItem
       Size.Width = 120.000000000000000000
-      ExplicitSize.cx = 102.000000000000000000
+      ExplicitSize.cx = 99.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited ToolBar5: TToolBar
         Size.Width = 480.000000000000000000
-        inherited Rectangle27: TRectangle
+        inherited lblTitle5: TLabel
           Size.Width = 480.000000000000000000
-          inherited Label20: TLabel
-            Size.Width = 480.000000000000000000
-            Size.Height = 17.547599792480470000
-            TextSettings.Font.StyleExt = {00070000000000000004000000}
-          end
         end
-      end
-      inherited Rectangle28: TRectangle
-        Size.Width = 480.000000000000000000
-        Size.Height = 732.000000000000000000
       end
     end
   end

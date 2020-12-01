@@ -10,7 +10,7 @@ uses
 type
   TTabbedwithNavigationForm = class(TForm)
     TabControl1: TTabControl;
-    TabItem1: TTabItem;
+    TabLoginCadastro: TTabItem;
     TabControl2: TTabControl;
     TabLogin: TTabItem;
     ToolBar1: TToolBar;
@@ -20,22 +20,15 @@ type
     ToolBar2: TToolBar;
     lblTitulo: TLabel;
     btnBack: TSpeedButton;
-    TabItem2: TTabItem;
+    TabConsultas: TTabItem;
     ToolBar3: TToolBar;
-    lblTitle3: TLabel;
-    TabItem3: TTabItem;
-    ToolBar4: TToolBar;
-    lblTitle4: TLabel;
-    TabItem4: TTabItem;
-    ToolBar5: TToolBar;
-    lblTitle5: TLabel;
     GestureManager1: TGestureManager;
     ActionList1: TActionList;
     NextTabAction1: TNextTabAction;
     PreviousTabAction1: TPreviousTabAction;
     topo: TRectangle;
     corpo: TRectangle;
-    InfoLogin: TRectangle;
+    Siz: TRectangle;
     SarsCovOpaco: TLabel;
     RNSoftwares: TLabel;
     RecEmail: TRectangle;
@@ -52,14 +45,86 @@ type
     TopoCadastro: TRectangle;
     CorpoCadastro: TRectangle;
     InfoCadastro: TRectangle;
-    RecEsquerdo: TRectangle;
-    RecDireito: TRectangle;
+    LblCadastro: TLabel;
+    LblNomeCompleto: TLabel;
+    Rectangle4: TRectangle;
+    Rectangle5: TRectangle;
+    Rectangle6: TRectangle;
+    Rectangle7: TRectangle;
+    LblCPF: TLabel;
+    LlbRG: TLabel;
+    LblIdade: TLabel;
+    LblAltura: TLabel;
+    Rectangle8: TRectangle;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    TabCadastro2: TTabItem;
+    ToolBar6: TToolBar;
+    Rectangle1: TRectangle;
+    Label1: TLabel;
+    Rectangle2: TRectangle;
+    Rectangle3: TRectangle;
+    Label4: TLabel;
+    Label5: TLabel;
+    Rectangle9: TRectangle;
+    Edit6: TEdit;
+    Rectangle10: TRectangle;
+    Edit7: TEdit;
+    Rectangle11: TRectangle;
+    Edit8: TEdit;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Rectangle13: TRectangle;
+    Edit10: TEdit;
+    Label9: TLabel;
+    TabCadastro3: TTabItem;
+    ToolBar7: TToolBar;
+    Rectangle14: TRectangle;
+    Label10: TLabel;
+    Rectangle15: TRectangle;
+    Rectangle16: TRectangle;
+    Label11: TLabel;
+    Label12: TLabel;
+    Rectangle17: TRectangle;
+    Edit11: TEdit;
+    Rectangle18: TRectangle;
+    Edit12: TEdit;
+    Rectangle19: TRectangle;
+    Edit13: TEdit;
+    Rectangle20: TRectangle;
+    Edit14: TEdit;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    Rectangle12: TRectangle;
+    Label16: TLabel;
+    Rectangle21: TRectangle;
+    Label17: TLabel;
+    Rectangle22: TRectangle;
+    Label18: TLabel;
+    Rectangle23: TRectangle;
+    TituloConsulta: TLabel;
+    Rectangle24: TRectangle;
+    TabDuvidas: TTabItem;
+    ToolBar4: TToolBar;
+    Rectangle25: TRectangle;
+    Label19: TLabel;
+    Rectangle26: TRectangle;
+    TabFAQ: TTabItem;
+    ToolBar5: TToolBar;
+    Rectangle27: TRectangle;
+    Label20: TLabel;
+    Rectangle28: TRectangle;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
-    procedure Label3Click(Sender: TObject);
-    procedure RecLoginClick(Sender: TObject);
-    procedure TabCadastroClick(Sender: TObject);
+    procedure lblTitle3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -72,6 +137,9 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.LgXhdpiTb.fmx ANDROID}
+{$R *.LgXhdpiPh.fmx ANDROID}
+{$R *.NmXhdpiPh.fmx ANDROID}
 
 procedure TTabbedwithNavigationForm.FormCreate(Sender: TObject);
 begin

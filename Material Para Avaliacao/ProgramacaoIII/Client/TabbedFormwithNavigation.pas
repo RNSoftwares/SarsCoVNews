@@ -10,7 +10,7 @@ uses
 type
   TTabbedwithNavigationForm = class(TForm)
     TabControl1: TTabControl;
-    TabItem1: TTabItem;
+    TabLoginCadastro: TTabItem;
     TabControl2: TTabControl;
     TabLogin: TTabItem;
     ToolBar1: TToolBar;
@@ -20,15 +20,8 @@ type
     ToolBar2: TToolBar;
     lblTitulo: TLabel;
     btnBack: TSpeedButton;
-    TabItem2: TTabItem;
+    TabConsultas: TTabItem;
     ToolBar3: TToolBar;
-    lblTitle3: TLabel;
-    TabItem3: TTabItem;
-    ToolBar4: TToolBar;
-    lblTitle4: TLabel;
-    TabItem4: TTabItem;
-    ToolBar5: TToolBar;
-    lblTitle5: TLabel;
     GestureManager1: TGestureManager;
     ActionList1: TActionList;
     NextTabAction1: TNextTabAction;
@@ -115,9 +108,24 @@ type
     Label17: TLabel;
     Rectangle22: TRectangle;
     Label18: TLabel;
+    Rectangle23: TRectangle;
+    TituloConsulta: TLabel;
+    Rectangle24: TRectangle;
+    TabDuvidas: TTabItem;
+    ToolBar4: TToolBar;
+    Rectangle25: TRectangle;
+    Label19: TLabel;
+    Rectangle26: TRectangle;
+    TabSintomas: TTabItem;
+    ToolBar5: TToolBar;
+    Rectangle27: TRectangle;
+    Label20: TLabel;
+    Rectangle28: TRectangle;
+    RadioButton1: TRadioButton;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+    procedure lblTitle3Click(Sender: TObject);
   private
     { Private declarations }
   public
