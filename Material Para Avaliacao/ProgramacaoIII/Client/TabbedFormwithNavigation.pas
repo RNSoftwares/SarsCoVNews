@@ -35,7 +35,7 @@ type
     PreviousTabAction1: TPreviousTabAction;
     topo: TRectangle;
     corpo: TRectangle;
-    InfoLogin: TRectangle;
+    Siz: TRectangle;
     SarsCovOpaco: TLabel;
     RNSoftwares: TLabel;
     RecEmail: TRectangle;
@@ -52,8 +52,69 @@ type
     TopoCadastro: TRectangle;
     CorpoCadastro: TRectangle;
     InfoCadastro: TRectangle;
-    RecEsquerdo: TRectangle;
-    RecDireito: TRectangle;
+    LblCadastro: TLabel;
+    LblNomeCompleto: TLabel;
+    Rectangle4: TRectangle;
+    Rectangle5: TRectangle;
+    Rectangle6: TRectangle;
+    Rectangle7: TRectangle;
+    LblCPF: TLabel;
+    LlbRG: TLabel;
+    LblIdade: TLabel;
+    LblAltura: TLabel;
+    Rectangle8: TRectangle;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    TabCadastro2: TTabItem;
+    ToolBar6: TToolBar;
+    Rectangle1: TRectangle;
+    Label1: TLabel;
+    Rectangle2: TRectangle;
+    Rectangle3: TRectangle;
+    Label4: TLabel;
+    Label5: TLabel;
+    Rectangle9: TRectangle;
+    Edit6: TEdit;
+    Rectangle10: TRectangle;
+    Edit7: TEdit;
+    Rectangle11: TRectangle;
+    Edit8: TEdit;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Rectangle13: TRectangle;
+    Edit10: TEdit;
+    Label9: TLabel;
+    TabCadastro3: TTabItem;
+    ToolBar7: TToolBar;
+    Rectangle14: TRectangle;
+    Label10: TLabel;
+    Rectangle15: TRectangle;
+    Rectangle16: TRectangle;
+    Label11: TLabel;
+    Label12: TLabel;
+    Rectangle17: TRectangle;
+    Edit11: TEdit;
+    Rectangle18: TRectangle;
+    Edit12: TEdit;
+    Rectangle19: TRectangle;
+    Edit13: TEdit;
+    Rectangle20: TRectangle;
+    Edit14: TEdit;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    Rectangle12: TRectangle;
+    Label16: TLabel;
+    Rectangle21: TRectangle;
+    Label17: TLabel;
+    Rectangle22: TRectangle;
+    Label18: TLabel;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
@@ -69,6 +130,9 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.LgXhdpiTb.fmx ANDROID}
+{$R *.LgXhdpiPh.fmx ANDROID}
+{$R *.NmXhdpiPh.fmx ANDROID}
 
 procedure TTabbedwithNavigationForm.FormCreate(Sender: TObject);
 begin

@@ -1,0 +1,1333 @@
+object TabbedwithNavigationForm: TTabbedwithNavigationForm
+  Left = 0
+  Top = 0
+  Caption = 'Form56'
+  ClientHeight = 816
+  ClientWidth = 1313
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Touch.GestureManager = GestureManager1
+    Align = Client
+    FullSize = True
+    Size.Width = 1313.000000000000000000
+    Size.Height = 816.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = Bottom
+    Sizes = (
+      1313s
+      767s
+      1313s
+      767s
+      1313s
+      767s
+      1313s
+      767s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 327.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemfavorites'
+      TabOrder = 0
+      ExplicitSize.cx = 101.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object TabControl2: TTabControl
+        Touch.GestureManager = GestureManager1
+        Align = Client
+        FullSize = True
+        Size.Width = 1313.000000000000000000
+        Size.Height = 767.000000000000000000
+        Size.PlatformDefault = False
+        TabHeight = 49.000000000000000000
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = Dots
+        Sizes = (
+          1313s
+          767s
+          1313s
+          767s
+          1313s
+          767s
+          1313s
+          767s)
+        object TabLogin: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'TabLogin'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object ToolBar1: TToolBar
+            Size.Width = 1313.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object topo: TRectangle
+              Align = Client
+              Fill.Color = xFFF2F0F4
+              Locked = True
+              Sides = [Top, Left, Right]
+              Size.Width = 1313.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              object btnNext: TSpeedButton
+                Action = NextTabAction1
+                Align = Right
+                Cursor = crHandPoint
+                Enabled = True
+                StyledSettings = [Family, Other]
+                ImageIndex = -1
+                Margins.Right = 5.000000000000000000
+                Position.X = 1180.000000000000000000
+                Size.Width = 128.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Cadastrar-se'
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 20.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+              object lblTitle1: TLabel
+                Align = Center
+                StyledSettings = []
+                Size.Width = 508.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'toollabel'
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 45.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Center
+                Text = 'SarsCov News'
+                TabOrder = 1
+              end
+            end
+          end
+          object corpo: TRectangle
+            Align = Client
+            Fill.Color = xFFF2F0F4
+            Locked = True
+            Sides = [Left, Bottom, Right]
+            Size.Width = 1313.000000000000000000
+            Size.Height = 719.000000000000000000
+            Size.PlatformDefault = False
+            object SarsCovOpaco: TLabel
+              Align = Center
+              StyledSettings = []
+              Opacity = 0.100000001490116100
+              Size.Width = 1122.000000000000000000
+              Size.Height = 134.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 170.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.HorzAlign = Center
+              Text = 'SarsCov News'
+              TabOrder = 0
+            end
+            object Siz: TRectangle
+              Align = Center
+              Fill.Color = xFFC5D6DB
+              Size.Width = 565.000000000000000000
+              Size.Height = 503.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Thickness = 6.000000000000000000
+              XRadius = 20.000000000000000000
+              YRadius = 20.000000000000000000
+              object RecSenha: TRectangle
+                Align = Top
+                Fill.Color = xFFECECEC
+                Margins.Left = 25.000000000000000000
+                Margins.Right = 25.000000000000000000
+                Position.X = 25.000000000000000000
+                Position.Y = 238.000000000000000000
+                Size.Width = 515.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object EdtSenha: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Contents
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Password = True
+                  TextSettings.Font.Size = 15.000000000000000000
+                  Locked = True
+                  Margins.Left = 7.000000000000000000
+                  Margins.Right = 7.000000000000000000
+                  Size.Width = 501.000000000000000000
+                  Size.Height = 50.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
+                end
+              end
+              object RecEmail: TRectangle
+                Align = Top
+                Fill.Color = xFFECECEC
+                Margins.Left = 25.000000000000000000
+                Margins.Right = 25.000000000000000000
+                Position.X = 25.000000000000000000
+                Position.Y = 143.000000000000000000
+                Size.Width = 515.000000000000000000
+                Size.Height = 53.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object EdtEmail: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Contents
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  KeyboardType = EmailAddress
+                  Margins.Left = 7.000000000000000000
+                  Margins.Right = 7.000000000000000000
+                  Size.Width = 501.000000000000000000
+                  Size.Height = 53.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Label2: TLabel
+                Align = Top
+                StyledSettings = [FontColor]
+                Margins.Top = 30.000000000000000000
+                Position.Y = 30.000000000000000000
+                Size.Width = 565.000000000000000000
+                Size.Height = 51.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 40.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Center
+                Text = 'Login'
+                TabOrder = 2
+              end
+              object Email: TLabel
+                Align = Top
+                StyledSettings = [FontColor]
+                Margins.Left = 25.000000000000000000
+                Margins.Top = 40.000000000000000000
+                Margins.Right = 25.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Position.X = 25.000000000000000000
+                Position.Y = 121.000000000000000000
+                Size.Width = 515.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'E-mail'
+                TabOrder = 3
+              end
+              object Senha: TLabel
+                Align = Top
+                StyledSettings = [FontColor]
+                Margins.Left = 25.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 25.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Position.X = 25.000000000000000000
+                Position.Y = 216.000000000000000000
+                Size.Width = 515.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Senha'
+                TabOrder = 4
+              end
+              object RecLogin: TRectangle
+                Align = Center
+                Cursor = crHandPoint
+                Fill.Color = xFFECECEC
+                Size.Width = 257.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Label3: TLabel
+                  Align = Center
+                  StyledSettings = [FontColor]
+                  Size.Width = 205.000000000000000000
+                  Size.Height = 41.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 35.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.HorzAlign = Center
+                  Text = 'Entrar'
+                  TabOrder = 0
+                end
+              end
+              object RecEsqueciSenha: TRectangle
+                Cursor = crHandPoint
+                Fill.Color = claNull
+                Position.X = 160.000000000000000000
+                Position.Y = 428.000000000000000000
+                Sides = []
+                Size.Width = 241.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+                object LblEsqueciSenha: TLabel
+                  Align = Center
+                  StyledSettings = [Size, FontColor]
+                  Size.Width = 311.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.HorzAlign = Center
+                  Text = 'Esqueceu sua Senha?'
+                  TabOrder = 0
+                end
+              end
+            end
+            object RNSoftwares: TLabel
+              Align = Bottom
+              StyledSettings = []
+              Margins.Left = 10.000000000000000000
+              Position.X = 10.000000000000000000
+              Position.Y = 685.000000000000000000
+              Size.Width = 1303.000000000000000000
+              Size.Height = 34.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 15.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              Text = 'Design by RN Sfotwares'
+              TabOrder = 2
+            end
+          end
+        end
+        object TabCadastro: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'TabCadastro'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object ToolBar2: TToolBar
+            Size.Width = 1313.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object TopoCadastro: TRectangle
+              Align = Client
+              Fill.Color = xFFF2F0F4
+              Sides = [Top, Left, Right]
+              Size.Width = 1313.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              object lblTitulo: TLabel
+                Align = Center
+                StyledSettings = [FontColor]
+                Size.Width = 508.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'toollabel'
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 45.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Center
+                Text = 'SarsCov News'
+                TabOrder = 0
+              end
+              object btnBack: TSpeedButton
+                Action = PreviousTabAction1
+                Align = Left
+                Enabled = True
+                StyledSettings = [FontColor]
+                ImageIndex = -1
+                Margins.Left = 5.000000000000000000
+                Position.X = 5.000000000000000000
+                Size.Width = 67.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Voltar'
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 20.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+            end
+          end
+          object CorpoCadastro: TRectangle
+            Align = Client
+            Fill.Color = xFFF2F0F4
+            Sides = [Left, Bottom, Right]
+            Size.Width = 1313.000000000000000000
+            Size.Height = 719.000000000000000000
+            Size.PlatformDefault = False
+            object InfoCadastro: TRectangle
+              Align = Center
+              Fill.Color = xFFC5D6DB
+              Size.Width = 565.000000000000000000
+              Size.Height = 503.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Thickness = 6.000000000000000000
+              XRadius = 20.000000000000000000
+              YRadius = 20.000000000000000000
+              object LblCadastro: TLabel
+                Align = Top
+                StyledSettings = [FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 30.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 30.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 40.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Center
+                Text = 'Cadastro'
+                TabOrder = 0
+              end
+              object LblNomeCompleto: TLabel
+                Align = Top
+                StyledSettings = [FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 30.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 110.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Nome Completo'
+                TabOrder = 1
+              end
+              object Rectangle4: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 132.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit1: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Rectangle5: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 209.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit2: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Rectangle6: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 286.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit3: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Rectangle7: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 363.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit4: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object LblCPF: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 187.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'CPF'
+                TabOrder = 6
+              end
+              object LlbRG: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 264.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'RG'
+                TabOrder = 7
+              end
+              object LblIdade: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 341.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Idade'
+                TabOrder = 8
+              end
+              object Rectangle8: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 440.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit5: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object LblAltura: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 418.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Altura'
+                TabOrder = 10
+              end
+            end
+          end
+          object Rectangle12: TRectangle
+            Cursor = crHandPoint
+            Fill.Color = claWhite
+            Position.X = 544.000000000000000000
+            Position.Y = 672.000000000000000000
+            Size.Width = 225.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Thickness = 3.000000000000000000
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object Label16: TLabel
+              Align = Center
+              StyledSettings = [FontColor]
+              Size.Width = 174.000000000000000000
+              Size.Height = 29.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 25.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.HorzAlign = Center
+              Text = 'Pr'#243'ximo'
+              TabOrder = 0
+            end
+          end
+        end
+        object TabCadastro2: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'TabCadastro'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object ToolBar6: TToolBar
+            Size.Width = 1313.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Rectangle1: TRectangle
+              Align = Client
+              Fill.Color = xFFF2F0F4
+              Sides = [Top, Left, Right]
+              Size.Width = 1313.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              object Label1: TLabel
+                Align = Center
+                StyledSettings = [FontColor]
+                Size.Width = 508.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'toollabel'
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 45.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Center
+                Text = 'SarsCov News'
+                TabOrder = 0
+              end
+            end
+          end
+          object Rectangle2: TRectangle
+            Align = Client
+            Fill.Color = xFFF2F0F4
+            Sides = [Left, Bottom, Right]
+            Size.Width = 1313.000000000000000000
+            Size.Height = 719.000000000000000000
+            Size.PlatformDefault = False
+            object Rectangle3: TRectangle
+              Align = Center
+              Fill.Color = xFFC5D6DB
+              Size.Width = 565.000000000000000000
+              Size.Height = 503.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Thickness = 6.000000000000000000
+              XRadius = 20.000000000000000000
+              YRadius = 20.000000000000000000
+              object Label4: TLabel
+                Align = Top
+                StyledSettings = [FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 30.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 30.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 40.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Center
+                Text = 'Cadastro'
+                TabOrder = 0
+              end
+              object Label5: TLabel
+                Align = Top
+                StyledSettings = [FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 30.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 110.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Telefone/Celular'
+                TabOrder = 1
+              end
+              object Rectangle9: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 132.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit6: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Rectangle10: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 209.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit7: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Rectangle11: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 286.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit8: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Label6: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 187.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Peso em Kg'
+                TabOrder = 6
+              end
+              object Label7: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 264.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Tipo Sangu'#237'neo'
+                TabOrder = 7
+              end
+              object Label8: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 341.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Sexo'
+                TabOrder = 8
+              end
+              object Rectangle13: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 423.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit10: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Label9: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 401.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'E-mail'
+                TabOrder = 10
+              end
+              object CheckBox2: TCheckBox
+                Align = Top
+                Margins.Left = 20.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 358.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 19.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 11
+                Text = 'Feminino'
+              end
+              object CheckBox1: TCheckBox
+                Align = Top
+                Margins.Left = 20.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 377.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 19.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 12
+                Text = 'Masculino'
+              end
+            end
+          end
+          object Rectangle21: TRectangle
+            Cursor = crHandPoint
+            Fill.Color = claWhite
+            Position.X = 552.000000000000000000
+            Position.Y = 672.000000000000000000
+            Size.Width = 225.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Thickness = 3.000000000000000000
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object Label17: TLabel
+              Align = Center
+              StyledSettings = [FontColor]
+              Size.Width = 174.000000000000000000
+              Size.Height = 29.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 25.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.HorzAlign = Center
+              Text = 'Pr'#243'ximo'
+              TabOrder = 0
+            end
+          end
+        end
+        object TabCadastro3: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'TabCadastro'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object ToolBar7: TToolBar
+            Size.Width = 1313.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Rectangle14: TRectangle
+              Align = Client
+              Fill.Color = xFFF2F0F4
+              Sides = [Top, Left, Right]
+              Size.Width = 1313.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              object Label10: TLabel
+                Align = Center
+                StyledSettings = [FontColor]
+                Size.Width = 508.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'toollabel'
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 45.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Center
+                Text = 'SarsCov News'
+                TabOrder = 0
+              end
+            end
+          end
+          object Rectangle15: TRectangle
+            Align = Client
+            Fill.Color = xFFF2F0F4
+            Sides = [Left, Bottom, Right]
+            Size.Width = 1313.000000000000000000
+            Size.Height = 719.000000000000000000
+            Size.PlatformDefault = False
+            object Rectangle16: TRectangle
+              Align = Center
+              Fill.Color = xFFC5D6DB
+              Size.Width = 565.000000000000000000
+              Size.Height = 503.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Thickness = 6.000000000000000000
+              XRadius = 20.000000000000000000
+              YRadius = 20.000000000000000000
+              object Label11: TLabel
+                Align = Top
+                StyledSettings = [FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 30.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 30.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 40.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Center
+                Text = 'Cadastro'
+                TabOrder = 0
+              end
+              object Label12: TLabel
+                Align = Top
+                StyledSettings = [FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 30.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 110.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Cidade'
+                TabOrder = 1
+              end
+              object Rectangle17: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 132.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit11: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Rectangle18: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 209.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit12: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Rectangle19: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 286.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit13: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Rectangle20: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 363.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Thickness = 3.000000000000000000
+                XRadius = 10.000000000000000000
+                YRadius = 10.000000000000000000
+                object Edit14: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Center
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Size.Width = 520.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Label13: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 187.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Rua'
+                TabOrder = 6
+              end
+              object Label14: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 264.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'N'#250'mero'
+                TabOrder = 7
+              end
+              object Label15: TLabel
+                Align = Top
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 341.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Bairro'
+                TabOrder = 8
+              end
+            end
+          end
+          object Rectangle22: TRectangle
+            Cursor = crHandPoint
+            Fill.Color = claWhite
+            Position.X = 552.000000000000000000
+            Position.Y = 672.000000000000000000
+            Size.Width = 225.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Thickness = 3.000000000000000000
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object Label18: TLabel
+              Align = Center
+              StyledSettings = [FontColor]
+              Size.Width = 174.000000000000000000
+              Size.Height = 29.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 25.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.HorzAlign = Center
+              Text = 'Finalizar'
+              TabOrder = 0
+            end
+          end
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 327.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemcontacts'
+      TabOrder = 0
+      Text = 'TabItem2'
+      ExplicitSize.cx = 102.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar3: TToolBar
+        Size.Width = 1313.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblTitle3: TLabel
+          Align = Contents
+          Size.Width = 1313.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'Title'
+        end
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 327.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemsearch'
+      TabOrder = 0
+      Text = 'TabItem3'
+      ExplicitSize.cx = 101.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar4: TToolBar
+        Size.Width = 1313.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblTitle4: TLabel
+          Align = Contents
+          Size.Width = 1313.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'Title'
+        end
+      end
+    end
+    object TabItem4: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 330.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitembookmarks'
+      TabOrder = 0
+      Text = 'TabItem4'
+      ExplicitSize.cx = 99.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar5: TToolBar
+        Size.Width = 1313.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblTitle5: TLabel
+          Align = Contents
+          Size.Width = 1313.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'Title'
+        end
+      end
+    end
+  end
+  object GestureManager1: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 16
+    Top = 177
+    GestureData = <
+      item
+        Control = TabControl1
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end
+      item
+        Control = TabControl2
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end>
+  end
+  object ActionList1: TActionList
+    Left = 16
+    Top = 120
+    object NextTabAction1: TNextTabAction
+      Category = 'Tab'
+      TabControl = TabControl2
+    end
+    object PreviousTabAction1: TPreviousTabAction
+      Category = 'Tab'
+      TabControl = TabControl2
+    end
+  end
+end
