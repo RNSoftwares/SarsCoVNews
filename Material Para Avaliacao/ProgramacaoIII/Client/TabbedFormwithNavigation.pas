@@ -5,7 +5,11 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.TabControl, FMX.StdCtrls, FMX.Controls.Presentation,
-  FMX.Gestures, System.Actions, FMX.ActnList, FMX.Objects, FMX.Edit;
+  FMX.Gestures, System.Actions, FMX.ActnList, FMX.Objects, FMX.Edit,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
+  FireDAC.Phys, FireDAC.Phys.PG, FireDAC.Phys.PGDef, FireDAC.FMXUI.Wait,
+  Data.DB, FireDAC.Comp.Client;
 
 type
   TTabbedwithNavigationForm = class(TForm)
@@ -122,10 +126,12 @@ type
     Label20: TLabel;
     Rectangle28: TRectangle;
     RadioButton1: TRadioButton;
+    FDConnection1: TFDConnection;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
-    procedure lblTitle3Click(Sender: TObject);
+    procedure Rectangle12Click(Sender: TObject);
+    procedure Rectangle21Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -145,14 +151,14 @@ implementation
 procedure TTabbedwithNavigationForm.FormCreate(Sender: TObject);
 begin
   { This defines the default active tab at runtime }
-  TabControl1.ActiveTab := TabItem1;
+  TabControl1.ActiveTab := TabLoginCadastro;
 end;
 
 procedure TTabbedwithNavigationForm.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
 begin
   if Key = vkHardwareBack then
   begin
-    if (TabControl1.ActiveTab = TabItem1) and (TabControl2.ActiveTab = TabCadastro) then
+    if (TabControl1.ActiveTab = TabLoginCadastro) and (TabControl2.ActiveTab = TabCadastro) then
     begin
       TabControl2.Previous;
       Key := 0;
@@ -179,6 +185,16 @@ begin
   end;
 end;
 
+
+procedure TTabbedwithNavigationForm.Rectangle12Click(Sender: TObject);
+begin
+    TabControl2.ActiveTab := TabCadastro2;
+end;
+
+procedure TTabbedwithNavigationForm.Rectangle21Click(Sender: TObject);
+begin
+    TabControl2.ActiveTab := TabCadastro3;
+end;
 
 end.
 

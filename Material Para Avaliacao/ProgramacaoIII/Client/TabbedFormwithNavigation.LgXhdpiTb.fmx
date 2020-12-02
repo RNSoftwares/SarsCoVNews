@@ -286,6 +286,7 @@ inherited TabbedwithNavigationForm_LgXhdpiTb: TTabbedwithNavigationForm_LgXhdpiT
           Size.Width = 480.000000000000000000
           inherited TituloConsulta: TLabel
             Size.Width = 480.000000000000000000
+            Size.Height = 46.976020812988280000
             TextSettings.Font.StyleExt = {00070000000000000004000000}
           end
         end
