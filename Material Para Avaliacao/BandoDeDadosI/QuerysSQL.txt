@@ -1,0 +1,16 @@
+1-)Relacione o código e nome de pacientes com   idades   entre   60   e   70   anos,   que apresentaram febre. Relacione a consulta em ordem ascendente de nome;
+
+R: SELECT nomusu FROM Usuario WHERE (idausu >= 60 AND idausu <= 70) ORDER BY nomusu
+
+2-)Relacione o nome do paciente, nome da cidade   de   residência   de   pacientes   do   sexo feminino,   residentes   nos   municípios  de Maravilha, Descanso, Pinhalzinho, Chapecó e Itapiranga que apresentaram sintomas e não foram   positivados   com   covid.   Relacione o relatório pelo nome da cidade ascendente e onome do paciente descendente
+
+R: SELECT u.nomusu, u.cidusu FROM usuario u, usuario u WHERE (sexusu = "F") AND (cidusu = "Maravilha" OR cidusu = "Descanso" OR cidusu = "Pinhalzinho" OR cidusu = "Chapecó" OR cidusu = "Itapiranga") AND stacovsin.Usuario = 0 ORDER BY u.cidusu ASC AND u.nomusu DESC;  
+
+3-)Relacione o código da cidade, nome da cidade,   quantidade   de   casos   suspeitos   de covid para todas as cidades. Ordene o relatório da cidade com mais casos suspeitos para a cidade com menos casos suspeitos
+
+R: SELECT c.codcid, c.nomcid, s.stacovsin FROM cidade c, s sintomas WHERE s.stacovsin = 1 ORDER BY c.nomcid; 
+
+4-)Relacione a idade e quantidade de casos positivos de covid por idade, registrados no período agosto a outubro de 2020. Ordene o relatório pela idade com mais casos para a idade com menos casos.
+
+R: SELECT u.idausu, s.stacovsin FROM usuario u, sintomas s WHERE s.stacovsin = 2 AND (datentpro >= "01/08/2020" AND datentpro <= "31/10/2020") ORDER BY u.idausu;
+

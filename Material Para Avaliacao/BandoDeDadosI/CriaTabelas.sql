@@ -132,6 +132,7 @@ CREATE TABLE sintomas (
 	codsin int NOT NULL,
 	nomsim varchar(50) NOT NULL,
 	grasin int NOT NULL,
+	stacovsin CHAR NOT NULL,
 	idusu int NOT NULL,
 	PRIMARY KEY (idsin)
 );
@@ -142,6 +143,7 @@ COMMENT ON COLUMN sintomas.idsin IS 'Código de identificação do registro do s
 COMMENT ON COLUMN sintomas.codsin IS 'Identificação do sintoma';
 COMMENT ON COLUMN sintomas.nomsim IS 'Nome por extenso do sintoma';
 COMMENT ON COLUMN sintomas.grasin IS 'Grau do sintoma';
+COMMENT ON COLUMN sistomas.stacovsin IS 'Status de covid sendo 0 = negativo, 1 = suspeito e 2 = confirmado';
 COMMENT ON COLUMN sintomas.idusu IS 'Identificação do usuário';
 
 --Criar tabela usuario
@@ -160,6 +162,7 @@ CREATE TABLE usuario (
 	ruausu varchar(255) NOT NULL,
 	numusu int NOT NULL,
 	baiusu varchar(255) NOT NULL,
+	cidusu varchar(255) NOT NULL,
 	idpai int NOT NULL,
 	idest int NOT NULL,
 	logace varchar(255) NOT NULL,
@@ -181,6 +184,7 @@ COMMENT ON COLUMN usuario.sexusu IS 'Sexo do usuário';
 COMMENT ON COLUMN usuario.ruausu IS 'Rua usuario/paciente';
 COMMENT ON COLUMN usuario.numusu IS 'Número casa usuário/paciente';
 COMMENT ON COLUMN usuario.baiusu IS 'Bairro do usuário';
+COOMENT ON COLUMN usuario.cidusu IS 'Cidade do usuário';
 COMMENT ON COLUMN usuario.idpai IS 'Código de identificação do pais';
 COMMENT ON COLUMN usuario.idest IS 'Código de identificação do estado';
 COMMENT ON COLUMN usuario.logace IS 'Login do usuario';
