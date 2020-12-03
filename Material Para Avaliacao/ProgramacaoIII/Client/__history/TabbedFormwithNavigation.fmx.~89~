@@ -2,8 +2,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
   Left = 0
   Top = 0
   Caption = 'Form56'
-  ClientHeight = 816
-  ClientWidth = 1303
+  ClientHeight = 791
+  ClientWidth = 1285
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -14,28 +14,28 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
     Touch.GestureManager = GestureManager1
     Align = Client
     FullSize = True
-    Size.Width = 1303.000000000000000000
-    Size.Height = 816.000000000000000000
+    Size.Width = 1285.000000000000000000
+    Size.Height = 791.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
     TabIndex = 0
     TabOrder = 0
     TabPosition = Bottom
     Sizes = (
-      1303s
-      767s
-      1303s
-      767s
-      1303s
-      767s
-      1303s
-      767s)
+      1285s
+      742s
+      1285s
+      742s
+      1285s
+      742s
+      1285s
+      742s)
     object TabLoginCadastro: TTabItem
       CustomIcon = <
         item
         end>
       IsSelected = True
-      Size.Width = 325.000000000000000000
+      Size.Width = 320.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'tabitemfavorites'
@@ -46,22 +46,22 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Touch.GestureManager = GestureManager1
         Align = Client
         FullSize = True
-        Size.Width = 1303.000000000000000000
-        Size.Height = 767.000000000000000000
+        Size.Width = 1285.000000000000000000
+        Size.Height = 742.000000000000000000
         Size.PlatformDefault = False
         TabHeight = 49.000000000000000000
         TabIndex = 1
         TabOrder = 0
         TabPosition = Dots
         Sizes = (
-          1303s
-          767s
-          1303s
-          767s
-          1303s
-          767s
-          1303s
-          767s)
+          1285s
+          742s
+          1285s
+          742s
+          1285s
+          742s
+          1285s
+          742s)
         object TabLogin: TTabItem
           CustomIcon = <
             item
@@ -76,7 +76,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
           object ToolBar1: TToolBar
-            Size.Width = 1303.000000000000000000
+            Size.Width = 1285.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -85,7 +85,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               Fill.Color = xFFF2F0F4
               Locked = True
               Sides = [Top, Left, Right]
-              Size.Width = 1303.000000000000000000
+              Size.Width = 1285.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               object btnNext: TSpeedButton
@@ -96,7 +96,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 StyledSettings = [Family, Other]
                 ImageIndex = -1
                 Margins.Right = 5.000000000000000000
-                Position.X = 1170.000000000000000000
+                Position.X = 1152.000000000000000000
                 Size.Width = 128.000000000000000000
                 Size.Height = 48.000000000000000000
                 Size.PlatformDefault = False
@@ -127,8 +127,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Fill.Color = xFFF2F0F4
             Locked = True
             Sides = [Left, Bottom, Right]
-            Size.Width = 1303.000000000000000000
-            Size.Height = 719.000000000000000000
+            Size.Width = 1285.000000000000000000
+            Size.Height = 694.000000000000000000
             Size.PlatformDefault = False
             object SarsCovOpaco: TLabel
               Align = Center
@@ -309,8 +309,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               StyledSettings = []
               Margins.Left = 10.000000000000000000
               Position.X = 10.000000000000000000
-              Position.Y = 685.000000000000000000
-              Size.Width = 1293.000000000000000000
+              Position.Y = 660.000000000000000000
+              Size.Width = 1275.000000000000000000
               Size.Height = 34.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.Family = 'Roboto'
@@ -335,7 +335,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
           object ToolBar2: TToolBar
-            Size.Width = 1303.000000000000000000
+            Size.Width = 1285.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -343,7 +343,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               Align = Client
               Fill.Color = xFFF2F0F4
               Sides = [Top, Left, Right]
-              Size.Width = 1303.000000000000000000
+              Size.Width = 1285.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               object lblTitulo: TLabel
@@ -382,8 +382,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Client
             Fill.Color = xFFF2F0F4
             Sides = [Left, Bottom, Right]
-            Size.Width = 1303.000000000000000000
-            Size.Height = 719.000000000000000000
+            Size.Width = 1285.000000000000000000
+            Size.Height = 694.000000000000000000
             Size.PlatformDefault = False
             object InfoCadastro: TRectangle
               Align = Center
@@ -617,8 +617,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           object Rectangle12: TRectangle
             Cursor = crHandPoint
             Fill.Color = claWhite
-            Position.X = 544.000000000000000000
-            Position.Y = 672.000000000000000000
+            Position.X = 528.000000000000000000
+            Position.Y = 656.000000000000000000
             Size.Width = 225.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
@@ -638,6 +638,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               TextSettings.HorzAlign = Center
               Text = 'Pr'#243'ximo'
               TabOrder = 0
+              OnClick = Label16Click
             end
           end
         end
@@ -655,7 +656,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
           object ToolBar6: TToolBar
-            Size.Width = 1303.000000000000000000
+            Size.Width = 1285.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -663,7 +664,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               Align = Client
               Fill.Color = xFFF2F0F4
               Sides = [Top, Left, Right]
-              Size.Width = 1303.000000000000000000
+              Size.Width = 1285.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               object Label1: TLabel
@@ -686,8 +687,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Client
             Fill.Color = xFFF2F0F4
             Sides = [Left, Bottom, Right]
-            Size.Width = 1303.000000000000000000
-            Size.Height = 719.000000000000000000
+            Size.Width = 1285.000000000000000000
+            Size.Height = 694.000000000000000000
             Size.PlatformDefault = False
             object Rectangle3: TRectangle
               Align = Center
@@ -922,13 +923,14 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Cursor = crHandPoint
             Fill.Color = claWhite
             Position.X = 552.000000000000000000
-            Position.Y = 672.000000000000000000
+            Position.Y = 664.000000000000000000
             Size.Width = 225.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             Stroke.Thickness = 3.000000000000000000
             XRadius = 10.000000000000000000
             YRadius = 10.000000000000000000
+            OnClick = Rectangle21Click
             object Label17: TLabel
               Align = Center
               StyledSettings = [FontColor]
@@ -958,7 +960,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
           object ToolBar7: TToolBar
-            Size.Width = 1303.000000000000000000
+            Size.Width = 1285.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -966,7 +968,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               Align = Client
               Fill.Color = xFFF2F0F4
               Sides = [Top, Left, Right]
-              Size.Width = 1303.000000000000000000
+              Size.Width = 1285.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               object Label10: TLabel
@@ -989,8 +991,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Client
             Fill.Color = xFFF2F0F4
             Sides = [Left, Bottom, Right]
-            Size.Width = 1303.000000000000000000
-            Size.Height = 719.000000000000000000
+            Size.Width = 1285.000000000000000000
+            Size.Height = 694.000000000000000000
             Size.PlatformDefault = False
             object Rectangle16: TRectangle
               Align = Center
@@ -1215,7 +1217,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         item
         end>
       IsSelected = False
-      Size.Width = 325.000000000000000000
+      Size.Width = 320.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'tabitemcontacts'
@@ -1223,7 +1225,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       object ToolBar3: TToolBar
-        Size.Width = 1303.000000000000000000
+        Size.Width = 1285.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -1231,14 +1233,14 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           Align = Contents
           Fill.Color = xFFF2F0F4
           Sides = [Top, Left, Right]
-          Size.Width = 1303.000000000000000000
+          Size.Width = 1285.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           object TituloConsulta: TLabel
             Align = Fit
             StyledSettings = [FontColor]
-            Size.Width = 1303.000000000000000000
-            Size.Height = 47.634124755859380000
+            Size.Width = 1284.999755859375000000
+            Size.Height = 46.976043701171880000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1254,8 +1256,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Align = Client
         Fill.Color = xFFF2F0F4
         Sides = [Left, Bottom, Right]
-        Size.Width = 1303.000000000000000000
-        Size.Height = 719.000000000000000000
+        Size.Width = 1285.000000000000000000
+        Size.Height = 694.000000000000000000
         Size.PlatformDefault = False
       end
     end
@@ -1264,7 +1266,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         item
         end>
       IsSelected = False
-      Size.Width = 325.000000000000000000
+      Size.Width = 320.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'tabitemcontacts'
@@ -1272,7 +1274,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       object ToolBar4: TToolBar
-        Size.Width = 1303.000000000000000000
+        Size.Width = 1285.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -1280,14 +1282,14 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           Align = Contents
           Fill.Color = xFFF2F0F4
           Sides = [Top, Left, Right]
-          Size.Width = 1303.000000000000000000
+          Size.Width = 1285.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           object Label19: TLabel
             Align = Fit
             StyledSettings = [FontColor]
-            Size.Width = 1303.000000000000000000
-            Size.Height = 47.634124755859380000
+            Size.Width = 1284.999755859375000000
+            Size.Height = 46.976043701171880000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1303,8 +1305,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Align = Client
         Fill.Color = xFFF2F0F4
         Sides = [Left, Bottom, Right]
-        Size.Width = 1303.000000000000000000
-        Size.Height = 719.000000000000000000
+        Size.Width = 1285.000000000000000000
+        Size.Height = 694.000000000000000000
         Size.PlatformDefault = False
       end
     end
@@ -1313,7 +1315,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         item
         end>
       IsSelected = False
-      Size.Width = 326.000000000000000000
+      Size.Width = 323.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'tabitemcontacts'
@@ -1321,7 +1323,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       object ToolBar5: TToolBar
-        Size.Width = 1303.000000000000000000
+        Size.Width = 1285.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -1329,14 +1331,14 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           Align = Contents
           Fill.Color = xFFF2F0F4
           Sides = [Top, Left, Right]
-          Size.Width = 1303.000000000000000000
+          Size.Width = 1285.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           object Label20: TLabel
             Align = Fit
             StyledSettings = [FontColor]
-            Size.Width = 1303.000000000000000000
-            Size.Height = 47.634124755859380000
+            Size.Width = 1284.999755859375000000
+            Size.Height = 46.976043701171880000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1352,8 +1354,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Align = Client
         Fill.Color = xFFF2F0F4
         Sides = [Left, Bottom, Right]
-        Size.Width = 1303.000000000000000000
-        Size.Height = 719.000000000000000000
+        Size.Width = 1285.000000000000000000
+        Size.Height = 694.000000000000000000
         Size.PlatformDefault = False
       end
     end
@@ -1395,5 +1397,15 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       Category = 'Tab'
       TabControl = TabControl2
     end
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=SarsCov'
+      'User_Name=postgres'
+      'Password=masterkey'
+      'Port=5433'
+      'DriverID=PG')
+    Left = 30
+    Top = 63
   end
 end

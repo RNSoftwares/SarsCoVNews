@@ -50,7 +50,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Size.Height = 742.000000000000000000
         Size.PlatformDefault = False
         TabHeight = 49.000000000000000000
-        TabIndex = 2
+        TabIndex = 1
         TabOrder = 0
         TabPosition = Dots
         Sizes = (
@@ -325,7 +325,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = False
+          IsSelected = True
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -638,6 +638,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               TextSettings.HorzAlign = Center
               Text = 'Pr'#243'ximo'
               TabOrder = 0
+              OnClick = Label16Click
             end
           end
         end
@@ -645,7 +646,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = True
+          IsSelected = False
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -1238,8 +1239,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           object TituloConsulta: TLabel
             Align = Fit
             StyledSettings = [FontColor]
-            Size.Width = 1285.000000000000000000
-            Size.Height = 46.976013183593750000
+            Size.Width = 1284.999755859375000000
+            Size.Height = 46.976043701171880000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1287,8 +1288,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           object Label19: TLabel
             Align = Fit
             StyledSettings = [FontColor]
-            Size.Width = 1285.000000000000000000
-            Size.Height = 46.976013183593750000
+            Size.Width = 1284.999755859375000000
+            Size.Height = 46.976043701171880000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1336,8 +1337,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           object Label20: TLabel
             Align = Fit
             StyledSettings = [FontColor]
-            Size.Width = 1285.000000000000000000
-            Size.Height = 46.976013183593750000
+            Size.Width = 1284.999755859375000000
+            Size.Height = 46.976043701171880000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1396,5 +1397,15 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       Category = 'Tab'
       TabControl = TabControl2
     end
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=SarsCov'
+      'User_Name=postgres'
+      'Password=masterkey'
+      'Port=5433'
+      'DriverID=PG')
+    Left = 30
+    Top = 63
   end
 end
