@@ -10,7 +10,7 @@ uses
   FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
   FireDAC.Phys, FireDAC.Phys.PG, FireDAC.Phys.PGDef, FireDAC.FMXUI.Wait,
   Data.DB, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS,
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, Datasnap.DBClient;
 
 type
   TTabbedwithNavigationForm = class(TForm)
@@ -113,7 +113,7 @@ type
     Label17: TLabel;
     Rectangle22: TRectangle;
     Label18: TLabel;
-    Rectangle23: TRectangle;
+    RecConsulta: TRectangle;
     TituloConsulta: TLabel;
     Rectangle24: TRectangle;
     TabDuvidas: TTabItem;
@@ -130,6 +130,16 @@ type
     FDConnection1: TFDConnection;
     FDPhysPgDriverLink1: TFDPhysPgDriverLink;
     FDQuery1: TFDQuery;
+    RecMostrar: TRectangle;
+    SizeGrip1: TSizeGrip;
+    RecPesquisar: TRectangle;
+    Rectangle30: TRectangle;
+    Rectangle32: TRectangle;
+    Rectangle33: TRectangle;
+    Rectangle34: TRectangle;
+    Edit9: TEdit;
+    LblPesquisa: TLabel;
+    Label21: TLabel;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
@@ -192,6 +202,8 @@ begin
       end;
   end;
 end;
+
+
 
 procedure TTabbedwithNavigationForm.Label18Click(Sender: TObject);
 var

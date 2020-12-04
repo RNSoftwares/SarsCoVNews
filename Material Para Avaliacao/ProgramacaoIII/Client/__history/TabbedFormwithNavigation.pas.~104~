@@ -10,7 +10,7 @@ uses
   FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
   FireDAC.Phys, FireDAC.Phys.PG, FireDAC.Phys.PGDef, FireDAC.FMXUI.Wait,
   Data.DB, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS,
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, Datasnap.DBClient;
 
 type
   TTabbedwithNavigationForm = class(TForm)
@@ -113,7 +113,7 @@ type
     Label17: TLabel;
     Rectangle22: TRectangle;
     Label18: TLabel;
-    Rectangle23: TRectangle;
+    RecConsulta: TRectangle;
     TituloConsulta: TLabel;
     Rectangle24: TRectangle;
     TabDuvidas: TTabItem;
@@ -130,6 +130,12 @@ type
     FDConnection1: TFDConnection;
     FDPhysPgDriverLink1: TFDPhysPgDriverLink;
     FDQuery1: TFDQuery;
+    Rectangle23: TRectangle;
+    SizeGrip1: TSizeGrip;
+    Rectangle29: TRectangle;
+    Rectangle30: TRectangle;
+    Rectangle31: TRectangle;
+    Rectangle32: TRectangle;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
@@ -193,20 +199,30 @@ begin
   end;
 end;
 
+
+
 procedure TTabbedwithNavigationForm.Label18Click(Sender: TObject);
 var
   Query: TFDQuery;
 
 begin
     Query:= Query.Create(Self);
+    Query.Connection := TabbedwithNavigationForm.FDConnection1;
+    Query.Connection.Connected;
+    Query.Close;
+    Query.SQL.Clear;
     Query.Close;
     Query.SQL.Clear;
     Query.SQL.Add('INSERT INTO usuario');
-    Query.SQL.Add('nomusu, cpfusu, rgusu, idausu, altusu');
-    Query.SQL.Add('VALUES (:nome, :cpf, :rg, :idade, :altura)');
+    Query.SQL.Add('nomusu, cpfusu, rgusu, idausu, altusu, telusu, pesusu, tipsanusu, sexusu, ruausu, numusu, baiusu, idpai, idest, logace, cidusu');
+    Query.SQL.Add('VALUES (:nome, :cpf, :rg, :idade, :altura, :telefone, :peso, :tipsan, :sexo, :rua, :numrua, :bairro, 1, 1, 2828602, :cidade)');
     Query.ParamByName('idade').AsInteger := StrToInt(Edit4.Text);
     Query.ParamByName('altura').AsInteger := StrToInt(Edit5.Text);
+    Query.ParamByName('peso').AsFloat := StrToInt(Edit7.Text);
+    Query.ParamByName('numrua').AsInteger := StrToInt(Edit13.Text);
     Query.ExecSQL;
+
+    TabControl1.ActiveTab:= TabLoginCadastro;
 end;
 
 procedure TTabbedwithNavigationForm.Rectangle12Click(Sender: TObject);
@@ -217,16 +233,16 @@ begin
     rg:= Edit3.Text;
     idade:= StrToInt(Edit4.Text);
     altura:= StrToInt(Edit5.Text);
-
 end;
 
 procedure TTabbedwithNavigationForm.Rectangle21Click(Sender: TObject);
-
-
 begin
     TabControl2.ActiveTab := TabCadastro3;
 
-
+    telefone:= Edit6.Text;
+    peso:= StrToFloat(Edit7.Text);
+    tipsan:= Edit8.Text;
+    sexo:= 'M';
 end;
 
 end.

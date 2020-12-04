@@ -1202,6 +1202,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               TextSettings.HorzAlign = Center
               Text = 'Finalizar'
               TabOrder = 0
+              OnClick = Label18Click
             end
           end
           object RadioButton1: TRadioButton
@@ -1239,7 +1240,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1284.999755859375000000
-            Size.Height = 46.976028442382810000
+            Size.Height = 46.976043701171880000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1288,7 +1289,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1284.999755859375000000
-            Size.Height = 46.976028442382810000
+            Size.Height = 46.976043701171880000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1337,7 +1338,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1284.999755859375000000
-            Size.Height = 46.976028442382810000
+            Size.Height = 46.976043701171880000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1402,9 +1403,25 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       'Database=SarsCov'
       'User_Name=postgres'
       'Password=masterkey'
-      'Port=5433'
       'DriverID=PG')
+    Connected = True
+    LoginPrompt = False
     Left = 30
     Top = 63
+  end
+  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
+    VendorHome = 
+      'D:\Desenvolvimento\Projetos\SarsCoVNews\Material Para Avaliacao\' +
+      'ProgramacaoIII\Servidor\Win32\Debug'
+    Left = 34
+    Top = 255
+  end
+  object FDQuery1: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM usuario')
+    Left = 18
+    Top = 327
   end
 end
