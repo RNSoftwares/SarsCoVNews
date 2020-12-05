@@ -2,5 +2,9 @@
 <BorlandProject>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5" Android64="" Android=""/>
-	</ActiveMobileDevice>
+	</ActiveMobileDevice>  <Transactions>
+    <Transaction>2020/12/04 22:07:44.682,=D:\Desenvolvimento\Projetos\SarsCoVNews\Material Para Avaliacao\ProgramacaoIII\Client\Unit1.pas</Transaction>
+    <Transaction>2020/12/04 22:07:58.461,D:\Desenvolvimento\Projetos\SarsCoVNews\Material Para Avaliacao\ProgramacaoIII\Client\DMSarsCov.dfm=D:\Desenvolvimento\Projetos\SarsCoVNews\Material Para Avaliacao\ProgramacaoIII\Client\Unit1.dfm</Transaction>
+    <Transaction>2020/12/04 22:07:58.461,D:\Desenvolvimento\Projetos\SarsCoVNews\Material Para Avaliacao\ProgramacaoIII\Client\DMSarsCov.pas=D:\Desenvolvimento\Projetos\SarsCoVNews\Material Para Avaliacao\ProgramacaoIII\Client\Unit1.pas</Transaction>
+  </Transactions>
 </BorlandProject>

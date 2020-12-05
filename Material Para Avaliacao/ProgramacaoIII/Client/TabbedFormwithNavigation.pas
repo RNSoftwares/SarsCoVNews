@@ -127,9 +127,6 @@ type
     Label20: TLabel;
     Rectangle28: TRectangle;
     RadioButton1: TRadioButton;
-    FDConnection1: TFDConnection;
-    FDPhysPgDriverLink1: TFDPhysPgDriverLink;
-    FDQuery1: TFDQuery;
     RecMostrar: TRectangle;
     SizeGrip1: TSizeGrip;
     RecPesquisar: TRectangle;
@@ -140,12 +137,15 @@ type
     Edit9: TEdit;
     LblPesquisa: TLabel;
     Label21: TLabel;
+    Action1: TAction;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
     procedure Rectangle12Click(Sender: TObject);
     procedure Rectangle21Click(Sender: TObject);
-    procedure Label18Click(Sender: TObject);
+    procedure FormClose(Sender: TObject);
+    procedure RecLoginClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -155,13 +155,16 @@ type
 var
   TabbedwithNavigationForm: TTabbedwithNavigationForm;
   nome, cpf, rg, email, bairro, telefone, tipsan: String;
-  idade, numrua: integer;
-  peso, altura: real;
+  idade, numrua, altura: integer;
+  peso: real;
   sexo: char;
 
 implementation
 
 {$R *.fmx}
+
+uses DMSarsCov;
+
 {$R *.LgXhdpiTb.fmx ANDROID}
 {$R *.LgXhdpiPh.fmx ANDROID}
 {$R *.NmXhdpiPh.fmx ANDROID}
@@ -170,6 +173,12 @@ procedure TTabbedwithNavigationForm.FormCreate(Sender: TObject);
 begin
   { This defines the default active tab at runtime }
   TabControl1.ActiveTab := TabLoginCadastro;
+end;
+
+procedure TTabbedwithNavigationForm.FormShow(Sender: TObject);
+begin
+  DataModule1.FDConnection1.Connected:= TRUE;
+  DataModule1.FDQuery1.Active:= TRUE;
 end;
 
 procedure TTabbedwithNavigationForm.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
@@ -203,30 +212,28 @@ begin
   end;
 end;
 
-
-
-procedure TTabbedwithNavigationForm.Label18Click(Sender: TObject);
+procedure TTabbedwithNavigationForm.RecLoginClick(Sender: TObject);
 var
-  Query: TFDQuery;
+  login, senha: string;
 
 begin
-    Query:= Query.Create(Self);
-    Query.Connection := TabbedwithNavigationForm.FDConnection1;
-    Query.Connection.Connected;
-    Query.Close;
-    Query.SQL.Clear;
-    Query.Close;
-    Query.SQL.Clear;
-    Query.SQL.Add('INSERT INTO usuario');
-    Query.SQL.Add('nomusu, cpfusu, rgusu, idausu, altusu, telusu, pesusu, tipsanusu, sexusu, ruausu, numusu, baiusu, idpai, idest, logace, cidusu');
-    Query.SQL.Add('VALUES (:nome, :cpf, :rg, :idade, :altura, :telefone, :peso, :tipsan, :sexo, :rua, :numrua, :bairro, 1, 1, 2828602, :cidade)');
-    Query.ParamByName('idade').AsInteger := StrToInt(Edit4.Text);
-    Query.ParamByName('altura').AsInteger := StrToInt(Edit5.Text);
-    Query.ParamByName('peso').AsFloat := StrToInt(Edit7.Text);
-    Query.ParamByName('numrua').AsInteger := StrToInt(Edit13.Text);
-    Query.ExecSQL;
+  login:= EdtEmail.Text;
+  senha:= EdtSenha.Text;
 
-    TabControl1.ActiveTab:= TabLoginCadastro;
+  DataModule1.FDQuery1.Active:= false;
+  DataModule1.FDQuery1.SQL.Clear;
+  DataModule1.FDQuery1.SQL.Add('SELECT * FROM acesso WHERE logace = :login AND pasace = :senha');
+  DataModule1.FDQuery1.ParamByName('login').Value:= login;
+  DataModule1.FDQuery1.ParamByName('senha').Value:= senha;
+  DataModule1.FDQuery1.Active:= true;
+
+  if(DataModule1.FDQuery1.RecordCount>0)then
+    begin
+      showmessage('LOHGADO PORRA!!!!!!!!!');
+      TabControl1.ActiveTab:= TabConsultas;
+    end
+  else
+    TabControl2.ActiveTab:= TabCadastro;
 end;
 
 procedure TTabbedwithNavigationForm.Rectangle12Click(Sender: TObject);
@@ -247,6 +254,12 @@ begin
     peso:= StrToFloat(Edit7.Text);
     tipsan:= Edit8.Text;
     sexo:= 'M';
+end;
+
+procedure TTabbedwithNavigationForm.FormClose(Sender: TObject);
+begin
+  DataModule1.FDQuery1.Active:= FALSE;
+  DataModule1.FDConnection1.Connected:= FALSE;
 end;
 
 end.

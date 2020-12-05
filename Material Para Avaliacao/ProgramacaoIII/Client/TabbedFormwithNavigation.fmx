@@ -55,7 +55,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Size.Height = 742.000000000000000000
         Size.PlatformDefault = False
         TabHeight = 49.000000000000000000
-        TabIndex = 3
+        TabIndex = 0
         TabOrder = 0
         TabPosition = Dots
         Sizes = (
@@ -71,7 +71,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = False
+          IsSelected = True
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -273,6 +273,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Size.PlatformDefault = False
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
+                OnClick = RecLoginClick
                 object Label3: TLabel
                   Align = Center
                   StyledSettings = [FontColor]
@@ -954,7 +955,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = True
+          IsSelected = False
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -1209,7 +1210,6 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 TextSettings.HorzAlign = Center
                 Text = 'Finalizar'
                 TabOrder = 0
-                OnClick = Label18Click
               end
             end
           end
@@ -1253,7 +1253,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1284.999755859375000000
-            Size.Height = 46.976074218750000000
+            Size.Height = 46.976089477539060000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1398,7 +1398,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1284.999755859375000000
-            Size.Height = 46.976074218750000000
+            Size.Height = 46.976089477539060000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1452,7 +1452,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1284.999755859375000000
-            Size.Height = 46.976074218750000000
+            Size.Height = 46.976089477539060000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1476,8 +1476,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
   end
   object GestureManager1: TGestureManager
     Sensitivity = 80.000000000000000000
-    Left = 88
-    Top = 9
+    Left = 80
+    Top = 241
     GestureData = <
       item
         Control = TabControl1
@@ -1501,8 +1501,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       end>
   end
   object ActionList1: TActionList
-    Left = 48
-    Top = 8
+    Left = 264
+    Top = 256
     object NextTabAction1: TNextTabAction
       Category = 'Tab'
       TabControl = TabControl2
@@ -1511,29 +1511,9 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       Category = 'Tab'
       TabControl = TabControl2
     end
-  end
-  object FDConnection1: TFDConnection
-    Params.Strings = (
-      'Database=SarsCov'
-      'User_Name=postgres'
-      'Password=masterkey'
-      'DriverID=PG')
-    LoginPrompt = False
-    Left = 6
-    Top = 7
-  end
-  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
-    VendorHome = 
-      'D:\Desenvolvimento\Projetos\SarsCoVNews\Material Para Avaliacao\' +
-      'ProgramacaoIII\Servidor\Win32\Debug'
-    Left = 130
-    Top = 7
-  end
-  object FDQuery1: TFDQuery
-    Connection = FDConnection1
-    SQL.Strings = (
-      'SELECT * FROM usuario')
-    Left = 186
-    Top = 15
+    object Action1: TAction
+      Category = 'Tab'
+      Text = 'Action1'
+    end
   end
 end

@@ -15,6 +15,7 @@ inherited TabbedwithNavigationForm_NmXhdpiPh: TTabbedwithNavigationForm_NmXhdpiP
       400s
       566s)
     inherited TabLoginCadastro: TTabItem
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
       Size.Width = 100.000000000000000000
       ExplicitSize.cx = 101.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
@@ -267,16 +268,19 @@ inherited TabbedwithNavigationForm_NmXhdpiPh: TTabbedwithNavigationForm_NmXhdpiP
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
               end
             end
-          end
-          inherited Rectangle22: TRectangle
-            inherited Label18: TLabel
-              TextSettings.Font.StyleExt = {00070000000000000004000000}
+            inherited Rectangle22: TRectangle
+              Position.Y = 468.000000000000000000
+              Size.Width = 0.000000000000000000
+              inherited Label18: TLabel
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
             end
           end
         end
       end
     end
     inherited TabConsultas: TTabItem
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
       Size.Width = 100.000000000000000000
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
@@ -291,12 +295,21 @@ inherited TabbedwithNavigationForm_NmXhdpiPh: TTabbedwithNavigationForm_NmXhdpiP
           end
         end
       end
-      inherited Rectangle23: TRectangle
+      inherited RecConsulta: TRectangle
         Size.Width = 400.000000000000000000
         Size.Height = 518.000000000000000000
+        inherited LblPesquisa: TLabel
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited RecPesquisar: TRectangle
+        inherited Label21: TLabel
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
       end
     end
     inherited TabDuvidas: TTabItem
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
       Size.Width = 100.000000000000000000
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
@@ -317,6 +330,7 @@ inherited TabbedwithNavigationForm_NmXhdpiPh: TTabbedwithNavigationForm_NmXhdpiP
       end
     end
     inherited TabSintomas: TTabItem
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
       Size.Width = 100.000000000000000000
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000

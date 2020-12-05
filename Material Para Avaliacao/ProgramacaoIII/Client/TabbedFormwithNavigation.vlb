@@ -42,7 +42,7 @@ Coordinates=171,78,67,36
 Coordinates=10,78,61,58
 
 []
-Coordinates=1163,111,91,36
+Coordinates=1163,1,104,36
 
 [topo]
 Coordinates=81,78,40,36
@@ -332,9 +332,6 @@ Coordinates=0,559,87,36
 
 [Email]
 Coordinates=567,463,47,58
-
-[FDConnection1]
-Coordinates=1163,1,104,36
 
 [Label6]
 Coordinates=26,499,53,58
