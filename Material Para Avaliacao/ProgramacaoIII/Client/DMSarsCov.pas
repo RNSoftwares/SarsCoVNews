@@ -14,8 +14,34 @@ type
     TDataModule1 = class(TDataModule)
     FDConnection1: TFDConnection;
     FDPhysPgDriverLink1: TFDPhysPgDriverLink;
-    FDQuery1: TFDQuery;
+    FDQacesso: TFDQuery;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    FDQusuario: TFDQuery;
+    FDQcidade: TFDQuery;
+    FDQacessologace: TWideStringField;
+    FDQacessopasace: TWideStringField;
+    FDQacessohinace: TWideStringField;
+    FDQacessonivace: TIntegerField;
+    FDQcidadecodcid: TIntegerField;
+    FDQcidadenomcid: TWideStringField;
+    FDQcidadeidest: TIntegerField;
+    FDQusuarioidusu: TIntegerField;
+    FDQusuarionomusu: TWideStringField;
+    FDQusuariocpfusu: TWideStringField;
+    FDQusuariorgusu: TWideStringField;
+    FDQusuarioidausu: TIntegerField;
+    FDQusuarioaltusu: TFloatField;
+    FDQusuariotelusu: TWideStringField;
+    FDQusuariopesusu: TFloatField;
+    FDQusuariotipsanusu: TWideStringField;
+    FDQusuariosexusu: TWideStringField;
+    FDQusuarioruausu: TWideStringField;
+    FDQusuarionumusu: TIntegerField;
+    FDQusuariobaiusu: TWideStringField;
+    FDQusuariocidusu: TWideStringField;
+    FDQusuarioidpai: TIntegerField;
+    FDQusuarioidest: TIntegerField;
+    FDQusuariologace: TWideStringField;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

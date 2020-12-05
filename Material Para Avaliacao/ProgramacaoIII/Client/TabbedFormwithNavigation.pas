@@ -33,17 +33,15 @@ type
     PreviousTabAction1: TPreviousTabAction;
     topo: TRectangle;
     corpo: TRectangle;
-    Siz: TRectangle;
+    CorpoLogin: TRectangle;
     SarsCovOpaco: TLabel;
     RNSoftwares: TLabel;
     RecEmail: TRectangle;
-    RecSenha: TRectangle;
-    Email: TLabel;
-    Label2: TLabel;
-    Senha: TLabel;
+    lblEmailLogin: TLabel;
+    lblLogin: TLabel;
+    lblSenhaLogin: TLabel;
     RecLogin: TRectangle;
     EdtEmail: TEdit;
-    EdtSenha: TEdit;
     RecEsqueciSenha: TRectangle;
     LblEsqueciSenha: TLabel;
     Label3: TLabel;
@@ -139,6 +137,9 @@ type
     EdtBairro: TEdit;
     EdtSenhaCadastro: TEdit;
     RecFinalizar: TRectangle;
+    RecSenha: TRectangle;
+    EdtSenha: TEdit;
+    Label2: TLabel;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -180,7 +181,9 @@ end;
 procedure TTabbedwithNavigationForm.FormShow(Sender: TObject);
 begin
   DataModule1.FDConnection1.Connected:= TRUE;
-  DataModule1.FDQuery1.Active:= TRUE;
+  DataModule1.FDQacesso.Active:= TRUE;
+  DataModule1.FDQusuario.Active:= TRUE;
+  DataModule1.FDQcidade.Active:= TRUE;
 end;
 
 procedure TTabbedwithNavigationForm.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
@@ -219,14 +222,14 @@ begin
   login:= EdtEmail.Text;
   senha:= EdtSenha.Text;
 
-  DataModule1.FDQuery1.Active:= false;
-  DataModule1.FDQuery1.SQL.Clear;
-  DataModule1.FDQuery1.SQL.Add('SELECT * FROM acesso WHERE logace = :login AND pasace = :senha');
-  DataModule1.FDQuery1.ParamByName('login').Value:= login;
-  DataModule1.FDQuery1.ParamByName('senha').Value:= senha;
-  DataModule1.FDQuery1.Active:= true;
+  DataModule1.FDQacesso.Active:= false;
+  DataModule1.FDQacesso.SQL.Clear;
+  DataModule1.FDQacesso.SQL.Add('SELECT * FROM acesso WHERE logace = :login AND pasace = :senha');
+  DataModule1.FDQacesso.ParamByName('login').Value:= login;
+  DataModule1.FDQacesso.ParamByName('senha').Value:= senha;
+  DataModule1.FDQacesso.Active:= true;
 
-  if(DataModule1.FDQuery1.RecordCount>0)then
+  if(DataModule1.FDQacesso.RecordCount>0)then
     begin
       TabControl1.ActiveTab:= TabConsultas;
     end
@@ -261,42 +264,54 @@ begin
   numrua:= StrToInt(edtNumero.Text);
   bairro:= edtBairro.Text;
   senhaCadastro:= edtSenhaCadastro.Text;
-  nivace:= 5;
+  nivace:= 1;
 
-  DataModule1.FDQuery1.Active:= false;
-  DataModule1.FDQuery1.SQL.Clear;
-  DataModule1.FDQuery1.SQL.Add('INSERT INTO acesso (logace, pasace)');
-  DataModule1.FDQuery1.SQL.Add('VALUES (:login, :emailCadastro)');
-  DataModule1.FDQuery1.ParamByName('login').Value:= login;
-  DataModule1.FDQuery1.ParamByName('emailCadastro').Value:= emailCadastro;
-  DataModule1.FDQuery1.SQL.Add('INSERT INTO usuario (nomusu, cpfusu, rgusu, idausu, altusu, telusu, pesusu, tipsanusu, sexusu, ruausu, numusu, baiusu');
-  DataModule1.FDQuery1.SQL.Add('VALUES (:nome, :cpf, :rg, :idade, :altura, :telefone, :peso, :tipsan, :sexo, :rua, :numrua, :bairro');
-  DataModule1.FDQuery1.ParamByName('nome').Value:= nome;
-  DataModule1.FDQuery1.ParamByName('cpf').Value:= cpf;
-  DataModule1.FDQuery1.ParamByName('rg').Value:= rg;
-  DataModule1.FDQuery1.ParamByName('idade').Value:= idade;
-  DataModule1.FDQuery1.ParamByName('altura').Value:= altura;
-  DataModule1.FDQuery1.ParamByName('telefone').Value:= telefone;
-  DataModule1.FDQuery1.ParamByName('peso').Value:= peso;
-  DataModule1.FDQuery1.ParamByName('tipsan').Value:= tipsan;
-  DataModule1.FDQuery1.ParamByName('sexo').Value:= sexo;
-  DataModule1.FDQuery1.ParamByName('rua').Value:= rua;
-  DataModule1.FDQuery1.ParamByName('numrua').Value:= numrua;
-  DataModule1.FDQuery1.ParamByName('bairro').Value:= bairro;
-  DataModule1.FDQuery1.SQL.Add('INSERT INTO cidade (nomcid)');
-  DataModule1.FDQuery1.SQL.Add('VALUES (:cidade)');
-  DataModule1.FDQuery1.ParamByName('cidade').Value:= cidade;
-  DataModule1.FDQuery1.SQL.Add('INSERT INTO acesso (logace, pasace, nivace)');
-  DataModule1.FDQuery1.SQL.Add('VALUES (:emailCadastro, :senhaCadastro, :nivace)');
-  DataModule1.FDQuery1.ParamByName('emailCadastro').Value:= emailCadastro;
-  DataModule1.FDQuery1.ParamByName('senhaCadastro').Value:= senhaCadastro;
-  DataModule1.FDQuery1.ParamByName('nivace').Value:= nivace;
-  DataModule1.FDQuery1.Active:= true;
+
+
+  DataModule1.FDQusuario.SQL.Clear;
+  DataModule1.FDQusuario.SQL.Add('INSERT INTO usuario');
+  DataModule1.FDQusuario.SQL.Add('(nomusu, cpfusu, rgusu, idausu, altusu, telusu, pesusu, tipsanusu, sexusu, ruausu, numusu, baiusu)');
+  DataModule1.FDQusuario.SQL.Add('VALUES (:nome, :cpf, :rg, :idade, :altura, :telefone, :peso, :tipsan, :sexo, :rua, :numrua, :bairro)');
+  DataModule1.FDQusuario.ParamByName('nome').Value:= nome;
+  DataModule1.FDQusuario.ParamByName('cpf').Value:= cpf;
+  DataModule1.FDQusuario.ParamByName('rg').Value:= rg;
+  DataModule1.FDQusuario.ParamByName('idade').Value:= idade;
+  DataModule1.FDQusuario.ParamByName('altura').Value:= altura;
+  DataModule1.FDQusuario.ParamByName('telefone').Value:= telefone;
+  DataModule1.FDQusuario.ParamByName('peso').Value:= peso;
+  DataModule1.FDQusuario.ParamByName('tipsan').Value:= tipsan;
+  DataModule1.FDQusuario.ParamByName('sexo').Value:= sexo;
+  DataModule1.FDQusuario.ParamByName('rua').Value:= rua;
+  DataModule1.FDQusuario.ParamByName('numrua').Value:= numrua;
+  DataModule1.FDQusuario.ParamByName('bairro').Value:= bairro;
+  DataModule1.FDQusuario.ExecSQL;
+
+  DataModule1.FDQacesso.SQL.Clear;
+  DataModule1.FDQacesso.SQL.Add('INSERT INTO acesso');
+  DataModule1.FDQacesso.SQL.Add('(logace, pasace, nivace)');
+  DataModule1.FDQacesso.SQL.Add('VALUES (:emailCadastro, :senhaCadastro, :nivace)');
+  DataModule1.FDQacesso.ParamByName('emailCadastro').Value := emailCadastro;
+  DataModule1.FDQacesso.ParamByName('senhaCadastro').Value := senhaCadastro;
+  DataModule1.FDQacesso.ParamByName('nivace').Value := nivace;
+  DataModule1.FDQacesso.ExecSQL;
+
+  DataModule1.FDQcidade.SQL.Clear;
+  DataModule1.FDQcidade.SQL.Add('INSERT INTO cidade');
+  DataModule1.FDQcidade.SQL.Add('(nomcid)');
+  DataModule1.FDQcidade.SQL.Add('VALUES (:cidade)');
+  DataModule1.FDQcidade.ParamByName('cidade').Value := cidade;
+  DataModule1.FDQacesso.ExecSQL;
+
+
+   TabControl2.ActiveTab := Tablogin;
+   showmessage('Cadastro realizado com sucesso');
 end;
 
 procedure TTabbedwithNavigationForm.FormClose(Sender: TObject);
 begin
-  DataModule1.FDQuery1.Active:= FALSE;
+  DataModule1.FDQacesso.Active:= FALSE;
+  DataModule1.FDQusuario.Active:= FALSE;
+  DataModule1.FDQcidade.Active:= FALSE;
   DataModule1.FDConnection1.Connected:= FALSE;
 end;
 

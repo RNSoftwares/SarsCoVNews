@@ -42,7 +42,7 @@ Coordinates=171,78,67,36
 Coordinates=10,78,61,58
 
 []
-Coordinates=1005,1,96,36
+Coordinates=669,386,74,36
 
 [topo]
 Coordinates=81,78,40,36
@@ -82,9 +82,6 @@ Coordinates=726,342,67,36
 
 [CheckBox1]
 Coordinates=272,328,80,58
-
-[RecSenha]
-Coordinates=669,386,74,36
 
 [TabSintomas]
 Coordinates=865,1,90,36
@@ -126,20 +123,11 @@ Coordinates=1005,496,120,36
 [Rectangle23]
 Coordinates=1005,551,87,36
 
-[Senha]
-Coordinates=429,298,51,58
-
 [Label3]
 Coordinates=508,499,53,58
 
 [Label19]
 Coordinates=500,276,60,58
-
-[Siz]
-Coordinates=469,461,40,36
-
-[Label2]
-Coordinates=85,499,53,58
 
 [EdtEmail]
 Coordinates=45,365,66,58
@@ -168,9 +156,6 @@ Coordinates=410,365,51,58
 [Label1]
 Coordinates=114,365,53,58
 
-[EdtSenha]
-Coordinates=567,386,71,58
-
 [Rectangle2]
 Coordinates=452,595,80,36
 
@@ -185,9 +170,6 @@ Coordinates=185,595,83,36
 
 [LblCadastro]
 Coordinates=726,1,84,58
-
-[Email]
-Coordinates=567,463,47,58
 
 [TituloConsulta]
 Coordinates=173,328,97,58
@@ -275,4 +257,16 @@ Coordinates=865,111,87,36
 
 [EdtEmailCadastro]
 Coordinates=163,78,51,58
+
+[CorpoLogin]
+Coordinates=469,461,40,36
+
+[lblLogin]
+Coordinates=85,499,53,58
+
+[lblEmailLogin]
+Coordinates=567,463,47,58
+
+[lblSenhaLogin]
+Coordinates=429,298,51,58
 
