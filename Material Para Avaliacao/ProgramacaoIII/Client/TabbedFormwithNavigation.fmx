@@ -55,7 +55,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Size.Height = 742.000000000000000000
         Size.PlatformDefault = False
         TabHeight = 49.000000000000000000
-        TabIndex = 2
+        TabIndex = 0
         TabOrder = 0
         TabPosition = Dots
         Sizes = (
@@ -71,7 +71,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = False
+          IsSelected = True
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -245,7 +245,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 TextSettings.Font.Family = 'Roboto'
                 TextSettings.Font.Size = 15.000000000000000000
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
-                Text = 'Nome Completo'
+                Text = 'E-Mail'
                 TabOrder = 3
               end
               object Senha: TLabel
@@ -653,7 +653,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = True
+          IsSelected = False
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -1229,30 +1229,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             end
           end
           object RecFinalizar: TRectangle
-            Cursor = crHandPoint
-            Fill.Color = claWhite
-            Position.X = 528.000000000000000000
-            Position.Y = 656.000000000000000000
-            Size.Width = 225.000000000000000000
+            Position.X = 480.000000000000000000
+            Position.Y = 664.000000000000000000
+            Size.Width = 273.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
-            Stroke.Thickness = 3.000000000000000000
-            XRadius = 10.000000000000000000
-            YRadius = 10.000000000000000000
-            OnClick = RecProximo2Click
-            object LblFinalizar: TLabel
-              Align = Center
-              StyledSettings = [FontColor]
-              Size.Width = 174.000000000000000000
-              Size.Height = 29.000000000000000000
-              Size.PlatformDefault = False
-              TextSettings.Font.Family = 'Roboto'
-              TextSettings.Font.Size = 25.000000000000000000
-              TextSettings.Font.StyleExt = {00070000000000000004000000}
-              TextSettings.HorzAlign = Center
-              Text = 'Finalizar'
-              TabOrder = 0
-            end
+            OnClick = RecFinalizarClick
           end
         end
       end

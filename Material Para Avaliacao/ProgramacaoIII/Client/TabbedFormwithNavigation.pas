@@ -134,12 +134,11 @@ type
     LblNumero: TLabel;
     LblBairro: TLabel;
     LblSenha: TLabel;
-    RecFinalizar: TRectangle;
-    LblFinalizar: TLabel;
     RecBairro: TRectangle;
     RecSenhaCadastro: TRectangle;
     EdtBairro: TEdit;
     EdtSenhaCadastro: TEdit;
+    RecFinalizar: TRectangle;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -148,6 +147,7 @@ type
     procedure RecProximo2Click(Sender: TObject);
     procedure FormClose(Sender: TObject);
     procedure RecLoginClick(Sender: TObject);
+    procedure RecFinalizarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -156,8 +156,8 @@ type
 
 var
   TabbedwithNavigationForm: TTabbedwithNavigationForm;
-  nome, cpf, rg, email, bairro, telefone, tipsan: String;
-  idade, numrua, altura: integer;
+  nome, cpf, rg, email, bairro, telefone, tipsan, rua, cidade, senha, senhaCadastro, login, emailCadastro: String;
+  idade, numrua, altura, nivace: integer;
   peso: real;
   sexo: char;
 
@@ -215,9 +215,6 @@ begin
 end;
 
 procedure TTabbedwithNavigationForm.RecLoginClick(Sender: TObject);
-var
-  login, senha: string;
-
 begin
   login:= EdtEmail.Text;
   senha:= EdtSenha.Text;
@@ -239,22 +236,62 @@ end;
 
 procedure TTabbedwithNavigationForm.RecProximo1Click(Sender: TObject);
 begin
-    TabControl2.ActiveTab := TabCadastro2;
     nome:= EdtNome.Text;
     cpf:= EdtCPF.Text;
     rg:= EdtRG.Text;
     idade:= StrToInt(EdtIdade.Text);
     altura:= StrToInt(EdtAltura.Text);
+    TabControl2.ActiveTab := TabCadastro2;
 end;
 
 procedure TTabbedwithNavigationForm.RecProximo2Click(Sender: TObject);
 begin
-    TabControl2.ActiveTab := TabCadastro3;
-
     telefone:= EdtCelular.Text;
     peso:= StrToFloat(EdtPeso.Text);
     tipsan:= EdtSangue.Text;
     sexo:= 'M';
+    emailCadastro:= edtEmailCadastro.Text;
+    TabControl2.ActiveTab := TabCadastro3;
+end;
+
+procedure TTabbedwithNavigationForm.RecFinalizarClick(Sender: TObject);
+begin
+  cidade:= EdtCidade.Text;
+  rua:= edtRua.Text;
+  numrua:= StrToInt(edtNumero.Text);
+  bairro:= edtBairro.Text;
+  senhaCadastro:= edtSenhaCadastro.Text;
+  nivace:= 5;
+
+  DataModule1.FDQuery1.Active:= false;
+  DataModule1.FDQuery1.SQL.Clear;
+  DataModule1.FDQuery1.SQL.Add('INSERT INTO acesso (logace, pasace)');
+  DataModule1.FDQuery1.SQL.Add('VALUES (:login, :emailCadastro)');
+  DataModule1.FDQuery1.ParamByName('login').Value:= login;
+  DataModule1.FDQuery1.ParamByName('emailCadastro').Value:= emailCadastro;
+  DataModule1.FDQuery1.SQL.Add('INSERT INTO usuario (nomusu, cpfusu, rgusu, idausu, altusu, telusu, pesusu, tipsanusu, sexusu, ruausu, numusu, baiusu');
+  DataModule1.FDQuery1.SQL.Add('VALUES (:nome, :cpf, :rg, :idade, :altura, :telefone, :peso, :tipsan, :sexo, :rua, :numrua, :bairro');
+  DataModule1.FDQuery1.ParamByName('nome').Value:= nome;
+  DataModule1.FDQuery1.ParamByName('cpf').Value:= cpf;
+  DataModule1.FDQuery1.ParamByName('rg').Value:= rg;
+  DataModule1.FDQuery1.ParamByName('idade').Value:= idade;
+  DataModule1.FDQuery1.ParamByName('altura').Value:= altura;
+  DataModule1.FDQuery1.ParamByName('telefone').Value:= telefone;
+  DataModule1.FDQuery1.ParamByName('peso').Value:= peso;
+  DataModule1.FDQuery1.ParamByName('tipsan').Value:= tipsan;
+  DataModule1.FDQuery1.ParamByName('sexo').Value:= sexo;
+  DataModule1.FDQuery1.ParamByName('rua').Value:= rua;
+  DataModule1.FDQuery1.ParamByName('numrua').Value:= numrua;
+  DataModule1.FDQuery1.ParamByName('bairro').Value:= bairro;
+  DataModule1.FDQuery1.SQL.Add('INSERT INTO cidade (nomcid)');
+  DataModule1.FDQuery1.SQL.Add('VALUES (:cidade)');
+  DataModule1.FDQuery1.ParamByName('cidade').Value:= cidade;
+  DataModule1.FDQuery1.SQL.Add('INSERT INTO acesso (logace, pasace, nivace)');
+  DataModule1.FDQuery1.SQL.Add('VALUES (:emailCadastro, :senhaCadastro, :nivace)');
+  DataModule1.FDQuery1.ParamByName('emailCadastro').Value:= emailCadastro;
+  DataModule1.FDQuery1.ParamByName('senhaCadastro').Value:= senhaCadastro;
+  DataModule1.FDQuery1.ParamByName('nivace').Value:= nivace;
+  DataModule1.FDQuery1.Active:= true;
 end;
 
 procedure TTabbedwithNavigationForm.FormClose(Sender: TObject);
@@ -264,4 +301,3 @@ begin
 end;
 
 end.
-

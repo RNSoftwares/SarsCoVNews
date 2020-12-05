@@ -8,7 +8,6 @@ object DataModule1: TDataModule1
       'Database=sarscov'
       'User_Name=postgres'
       'Password=masterkey'
-      'Port=5433'
       'DriverID=PG')
     LoginPrompt = False
     Left = 72
@@ -16,8 +15,8 @@ object DataModule1: TDataModule1
   end
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
     VendorHome = 
-      'E:\'#193'rea de Trabalho\SarsCoVNews\Material Para Avaliacao\Programa' +
-      'caoIII\Client\Win32\Debug'
+      'D:\Desenvolvimento\Projetos\SarsCoVNews\Material Para Avaliacao\' +
+      'ProgramacaoIII\Client\Win32\Debug'
     Left = 208
     Top = 48
   end
