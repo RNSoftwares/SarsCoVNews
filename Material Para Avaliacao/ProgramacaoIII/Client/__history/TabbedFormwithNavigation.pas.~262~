@@ -139,6 +139,7 @@ type
     RecFinalizar: TRectangle;
     RecSenha: TRectangle;
     EdtSenha: TEdit;
+    Label2: TLabel;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -157,7 +158,7 @@ type
 var
   TabbedwithNavigationForm: TTabbedwithNavigationForm;
   nome, cpf, rg, email, bairro, telefone, tipsan, rua, cidade, senha, senhaCadastro, login, emailCadastro: String;
-  idade, numrua, altura: integer;
+  idade, numrua, altura, nivace: integer;
   peso: real;
   sexo: char;
 
@@ -263,6 +264,7 @@ begin
   numrua:= StrToInt(edtNumero.Text);
   bairro:= edtBairro.Text;
   senhaCadastro:= edtSenhaCadastro.Text;
+  nivace:= 1;
 
 
 
@@ -284,14 +286,25 @@ begin
   DataModule1.FDQusuario.ParamByName('bairro').Value:= bairro;
   DataModule1.FDQusuario.ExecSQL;
 
+  DataModule1.FDQcidade.SQL.Clear;
+  DataModule1.FDQcidade.SQL.Add('INSERT INTO cidade');
+  DataModule1.FDQcidade.SQL.Add('(nomcid)');
+  DataModule1.FDQcidade.SQL.Add('VALUES (:cidade)');
+  DataModule1.FDQcidade.ParamByName('cidade').Value := cidade;
+  DataModule1.FDQcidade.ExecSQL;
+
   DataModule1.FDQacesso.SQL.Clear;
   DataModule1.FDQacesso.SQL.Add('INSERT INTO acesso');
-  DataModule1.FDQacesso.SQL.Add('(logace, pasace)');
-  DataModule1.FDQacesso.SQL.Add('VALUES (:emailCadastro, :senhaCadastro)');
+  DataModule1.FDQacesso.SQL.Add('(logace, pasace, nivace)');
+  DataModule1.FDQacesso.SQL.Add('VALUES (:emailCadastro, :senhaCadastro, :nivace)');
   DataModule1.FDQacesso.ParamByName('emailCadastro').Value := emailCadastro;
   DataModule1.FDQacesso.ParamByName('senhaCadastro').Value := senhaCadastro;
+  DataModule1.FDQacesso.ParamByName('nivace').Value := nivace;
   DataModule1.FDQacesso.ExecSQL;
 
+
+   TabControl2.ActiveTab := Tablogin;
+   showmessage('Cadastro realizado com sucesso');
 end;
 
 procedure TTabbedwithNavigationForm.FormClose(Sender: TObject);

@@ -301,9 +301,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
                   Password = True
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [FontColor]
                 end
               end
             end
@@ -1263,6 +1266,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  Password = True
                   TextSettings.Font.Family = 'Roboto'
                   TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
@@ -1338,7 +1342,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1238.000000000000000000
-            Size.Height = 45.257064819335940000
+            Size.Height = 45.257072448730470000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1483,7 +1487,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1238.000000000000000000
-            Size.Height = 45.257064819335940000
+            Size.Height = 45.257072448730470000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1537,7 +1541,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1238.000000000000000000
-            Size.Height = 45.257064819335940000
+            Size.Height = 45.257072448730470000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
