@@ -184,7 +184,7 @@ COMMENT ON COLUMN usuario.sexusu IS 'Sexo do usuário';
 COMMENT ON COLUMN usuario.ruausu IS 'Rua usuario/paciente';
 COMMENT ON COLUMN usuario.numusu IS 'Número casa usuário/paciente';
 COMMENT ON COLUMN usuario.baiusu IS 'Bairro do usuário';
-COOMENT ON COLUMN usuario.cidusu IS 'Cidade do usuário';
+COMMENT ON COLUMN usuario.cidusu IS 'Cidade do usuário';
 COMMENT ON COLUMN usuario.idpai IS 'Código de identificação do pais';
 COMMENT ON COLUMN usuario.idest IS 'Código de identificação do estado';
 COMMENT ON COLUMN usuario.logace IS 'Login do usuario';

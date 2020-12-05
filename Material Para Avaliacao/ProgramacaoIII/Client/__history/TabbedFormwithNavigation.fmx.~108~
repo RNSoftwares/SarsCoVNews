@@ -273,6 +273,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Size.PlatformDefault = False
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
+                OnClick = RecLoginClick
                 object Label3: TLabel
                   Align = Center
                   StyledSettings = [FontColor]
@@ -1209,7 +1210,6 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 TextSettings.HorzAlign = Center
                 Text = 'Finalizar'
                 TabOrder = 0
-                OnClick = Label18Click
               end
             end
           end
@@ -1510,6 +1510,10 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
     object PreviousTabAction1: TPreviousTabAction
       Category = 'Tab'
       TabControl = TabControl2
+    end
+    object Action1: TAction
+      Category = 'Tab'
+      Text = 'Action1'
     end
   end
 end

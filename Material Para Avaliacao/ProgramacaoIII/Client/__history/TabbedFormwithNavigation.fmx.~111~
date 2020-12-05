@@ -55,7 +55,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Size.Height = 742.000000000000000000
         Size.PlatformDefault = False
         TabHeight = 49.000000000000000000
-        TabIndex = 3
+        TabIndex = 2
         TabOrder = 0
         TabPosition = Dots
         Sizes = (
@@ -177,7 +177,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
                   Password = True
-                  TextSettings.Font.Size = 15.000000000000000000
+                  TextSettings.Font.Size = 25.000000000000000000
                   Locked = True
                   Margins.Left = 7.000000000000000000
                   Margins.Right = 7.000000000000000000
@@ -206,11 +206,13 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
                   KeyboardType = EmailAddress
+                  TextSettings.Font.Size = 25.000000000000000000
                   Margins.Left = 7.000000000000000000
                   Margins.Right = 7.000000000000000000
                   Size.Width = 501.000000000000000000
                   Size.Height = 53.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
                 end
               end
               object Label2: TLabel
@@ -243,7 +245,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 TextSettings.Font.Family = 'Roboto'
                 TextSettings.Font.Size = 15.000000000000000000
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
-                Text = 'E-mail'
+                Text = 'Nome Completo'
                 TabOrder = 3
               end
               object Senha: TLabel
@@ -273,6 +275,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Size.PlatformDefault = False
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
+                OnClick = RecLoginClick
                 object Label3: TLabel
                   Align = Center
                   StyledSettings = [FontColor]
@@ -433,7 +436,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'Nome Completo'
                 TabOrder = 1
               end
-              object Rectangle4: TRectangle
+              object RecNome: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -447,7 +450,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit1: TEdit
+                object EdtNome: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -457,7 +460,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
-              object Rectangle5: TRectangle
+              object RecCPF: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -471,7 +474,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit2: TEdit
+                object EdtCPF: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -481,7 +484,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
-              object Rectangle6: TRectangle
+              object RecRG: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -495,7 +498,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit3: TEdit
+                object EdtRG: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -505,7 +508,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
-              object Rectangle7: TRectangle
+              object RecIdade: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -519,7 +522,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit4: TEdit
+                object EdtIdade: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -577,7 +580,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'Idade'
                 TabOrder = 8
               end
-              object Rectangle8: TRectangle
+              object RecAltura: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -591,7 +594,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit5: TEdit
+                object EdtAltura: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -619,7 +622,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               end
             end
           end
-          object Rectangle12: TRectangle
+          object RecProximo1: TRectangle
             Cursor = crHandPoint
             Fill.Color = claWhite
             Position.X = 528.000000000000000000
@@ -630,8 +633,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Stroke.Thickness = 3.000000000000000000
             XRadius = 10.000000000000000000
             YRadius = 10.000000000000000000
-            OnClick = Rectangle12Click
-            object Label16: TLabel
+            OnClick = RecProximo1Click
+            object LblProximo: TLabel
               Align = Center
               StyledSettings = [FontColor]
               Size.Width = 174.000000000000000000
@@ -650,7 +653,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = False
+          IsSelected = True
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -703,7 +706,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               Stroke.Thickness = 6.000000000000000000
               XRadius = 20.000000000000000000
               YRadius = 20.000000000000000000
-              object Label4: TLabel
+              object LblCadastro2: TLabel
                 Align = Top
                 StyledSettings = [FontColor]
                 Margins.Left = 20.000000000000000000
@@ -721,7 +724,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'Cadastro'
                 TabOrder = 0
               end
-              object Label5: TLabel
+              object LblCelular: TLabel
                 Align = Top
                 StyledSettings = [FontColor]
                 Margins.Left = 20.000000000000000000
@@ -737,7 +740,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'Telefone/Celular'
                 TabOrder = 1
               end
-              object Rectangle9: TRectangle
+              object RecCelular: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -751,7 +754,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit6: TEdit
+                object EdtCelular: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -761,7 +764,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
-              object Rectangle10: TRectangle
+              object RecPeso: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -775,7 +778,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit7: TEdit
+                object EdtPeso: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -785,7 +788,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
-              object Rectangle11: TRectangle
+              object RecSangue: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -799,7 +802,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit8: TEdit
+                object EdtSangue: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -809,7 +812,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
-              object Label6: TLabel
+              object LblPeso: TLabel
                 Align = Top
                 StyledSettings = [Size, FontColor]
                 Margins.Left = 20.000000000000000000
@@ -825,7 +828,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'Peso em Kg'
                 TabOrder = 6
               end
-              object Label7: TLabel
+              object LblSangue: TLabel
                 Align = Top
                 StyledSettings = [Size, FontColor]
                 Margins.Left = 20.000000000000000000
@@ -841,7 +844,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'Tipo Sangu'#237'neo'
                 TabOrder = 7
               end
-              object Label8: TLabel
+              object LblSexo: TLabel
                 Align = Top
                 StyledSettings = [Size, FontColor]
                 Margins.Left = 20.000000000000000000
@@ -857,7 +860,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'Sexo'
                 TabOrder = 8
               end
-              object Rectangle13: TRectangle
+              object RectEmail: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -871,7 +874,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit10: TEdit
+                object EditEmail: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -881,7 +884,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
-              object Label9: TLabel
+              object LblEmail: TLabel
                 Align = Top
                 StyledSettings = [Size, FontColor]
                 Margins.Left = 20.000000000000000000
@@ -923,19 +926,19 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               end
             end
           end
-          object Rectangle21: TRectangle
+          object RecProximo2: TRectangle
             Cursor = crHandPoint
             Fill.Color = claWhite
-            Position.X = 552.000000000000000000
-            Position.Y = 664.000000000000000000
+            Position.X = 528.000000000000000000
+            Position.Y = 656.000000000000000000
             Size.Width = 225.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             Stroke.Thickness = 3.000000000000000000
             XRadius = 10.000000000000000000
             YRadius = 10.000000000000000000
-            OnClick = Rectangle21Click
-            object Label17: TLabel
+            OnClick = RecProximo2Click
+            object LblProximo1: TLabel
               Align = Center
               StyledSettings = [FontColor]
               Size.Width = 174.000000000000000000
@@ -954,7 +957,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = True
+          IsSelected = False
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -991,14 +994,14 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               end
             end
           end
-          object Rectangle15: TRectangle
+          object CorpoCadastro3: TRectangle
             Align = Client
             Fill.Color = xFFF2F0F4
             Sides = [Left, Bottom, Right]
             Size.Width = 1285.000000000000000000
             Size.Height = 694.000000000000000000
             Size.PlatformDefault = False
-            object Rectangle16: TRectangle
+            object InfoCadastro3: TRectangle
               Align = Center
               Fill.Color = xFFC5D6DB
               Size.Width = 565.000000000000000000
@@ -1007,7 +1010,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               Stroke.Thickness = 6.000000000000000000
               XRadius = 20.000000000000000000
               YRadius = 20.000000000000000000
-              object Label11: TLabel
+              object LblCadastro3: TLabel
                 Align = Top
                 StyledSettings = [FontColor]
                 Margins.Left = 20.000000000000000000
@@ -1025,7 +1028,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'Cadastro'
                 TabOrder = 0
               end
-              object Label12: TLabel
+              object Lbl1: TLabel
                 Align = Top
                 StyledSettings = [FontColor]
                 Margins.Left = 20.000000000000000000
@@ -1038,10 +1041,10 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Size.PlatformDefault = False
                 TextSettings.Font.Family = 'Roboto'
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
-                Text = 'Cidade'
+                Text = 'Telefone/Celular'
                 TabOrder = 1
               end
-              object Rectangle17: TRectangle
+              object Rec1: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -1055,7 +1058,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit11: TEdit
+                object Edt1: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -1065,7 +1068,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
-              object Rectangle18: TRectangle
+              object Rec2: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -1079,7 +1082,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit12: TEdit
+                object Edt2: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -1089,7 +1092,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
-              object Rectangle19: TRectangle
+              object Rec3: TRectangle
                 Align = Top
                 Fill.Color = claWhite
                 Margins.Left = 20.000000000000000000
@@ -1103,7 +1106,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Stroke.Thickness = 3.000000000000000000
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
-                object Edit13: TEdit
+                object Edt3: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Center
                   StyleLookup = 'transparentedit'
@@ -1113,31 +1116,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
-              object Rectangle20: TRectangle
-                Align = Top
-                Fill.Color = claWhite
-                Margins.Left = 20.000000000000000000
-                Margins.Top = 5.000000000000000000
-                Margins.Right = 20.000000000000000000
-                Position.X = 20.000000000000000000
-                Position.Y = 363.000000000000000000
-                Size.Width = 525.000000000000000000
-                Size.Height = 50.000000000000000000
-                Size.PlatformDefault = False
-                Stroke.Thickness = 3.000000000000000000
-                XRadius = 10.000000000000000000
-                YRadius = 10.000000000000000000
-                object Edit14: TEdit
-                  Touch.InteractiveGestures = [LongTap, DoubleTap]
-                  Align = Center
-                  StyleLookup = 'transparentedit'
-                  TabOrder = 0
-                  Size.Width = 520.000000000000000000
-                  Size.Height = 36.000000000000000000
-                  Size.PlatformDefault = False
-                end
-              end
-              object Label13: TLabel
+              object Lbl2: TLabel
                 Align = Top
                 StyledSettings = [Size, FontColor]
                 Margins.Left = 20.000000000000000000
@@ -1150,10 +1129,10 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Size.PlatformDefault = False
                 TextSettings.Font.Family = 'Roboto'
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
-                Text = 'Rua'
+                Text = 'Peso em Kg'
                 TabOrder = 6
               end
-              object Label14: TLabel
+              object Lbl3: TLabel
                 Align = Top
                 StyledSettings = [Size, FontColor]
                 Margins.Left = 20.000000000000000000
@@ -1166,11 +1145,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Size.PlatformDefault = False
                 TextSettings.Font.Family = 'Roboto'
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
-                Text = 'N'#250'mero'
+                Text = 'Tipo Sangu'#237'neo'
                 TabOrder = 7
               end
-              object Label15: TLabel
+              object Lbl4: TLabel
                 Align = Top
+                StyledSettings = [Size, FontColor]
                 Margins.Left = 20.000000000000000000
                 Margins.Top = 5.000000000000000000
                 Margins.Right = 20.000000000000000000
@@ -1179,43 +1159,54 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Size.Width = 525.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
-                Text = 'Bairro'
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Sexo'
                 TabOrder = 8
               end
-            end
-            object Rectangle22: TRectangle
-              Align = Bottom
-              Cursor = crHandPoint
-              Fill.Color = claWhite
-              Margins.Left = 500.000000000000000000
-              Margins.Right = 500.000000000000000000
-              Position.X = 500.000000000000000000
-              Position.Y = 644.000000000000000000
-              Size.Width = 285.000000000000000000
-              Size.Height = 50.000000000000000000
-              Size.PlatformDefault = False
-              Stroke.Thickness = 3.000000000000000000
-              XRadius = 10.000000000000000000
-              YRadius = 10.000000000000000000
-              object Label18: TLabel
-                Align = Center
-                StyledSettings = [FontColor]
-                Size.Width = 174.000000000000000000
-                Size.Height = 29.000000000000000000
+              object Lbl5: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 363.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
                 TextSettings.Font.Family = 'Roboto'
-                TextSettings.Font.Size = 25.000000000000000000
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
-                TextSettings.HorzAlign = Center
-                Text = 'Finalizar'
-                TabOrder = 0
-                OnClick = Label18Click
+                Text = 'E-mail'
+                TabOrder = 10
               end
             end
           end
-          object RadioButton1: TRadioButton
-            TabOrder = 2
-            Text = 'RadioButton1'
+          object Rectangle22: TRectangle
+            Cursor = crHandPoint
+            Fill.Color = claWhite
+            Position.X = 528.000000000000000000
+            Position.Y = 656.000000000000000000
+            Size.Width = 225.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Thickness = 3.000000000000000000
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            OnClick = RecProximo2Click
+            object Label22: TLabel
+              Align = Center
+              StyledSettings = [FontColor]
+              Size.Width = 174.000000000000000000
+              Size.Height = 29.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 25.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.HorzAlign = Center
+              Text = 'Pr'#243'ximo'
+              TabOrder = 0
+            end
           end
         end
       end
@@ -1253,7 +1244,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1284.999755859375000000
-            Size.Height = 46.976074218750000000
+            Size.Height = 46.976089477539060000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1398,7 +1389,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1284.999755859375000000
-            Size.Height = 46.976074218750000000
+            Size.Height = 46.976089477539060000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1452,7 +1443,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1284.999755859375000000
-            Size.Height = 46.976074218750000000
+            Size.Height = 46.976089477539060000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1476,8 +1467,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
   end
   object GestureManager1: TGestureManager
     Sensitivity = 80.000000000000000000
-    Left = 88
-    Top = 9
+    Left = 32
+    Top = 185
     GestureData = <
       item
         Control = TabControl1
@@ -1501,8 +1492,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       end>
   end
   object ActionList1: TActionList
-    Left = 48
-    Top = 8
+    Left = 32
+    Top = 128
     object NextTabAction1: TNextTabAction
       Category = 'Tab'
       TabControl = TabControl2
@@ -1511,29 +1502,9 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       Category = 'Tab'
       TabControl = TabControl2
     end
-  end
-  object FDConnection1: TFDConnection
-    Params.Strings = (
-      'Database=SarsCov'
-      'User_Name=postgres'
-      'Password=masterkey'
-      'DriverID=PG')
-    LoginPrompt = False
-    Left = 6
-    Top = 7
-  end
-  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
-    VendorHome = 
-      'D:\Desenvolvimento\Projetos\SarsCoVNews\Material Para Avaliacao\' +
-      'ProgramacaoIII\Servidor\Win32\Debug'
-    Left = 130
-    Top = 7
-  end
-  object FDQuery1: TFDQuery
-    Connection = FDConnection1
-    SQL.Strings = (
-      'SELECT * FROM usuario')
-    Left = 186
-    Top = 15
+    object Action1: TAction
+      Category = 'Tab'
+      Text = 'Action1'
+    end
   end
 end

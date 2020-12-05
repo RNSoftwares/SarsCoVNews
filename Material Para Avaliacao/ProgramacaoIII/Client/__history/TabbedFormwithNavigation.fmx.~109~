@@ -55,7 +55,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Size.Height = 742.000000000000000000
         Size.PlatformDefault = False
         TabHeight = 49.000000000000000000
-        TabIndex = 0
+        TabIndex = 3
         TabOrder = 0
         TabPosition = Dots
         Sizes = (
@@ -71,7 +71,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = True
+          IsSelected = False
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -177,7 +177,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
                   Password = True
-                  TextSettings.Font.Size = 15.000000000000000000
+                  TextSettings.Font.Size = 25.000000000000000000
                   Locked = True
                   Margins.Left = 7.000000000000000000
                   Margins.Right = 7.000000000000000000
@@ -206,11 +206,13 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
                   KeyboardType = EmailAddress
+                  TextSettings.Font.Size = 25.000000000000000000
                   Margins.Left = 7.000000000000000000
                   Margins.Right = 7.000000000000000000
                   Size.Width = 501.000000000000000000
                   Size.Height = 53.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
                 end
               end
               object Label2: TLabel
@@ -243,7 +245,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 TextSettings.Font.Family = 'Roboto'
                 TextSettings.Font.Size = 15.000000000000000000
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
-                Text = 'E-mail'
+                Text = 'Nome Completo'
                 TabOrder = 3
               end
               object Senha: TLabel
@@ -273,6 +275,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Size.PlatformDefault = False
                 XRadius = 10.000000000000000000
                 YRadius = 10.000000000000000000
+                OnClick = RecLoginClick
                 object Label3: TLabel
                   Align = Center
                   StyledSettings = [FontColor]
@@ -926,8 +929,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           object Rectangle21: TRectangle
             Cursor = crHandPoint
             Fill.Color = claWhite
-            Position.X = 552.000000000000000000
-            Position.Y = 664.000000000000000000
+            Position.X = 528.000000000000000000
+            Position.Y = 656.000000000000000000
             Size.Width = 225.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
@@ -954,7 +957,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = False
+          IsSelected = True
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -1038,7 +1041,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Size.PlatformDefault = False
                 TextSettings.Font.Family = 'Roboto'
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
-                Text = 'Cidade'
+                Text = 'Telefone/Celular'
                 TabOrder = 1
               end
               object Rectangle17: TRectangle
@@ -1113,6 +1116,54 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
+              object Label13: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 187.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Peso em Kg'
+                TabOrder = 6
+              end
+              object Label14: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 264.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Tipo Sangu'#237'neo'
+                TabOrder = 7
+              end
+              object Label15: TLabel
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 341.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Sexo'
+                TabOrder = 8
+              end
               object Rectangle20: TRectangle
                 Align = Top
                 Fill.Color = claWhite
@@ -1120,7 +1171,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Margins.Top = 5.000000000000000000
                 Margins.Right = 20.000000000000000000
                 Position.X = 20.000000000000000000
-                Position.Y = 363.000000000000000000
+                Position.Y = 423.000000000000000000
                 Size.Width = 525.000000000000000000
                 Size.Height = 50.000000000000000000
                 Size.PlatformDefault = False
@@ -1137,85 +1188,73 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Size.PlatformDefault = False
                 end
               end
-              object Label13: TLabel
-                Align = Top
-                StyledSettings = [Size, FontColor]
-                Margins.Left = 20.000000000000000000
-                Margins.Top = 5.000000000000000000
-                Margins.Right = 20.000000000000000000
-                Position.X = 20.000000000000000000
-                Position.Y = 187.000000000000000000
-                Size.Width = 525.000000000000000000
-                Size.Height = 17.000000000000000000
-                Size.PlatformDefault = False
-                TextSettings.Font.Family = 'Roboto'
-                TextSettings.Font.StyleExt = {00070000000000000004000000}
-                Text = 'Rua'
-                TabOrder = 6
-              end
-              object Label14: TLabel
-                Align = Top
-                StyledSettings = [Size, FontColor]
-                Margins.Left = 20.000000000000000000
-                Margins.Top = 5.000000000000000000
-                Margins.Right = 20.000000000000000000
-                Position.X = 20.000000000000000000
-                Position.Y = 264.000000000000000000
-                Size.Width = 525.000000000000000000
-                Size.Height = 17.000000000000000000
-                Size.PlatformDefault = False
-                TextSettings.Font.Family = 'Roboto'
-                TextSettings.Font.StyleExt = {00070000000000000004000000}
-                Text = 'N'#250'mero'
-                TabOrder = 7
-              end
-              object Label15: TLabel
-                Align = Top
-                Margins.Left = 20.000000000000000000
-                Margins.Top = 5.000000000000000000
-                Margins.Right = 20.000000000000000000
-                Position.X = 20.000000000000000000
-                Position.Y = 341.000000000000000000
-                Size.Width = 525.000000000000000000
-                Size.Height = 17.000000000000000000
-                Size.PlatformDefault = False
-                Text = 'Bairro'
-                TabOrder = 8
-              end
-            end
-            object Rectangle22: TRectangle
-              Align = Bottom
-              Cursor = crHandPoint
-              Fill.Color = claWhite
-              Margins.Left = 500.000000000000000000
-              Margins.Right = 500.000000000000000000
-              Position.X = 500.000000000000000000
-              Position.Y = 644.000000000000000000
-              Size.Width = 285.000000000000000000
-              Size.Height = 50.000000000000000000
-              Size.PlatformDefault = False
-              Stroke.Thickness = 3.000000000000000000
-              XRadius = 10.000000000000000000
-              YRadius = 10.000000000000000000
               object Label18: TLabel
-                Align = Center
-                StyledSettings = [FontColor]
-                Size.Width = 174.000000000000000000
-                Size.Height = 29.000000000000000000
+                Align = Top
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 20.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 401.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
                 TextSettings.Font.Family = 'Roboto'
-                TextSettings.Font.Size = 25.000000000000000000
                 TextSettings.Font.StyleExt = {00070000000000000004000000}
-                TextSettings.HorzAlign = Center
-                Text = 'Finalizar'
-                TabOrder = 0
-                OnClick = Label18Click
+                Text = 'E-mail'
+                TabOrder = 10
+              end
+              object CheckBox3: TCheckBox
+                Align = Top
+                Margins.Left = 20.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 358.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 19.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 11
+                Text = 'Feminino'
+              end
+              object CheckBox4: TCheckBox
+                Align = Top
+                Margins.Left = 20.000000000000000000
+                Margins.Right = 20.000000000000000000
+                Position.X = 20.000000000000000000
+                Position.Y = 377.000000000000000000
+                Size.Width = 525.000000000000000000
+                Size.Height = 19.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 12
+                Text = 'Masculino'
               end
             end
           end
-          object RadioButton1: TRadioButton
-            TabOrder = 2
-            Text = 'RadioButton1'
+          object Rectangle22: TRectangle
+            Cursor = crHandPoint
+            Fill.Color = claWhite
+            Position.X = 528.000000000000000000
+            Position.Y = 656.000000000000000000
+            Size.Width = 225.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Thickness = 3.000000000000000000
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            OnClick = Rectangle21Click
+            object Label22: TLabel
+              Align = Center
+              StyledSettings = [FontColor]
+              Size.Width = 174.000000000000000000
+              Size.Height = 29.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 25.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.HorzAlign = Center
+              Text = 'Pr'#243'ximo'
+              TabOrder = 0
+            end
           end
         end
       end
@@ -1476,8 +1515,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
   end
   object GestureManager1: TGestureManager
     Sensitivity = 80.000000000000000000
-    Left = 80
-    Top = 241
+    Left = 32
+    Top = 185
     GestureData = <
       item
         Control = TabControl1
@@ -1501,8 +1540,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       end>
   end
   object ActionList1: TActionList
-    Left = 264
-    Top = 256
+    Left = 32
+    Top = 128
     object NextTabAction1: TNextTabAction
       Category = 'Tab'
       TabControl = TabControl2
@@ -1510,6 +1549,10 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
     object PreviousTabAction1: TPreviousTabAction
       Category = 'Tab'
       TabControl = TabControl2
+    end
+    object Action1: TAction
+      Category = 'Tab'
+      Text = 'Action1'
     end
   end
 end

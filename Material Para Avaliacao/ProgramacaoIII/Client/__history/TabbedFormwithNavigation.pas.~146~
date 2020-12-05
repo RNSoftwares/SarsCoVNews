@@ -145,8 +145,7 @@ type
     procedure Rectangle12Click(Sender: TObject);
     procedure Rectangle21Click(Sender: TObject);
     procedure FormClose(Sender: TObject);
-    procedure Label3Click(Sender: TObject);
-    procedure Label16Click(Sender: TObject);
+    procedure RecLoginClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -213,9 +212,10 @@ begin
   end;
 end;
 
-procedure TTabbedwithNavigationForm.Label3Click(Sender: TObject);
+procedure TTabbedwithNavigationForm.RecLoginClick(Sender: TObject);
 var
   login, senha: string;
+
 begin
   login:= EdtEmail.Text;
   senha:= EdtSenha.Text;
@@ -223,8 +223,8 @@ begin
   DataModule1.FDQuery1.Active:= false;
   DataModule1.FDQuery1.SQL.Clear;
   DataModule1.FDQuery1.SQL.Add('SELECT * FROM acesso WHERE logace = :login AND pasace = :senha');
-  DataModule1.FDQuery1.ParamByName('logace').Value:= login;
-  DataModule1.FDQuery1.ParamByName('pasace').Value:= senha;
+  DataModule1.FDQuery1.ParamByName('login').Value:= login;
+  DataModule1.FDQuery1.ParamByName('senha').Value:= senha;
   DataModule1.FDQuery1.Active:= true;
 
   if(DataModule1.FDQuery1.RecordCount>0)then

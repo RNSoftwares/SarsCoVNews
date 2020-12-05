@@ -42,7 +42,7 @@ Coordinates=171,78,67,36
 Coordinates=10,78,61,58
 
 []
-Coordinates=1163,1,104,36
+Coordinates=1005,1,96,36
 
 [topo]
 Coordinates=81,78,40,36
@@ -71,9 +71,6 @@ Coordinates=726,287,69,36
 [CheckBox2]
 Coordinates=726,78,80,58
 
-[Label16]
-Coordinates=500,353,60,58
-
 [Rectangle26]
 Coordinates=340,269,87,36
 
@@ -95,26 +92,8 @@ Coordinates=865,1,90,36
 [TopoCadastro]
 Coordinates=865,56,96,36
 
-[Edit2]
-Coordinates=53,77,44,58
-
-[Edit14]
-Coordinates=30,173,51,58
-
-[Label9]
-Coordinates=72,1,53,58
-
-[Rectangle13]
-Coordinates=865,111,87,36
-
-[Rectangle7]
-Coordinates=865,166,80,36
-
 [LblNomeCompleto]
 Coordinates=567,309,121,58
-
-[Label17]
-Coordinates=233,403,60,58
 
 [ToolBar5]
 Coordinates=726,441,67,36
@@ -129,98 +108,17 @@ Visible=True
 [LblIdade]
 Coordinates=567,1,64,58
 
-[Rectangle15]
-Coordinates=865,331,87,36
-
-[Rectangle20]
-Coordinates=865,386,87,36
-
-[Edit6]
-Coordinates=50,269,44,58
-
-[Rectangle5]
-Coordinates=865,441,80,36
-
-[Rectangle16]
-Coordinates=865,496,87,36
-
-[Edit11]
-Coordinates=567,155,51,58
-
 [corpo]
 Coordinates=518,461,47,36
 
-[Label13]
-Coordinates=203,499,60,58
-
-[Label11]
-Coordinates=439,499,60,58
-
 [Rectangle24]
 Coordinates=776,499,87,36
-
-[Label14]
-Coordinates=272,499,60,58
-
-[Edit8]
-Coordinates=390,499,44,58
-
-[Edit7]
-Coordinates=341,499,44,58
-
-[Rectangle4]
-Coordinates=687,499,80,36
-
-[TabCadastro3]
-Coordinates=1005,1,96,36
 
 [Rectangle1]
 Coordinates=1005,56,80,36
 
 [Rectangle28]
 Coordinates=1005,111,87,36
-
-[Label18]
-Coordinates=158,269,60,58
-
-[Rectangle21]
-Coordinates=1005,166,87,36
-
-[Rectangle9]
-Coordinates=1005,221,80,36
-
-[Rectangle11]
-Coordinates=1005,276,87,36
-
-[Rectangle8]
-Coordinates=1005,331,80,36
-
-[Label12]
-Coordinates=567,232,60,58
-
-[Rectangle10]
-Coordinates=1005,386,87,36
-
-[Label5]
-Coordinates=144,499,53,58
-
-[Label7]
-Coordinates=163,1,53,58
-
-[Edit3]
-Coordinates=227,269,44,58
-
-[Edit4]
-Coordinates=361,365,44,58
-
-[Label10]
-Coordinates=429,221,60,58
-
-[Rectangle14]
-Coordinates=1005,441,87,36
-
-[Edit10]
-Coordinates=163,78,51,58
 
 [RecEsqueciSenha]
 Coordinates=1005,496,120,36
@@ -234,17 +132,11 @@ Coordinates=429,298,51,58
 [Label3]
 Coordinates=508,499,53,58
 
-[ToolBar7]
-Coordinates=657,461,67,36
-
 [Label19]
 Coordinates=500,276,60,58
 
 [Siz]
 Coordinates=469,461,40,36
-
-[RadioButton1]
-Coordinates=986,595,92,36
 
 [Label2]
 Coordinates=85,499,53,58
@@ -252,26 +144,14 @@ Coordinates=85,499,53,58
 [EdtEmail]
 Coordinates=45,365,66,58
 
-[Edit12]
-Coordinates=99,269,51,58
-
 [Rectangle3]
 Coordinates=897,595,80,36
-
-[Edit5]
-Coordinates=0,307,44,58
 
 [Rectangle25]
 Coordinates=808,595,87,36
 
-[Label8]
-Coordinates=302,403,53,58
-
 [Label20]
 Coordinates=261,1,60,58
-
-[Rectangle6]
-Coordinates=719,595,80,36
 
 [InfoCadastro]
 Coordinates=630,595,88,36
@@ -279,35 +159,20 @@ Coordinates=630,595,88,36
 [LblEsqueciSenha]
 Coordinates=370,60,115,58
 
-[Edit13]
-Coordinates=276,232,51,58
-
 [ToolBar4]
 Coordinates=400,461,67,36
 
 [LlbRG]
 Coordinates=410,365,51,58
 
-[Rectangle22]
-Coordinates=541,595,87,36
-
 [Label1]
 Coordinates=114,365,53,58
-
-[Edit1]
-Coordinates=184,403,44,58
 
 [EdtSenha]
 Coordinates=567,386,71,58
 
 [Rectangle2]
 Coordinates=452,595,80,36
-
-[Rectangle19]
-Coordinates=363,595,87,36
-
-[Label4]
-Coordinates=0,0,53,58
 
 [Rectangle27]
 Coordinates=274,595,87,36
@@ -321,24 +186,93 @@ Coordinates=185,595,83,36
 [LblCadastro]
 Coordinates=726,1,84,58
 
-[Rectangle17]
-Coordinates=96,595,87,36
-
-[Label15]
-Coordinates=163,155,60,58
-
-[Rectangle12]
-Coordinates=0,559,87,36
-
 [Email]
 Coordinates=567,463,47,58
-
-[Label6]
-Coordinates=26,499,53,58
 
 [TituloConsulta]
 Coordinates=173,328,97,58
 
-[Rectangle18]
-Coordinates=1163,56,87,36
+[RecProximo1]
+Coordinates=0,559,87,36
+
+[RecProximo2]
+Coordinates=1005,166,87,36
+
+[LblProximo1]
+Coordinates=233,403,60,58
+
+[LblProximo]
+Coordinates=500,353,60,58
+
+[RecNome]
+Coordinates=687,499,80,36
+
+[EdtNome]
+Coordinates=184,403,44,58
+
+[RecCPF]
+Coordinates=865,441,80,36
+
+[EdtCPF]
+Coordinates=53,77,44,58
+
+[RecRG]
+Coordinates=719,595,80,36
+
+[EdtRG]
+Coordinates=227,269,44,58
+
+[RecIdade]
+Coordinates=865,166,80,36
+
+[EdtIdade]
+Coordinates=361,365,44,58
+
+[RecAltura]
+Coordinates=1005,331,80,36
+
+[EdtAltura]
+Coordinates=0,307,44,58
+
+[LblCelular]
+Coordinates=144,499,53,58
+
+[LblPeso]
+Coordinates=26,499,53,58
+
+[LblSangue]
+Coordinates=163,1,53,58
+
+[LblSexo]
+Coordinates=302,403,53,58
+
+[LblEmail]
+Coordinates=72,1,53,58
+
+[LblCadastro2]
+Coordinates=0,0,53,58
+
+[RecPeso]
+Coordinates=1005,386,87,36
+
+[EdtPeso]
+Coordinates=341,499,44,58
+
+[RecCelular]
+Coordinates=1005,221,80,36
+
+[EdtCelular]
+Coordinates=50,269,44,58
+
+[RecSangue]
+Coordinates=1005,276,87,36
+
+[EdtSangue]
+Coordinates=390,499,44,58
+
+[RecEmailCadastro]
+Coordinates=865,111,87,36
+
+[EdtEmailCadastro]
+Coordinates=163,78,51,58
 

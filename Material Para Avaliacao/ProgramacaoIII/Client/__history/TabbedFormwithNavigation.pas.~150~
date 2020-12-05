@@ -86,6 +86,36 @@ type
     Rectangle13: TRectangle;
     Edit10: TEdit;
     Label9: TLabel;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    Rectangle12: TRectangle;
+    Label16: TLabel;
+    Rectangle21: TRectangle;
+    Label17: TLabel;
+    RecConsulta: TRectangle;
+    TituloConsulta: TLabel;
+    Rectangle24: TRectangle;
+    TabDuvidas: TTabItem;
+    ToolBar4: TToolBar;
+    Rectangle25: TRectangle;
+    Label19: TLabel;
+    Rectangle26: TRectangle;
+    TabSintomas: TTabItem;
+    ToolBar5: TToolBar;
+    Rectangle27: TRectangle;
+    Label20: TLabel;
+    Rectangle28: TRectangle;
+    RecMostrar: TRectangle;
+    SizeGrip1: TSizeGrip;
+    RecPesquisar: TRectangle;
+    Rectangle30: TRectangle;
+    Rectangle32: TRectangle;
+    Rectangle33: TRectangle;
+    Rectangle34: TRectangle;
+    Edit9: TEdit;
+    LblPesquisa: TLabel;
+    Label21: TLabel;
+    Action1: TAction;
     TabCadastro3: TTabItem;
     ToolBar7: TToolBar;
     Rectangle14: TRectangle;
@@ -100,43 +130,16 @@ type
     Edit12: TEdit;
     Rectangle19: TRectangle;
     Edit13: TEdit;
-    Rectangle20: TRectangle;
-    Edit14: TEdit;
     Label13: TLabel;
     Label14: TLabel;
     Label15: TLabel;
-    CheckBox1: TCheckBox;
-    CheckBox2: TCheckBox;
-    Rectangle12: TRectangle;
-    Label16: TLabel;
-    Rectangle21: TRectangle;
-    Label17: TLabel;
-    Rectangle22: TRectangle;
+    Rectangle20: TRectangle;
+    Edit14: TEdit;
     Label18: TLabel;
-    RecConsulta: TRectangle;
-    TituloConsulta: TLabel;
-    Rectangle24: TRectangle;
-    TabDuvidas: TTabItem;
-    ToolBar4: TToolBar;
-    Rectangle25: TRectangle;
-    Label19: TLabel;
-    Rectangle26: TRectangle;
-    TabSintomas: TTabItem;
-    ToolBar5: TToolBar;
-    Rectangle27: TRectangle;
-    Label20: TLabel;
-    Rectangle28: TRectangle;
-    RadioButton1: TRadioButton;
-    RecMostrar: TRectangle;
-    SizeGrip1: TSizeGrip;
-    RecPesquisar: TRectangle;
-    Rectangle30: TRectangle;
-    Rectangle32: TRectangle;
-    Rectangle33: TRectangle;
-    Rectangle34: TRectangle;
-    Edit9: TEdit;
-    LblPesquisa: TLabel;
-    Label21: TLabel;
+    CheckBox3: TCheckBox;
+    CheckBox4: TCheckBox;
+    Rectangle22: TRectangle;
+    Label22: TLabel;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -144,7 +147,7 @@ type
     procedure Rectangle12Click(Sender: TObject);
     procedure Rectangle21Click(Sender: TObject);
     procedure FormClose(Sender: TObject);
-    procedure Label3Click(Sender: TObject);
+    procedure RecLoginClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -211,9 +214,10 @@ begin
   end;
 end;
 
-procedure TTabbedwithNavigationForm.Label3Click(Sender: TObject);
+procedure TTabbedwithNavigationForm.RecLoginClick(Sender: TObject);
 var
   login, senha: string;
+
 begin
   login:= EdtEmail.Text;
   senha:= EdtSenha.Text;
@@ -221,17 +225,16 @@ begin
   DataModule1.FDQuery1.Active:= false;
   DataModule1.FDQuery1.SQL.Clear;
   DataModule1.FDQuery1.SQL.Add('SELECT * FROM acesso WHERE logace = :login AND pasace = :senha');
-  DataModule1.FDQuery1.ParamByName('logace').Value:= login;
-  DataModule1.FDQuery1.ParamByName('pasace').Value:= senha;
+  DataModule1.FDQuery1.ParamByName('login').Value:= login;
+  DataModule1.FDQuery1.ParamByName('senha').Value:= senha;
   DataModule1.FDQuery1.Active:= true;
 
   if(DataModule1.FDQuery1.RecordCount>0)then
     begin
-      showmessage('LOHGADO PORRA!!!!!!!!!');
       TabControl1.ActiveTab:= TabConsultas;
     end
   else
-    TabControl1.ActiveTab:= TabCadastro;
+    showmessage('Login ou Senha incorretos')
 end;
 
 procedure TTabbedwithNavigationForm.Rectangle12Click(Sender: TObject);

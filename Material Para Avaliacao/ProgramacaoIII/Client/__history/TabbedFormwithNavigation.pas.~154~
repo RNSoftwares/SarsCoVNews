@@ -52,67 +52,46 @@ type
     InfoCadastro: TRectangle;
     LblCadastro: TLabel;
     LblNomeCompleto: TLabel;
-    Rectangle4: TRectangle;
-    Rectangle5: TRectangle;
-    Rectangle6: TRectangle;
-    Rectangle7: TRectangle;
+    RecNome: TRectangle;
+    RecCPF: TRectangle;
+    RecRG: TRectangle;
+    RecIdade: TRectangle;
     LblCPF: TLabel;
     LlbRG: TLabel;
     LblIdade: TLabel;
     LblAltura: TLabel;
-    Rectangle8: TRectangle;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    Edit5: TEdit;
+    RecAltura: TRectangle;
+    EdtNome: TEdit;
+    EdtCPF: TEdit;
+    EdtRG: TEdit;
+    EdtIdade: TEdit;
+    EdtAltura: TEdit;
     TabCadastro2: TTabItem;
     ToolBar6: TToolBar;
     Rectangle1: TRectangle;
     Label1: TLabel;
     Rectangle2: TRectangle;
     Rectangle3: TRectangle;
-    Label4: TLabel;
-    Label5: TLabel;
-    Rectangle9: TRectangle;
-    Edit6: TEdit;
-    Rectangle10: TRectangle;
-    Edit7: TEdit;
-    Rectangle11: TRectangle;
-    Edit8: TEdit;
-    Label6: TLabel;
-    Label7: TLabel;
-    Label8: TLabel;
-    Rectangle13: TRectangle;
-    Edit10: TEdit;
-    Label9: TLabel;
-    TabCadastro3: TTabItem;
-    ToolBar7: TToolBar;
-    Rectangle14: TRectangle;
-    Label10: TLabel;
-    Rectangle15: TRectangle;
-    Rectangle16: TRectangle;
-    Label11: TLabel;
-    Label12: TLabel;
-    Rectangle17: TRectangle;
-    Edit11: TEdit;
-    Rectangle18: TRectangle;
-    Edit12: TEdit;
-    Rectangle19: TRectangle;
-    Edit13: TEdit;
-    Rectangle20: TRectangle;
-    Edit14: TEdit;
-    Label13: TLabel;
-    Label14: TLabel;
-    Label15: TLabel;
+    LblCadastro2: TLabel;
+    LblCelular: TLabel;
+    RecCelular: TRectangle;
+    EdtCelular: TEdit;
+    RecPeso: TRectangle;
+    EdtPeso: TEdit;
+    RecSangue: TRectangle;
+    EdtSangue: TEdit;
+    LblPeso: TLabel;
+    LblSangue: TLabel;
+    LblSexo: TLabel;
+    RectEmail: TRectangle;
+    EditEmail: TEdit;
+    LblEmail: TLabel;
     CheckBox1: TCheckBox;
     CheckBox2: TCheckBox;
-    Rectangle12: TRectangle;
-    Label16: TLabel;
-    Rectangle21: TRectangle;
-    Label17: TLabel;
-    Rectangle22: TRectangle;
-    Label18: TLabel;
+    RecProximo1: TRectangle;
+    LblProximo: TLabel;
+    RecProximo2: TRectangle;
+    LblProximo1: TLabel;
     RecConsulta: TRectangle;
     TituloConsulta: TLabel;
     Rectangle24: TRectangle;
@@ -126,7 +105,6 @@ type
     Rectangle27: TRectangle;
     Label20: TLabel;
     Rectangle28: TRectangle;
-    RadioButton1: TRadioButton;
     RecMostrar: TRectangle;
     SizeGrip1: TSizeGrip;
     RecPesquisar: TRectangle;
@@ -138,15 +116,34 @@ type
     LblPesquisa: TLabel;
     Label21: TLabel;
     Action1: TAction;
+    TabCadastro3: TTabItem;
+    ToolBar7: TToolBar;
+    Rectangle14: TRectangle;
+    Label10: TLabel;
+    CorpoCadastro3: TRectangle;
+    InfoCadastro3: TRectangle;
+    LblCadastro3: TLabel;
+    Lbl1: TLabel;
+    Rec1: TRectangle;
+    Edt1: TEdit;
+    Rec2: TRectangle;
+    Edt2: TEdit;
+    Rec3: TRectangle;
+    Edt3: TEdit;
+    Lbl2: TLabel;
+    Lbl3: TLabel;
+    Lbl4: TLabel;
+    Lbl5: TLabel;
+    Rectangle22: TRectangle;
+    Label22: TLabel;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
-    procedure Rectangle12Click(Sender: TObject);
-    procedure Rectangle21Click(Sender: TObject);
+    procedure RecProximo1Click(Sender: TObject);
+    procedure RecProximo2Click(Sender: TObject);
     procedure FormClose(Sender: TObject);
-    procedure Label3Click(Sender: TObject);
-    procedure Action1Execute(Sender: TObject);
+    procedure RecLoginClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -213,9 +210,10 @@ begin
   end;
 end;
 
-procedure TTabbedwithNavigationForm.Label3Click(Sender: TObject);
+procedure TTabbedwithNavigationForm.RecLoginClick(Sender: TObject);
 var
   login, senha: string;
+
 begin
   login:= EdtEmail.Text;
   senha:= EdtSenha.Text;
@@ -223,36 +221,35 @@ begin
   DataModule1.FDQuery1.Active:= false;
   DataModule1.FDQuery1.SQL.Clear;
   DataModule1.FDQuery1.SQL.Add('SELECT * FROM acesso WHERE logace = :login AND pasace = :senha');
-  DataModule1.FDQuery1.ParamByName('logace').Value:= login;
-  DataModule1.FDQuery1.ParamByName('pasace').Value:= senha;
+  DataModule1.FDQuery1.ParamByName('login').Value:= login;
+  DataModule1.FDQuery1.ParamByName('senha').Value:= senha;
   DataModule1.FDQuery1.Active:= true;
 
   if(DataModule1.FDQuery1.RecordCount>0)then
     begin
-      showmessage('LOHGADO PORRA!!!!!!!!!');
       TabControl1.ActiveTab:= TabConsultas;
     end
   else
-    TabControl2.ActiveTab:= TabCadastro;
+    showmessage('Login ou Senha incorretos')
 end;
 
-procedure TTabbedwithNavigationForm.Rectangle12Click(Sender: TObject);
+procedure TTabbedwithNavigationForm.RecProximo1Click(Sender: TObject);
 begin
     TabControl2.ActiveTab := TabCadastro2;
-    nome:= Edit1.Text;
-    cpf:= Edit2.Text;
-    rg:= Edit3.Text;
-    idade:= StrToInt(Edit4.Text);
-    altura:= StrToInt(Edit5.Text);
+    nome:= EdtNome.Text;
+    cpf:= EdtCPF.Text;
+    rg:= EdtRG.Text;
+    idade:= StrToInt(EdtIdade.Text);
+    altura:= StrToInt(EdtAltura.Text);
 end;
 
-procedure TTabbedwithNavigationForm.Rectangle21Click(Sender: TObject);
+procedure TTabbedwithNavigationForm.RecProximo2Click(Sender: TObject);
 begin
     TabControl2.ActiveTab := TabCadastro3;
 
-    telefone:= Edit6.Text;
-    peso:= StrToFloat(Edit7.Text);
-    tipsan:= Edit8.Text;
+    telefone:= EdtCelular.Text;
+    peso:= StrToFloat(EdtPeso.Text);
+    tipsan:= EdtSangue.Text;
     sexo:= 'M';
 end;
 
