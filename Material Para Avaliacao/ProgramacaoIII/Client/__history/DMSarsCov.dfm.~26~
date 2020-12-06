@@ -8,6 +8,7 @@ object DataModule1: TDataModule1
       'Database=sarscov'
       'User_Name=postgres'
       'Password=masterkey'
+      'Port=5433'
       'DriverID=PG')
     LoginPrompt = False
     Left = 72

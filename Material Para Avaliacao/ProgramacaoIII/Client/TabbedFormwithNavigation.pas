@@ -84,8 +84,6 @@ type
     RecEmailCadastro: TRectangle;
     EdtEmailCadastro: TEdit;
     LblEmail: TLabel;
-    CheckBox1: TCheckBox;
-    CheckBox2: TCheckBox;
     RecProximo1: TRectangle;
     LblProximo: TLabel;
     RecProximo2: TRectangle;
@@ -140,6 +138,8 @@ type
     RecSenha: TRectangle;
     EdtSenha: TEdit;
     Label2: TLabel;
+    radiomasc: TRadioButton;
+    radiosexfem: TRadioButton;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -149,7 +149,8 @@ type
     procedure FormClose(Sender: TObject);
     procedure RecLoginClick(Sender: TObject);
     procedure RecFinalizarClick(Sender: TObject);
-  private
+    procedure radiomascChange(Sender: TObject);
+    procedure radiosexfemChange(Sender: TObject);
     { Private declarations }
   public
     { Public declarations }
@@ -160,7 +161,7 @@ var
   nome, cpf, rg, email, bairro, telefone, tipsan, rua, cidade, senha, senhaCadastro, login, emailCadastro: String;
   idade, numrua, altura, nivace: integer;
   peso: real;
-  sexo: char;
+  sexo, sexosel: char;
 
 implementation
 
@@ -217,6 +218,16 @@ begin
   end;
 end;
 
+procedure TTabbedwithNavigationForm.radiomascChange(Sender: TObject);
+begin
+  sexosel:= 'M';
+end;
+
+procedure TTabbedwithNavigationForm.radiosexfemChange(Sender: TObject);
+begin
+  sexosel:= 'F';
+end;
+
 procedure TTabbedwithNavigationForm.RecLoginClick(Sender: TObject);
 begin
   login:= EdtEmail.Text;
@@ -253,7 +264,7 @@ begin
     telefone:= EdtCelular.Text;
     peso:= StrToFloat(EdtPeso.Text);
     tipsan:= EdtSangue.Text;
-    sexo:= 'M';
+    sexo:= sexosel;
     emailCadastro:= edtEmailCadastro.Text;
     TabControl2.ActiveTab := TabCadastro3;
 end;

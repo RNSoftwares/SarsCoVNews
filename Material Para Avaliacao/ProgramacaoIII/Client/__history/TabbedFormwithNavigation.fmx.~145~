@@ -55,7 +55,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Size.Height = 742.000000000000000000
         Size.PlatformDefault = False
         TabHeight = 49.000000000000000000
-        TabIndex = 0
+        TabIndex = 2
         TabOrder = 0
         TabPosition = None
         Sizes = (
@@ -71,7 +71,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = True
+          IsSelected = False
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -301,9 +301,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
                   Password = True
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [FontColor]
                 end
               end
             end
@@ -664,7 +667,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
-          IsSelected = False
+          IsSelected = True
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -887,7 +890,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Margins.Top = 5.000000000000000000
                 Margins.Right = 20.000000000000000000
                 Position.X = 20.000000000000000000
-                Position.Y = 423.000000000000000000
+                Position.Y = 385.000000000000000000
                 Size.Width = 525.000000000000000000
                 Size.Height = 50.000000000000000000
                 Size.PlatformDefault = False
@@ -914,7 +917,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Margins.Top = 5.000000000000000000
                 Margins.Right = 20.000000000000000000
                 Position.X = 20.000000000000000000
-                Position.Y = 401.000000000000000000
+                Position.Y = 363.000000000000000000
                 Size.Width = 525.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
@@ -923,29 +926,23 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'E-mail'
                 TabOrder = 10
               end
-              object CheckBox2: TCheckBox
-                Align = Top
-                Margins.Left = 20.000000000000000000
-                Margins.Right = 20.000000000000000000
-                Position.X = 20.000000000000000000
-                Position.Y = 358.000000000000000000
-                Size.Width = 525.000000000000000000
-                Size.Height = 19.000000000000000000
+              object radiomasc: TRadioButton
+                GroupName = 'sexo'
+                Position.X = 32.000000000000000000
+                Position.Y = 83.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 11
-                Text = 'Feminino'
-              end
-              object CheckBox1: TCheckBox
-                Align = Top
-                Margins.Left = 20.000000000000000000
-                Margins.Right = 20.000000000000000000
-                Position.X = 20.000000000000000000
-                Position.Y = 377.000000000000000000
-                Size.Width = 525.000000000000000000
-                Size.Height = 19.000000000000000000
-                Size.PlatformDefault = False
-                TabOrder = 12
                 Text = 'Masculino'
+                OnChange = radiomascChange
+              end
+              object radiosexfem: TRadioButton
+                GroupName = 'sexo'
+                Position.X = 445.000000000000000000
+                Position.Y = 81.000000000000000000
+                TabOrder = 12
+                Text = 'Feminino'
               end
             end
             object RecProximo2: TRectangle
@@ -1263,6 +1260,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  Password = True
                   TextSettings.Font.Family = 'Roboto'
                   TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000

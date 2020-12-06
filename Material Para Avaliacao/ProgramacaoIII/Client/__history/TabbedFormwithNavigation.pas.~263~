@@ -232,6 +232,7 @@ begin
   if(DataModule1.FDQacesso.RecordCount>0)then
     begin
       TabControl1.ActiveTab:= TabConsultas;
+      showmessage('Logado com Sucesso');
     end
   else
     showmessage('Login ou Senha incorretos')

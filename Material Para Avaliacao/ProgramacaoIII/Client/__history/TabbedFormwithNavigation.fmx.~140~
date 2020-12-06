@@ -3,7 +3,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
   Top = 0
   Caption = 'Form56'
   ClientHeight = 791
-  ClientWidth = 1285
+  ClientWidth = 1238
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -14,21 +14,21 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
     Touch.GestureManager = GestureManager1
     Align = Client
     FullSize = True
-    Size.Width = 1285.000000000000000000
+    Size.Width = 1238.000000000000000000
     Size.Height = 791.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 0
     TabPosition = Bottom
     Sizes = (
-      1285s
+      1238s
       742s
-      1285s
+      1238s
       742s
-      1285s
+      1238s
       742s
-      1285s
+      1238s
       742s)
     object TabLoginCadastro: TTabItem
       CustomIcon = <
@@ -38,8 +38,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       TextSettings.Font.Size = 30.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       StyledSettings = [FontColor]
-      IsSelected = True
-      Size.Width = 320.000000000000000000
+      IsSelected = False
+      Size.Width = 309.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'tabitemcustom'
@@ -51,21 +51,21 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Touch.GestureManager = GestureManager1
         Align = Client
         FullSize = True
-        Size.Width = 1285.000000000000000000
+        Size.Width = 1238.000000000000000000
         Size.Height = 742.000000000000000000
         Size.PlatformDefault = False
         TabHeight = 49.000000000000000000
         TabIndex = 0
         TabOrder = 0
-        TabPosition = Dots
+        TabPosition = None
         Sizes = (
-          1285s
+          1238s
           742s
-          1285s
+          1238s
           742s
-          1285s
+          1238s
           742s
-          1285s
+          1238s
           742s)
         object TabLogin: TTabItem
           CustomIcon = <
@@ -81,7 +81,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
           object ToolBar1: TToolBar
-            Size.Width = 1285.000000000000000000
+            Size.Width = 1238.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -90,7 +90,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               Fill.Color = xFFF2F0F4
               Locked = True
               Sides = [Top, Left, Right]
-              Size.Width = 1285.000000000000000000
+              Size.Width = 1238.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               object btnNext: TSpeedButton
@@ -101,7 +101,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 StyledSettings = [Family, Other]
                 ImageIndex = -1
                 Margins.Right = 5.000000000000000000
-                Position.X = 1152.000000000000000000
+                Position.X = 1105.000000000000000000
                 Size.Width = 128.000000000000000000
                 Size.Height = 48.000000000000000000
                 Size.PlatformDefault = False
@@ -132,7 +132,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Fill.Color = xFFF2F0F4
             Locked = True
             Sides = [Left, Bottom, Right]
-            Size.Width = 1285.000000000000000000
+            Size.Width = 1238.000000000000000000
             Size.Height = 694.000000000000000000
             Size.PlatformDefault = False
             object SarsCovOpaco: TLabel
@@ -186,7 +186,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   StyledSettings = [Family, Style, FontColor]
                 end
               end
-              object Login: TLabel
+              object lblLogin: TLabel
                 Align = Top
                 StyledSettings = [FontColor]
                 Margins.Top = 30.000000000000000000
@@ -201,7 +201,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'Login'
                 TabOrder = 2
               end
-              object Email: TLabel
+              object lblEmailLogin: TLabel
                 Align = Top
                 StyledSettings = [FontColor]
                 Margins.Left = 25.000000000000000000
@@ -219,7 +219,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'E-Mail'
                 TabOrder = 3
               end
-              object Senha: TLabel
+              object lblSenhaLogin: TLabel
                 Align = Top
                 StyledSettings = [FontColor]
                 Margins.Left = 25.000000000000000000
@@ -300,9 +300,13 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  Password = True
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [FontColor]
                 end
               end
             end
@@ -312,7 +316,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               Margins.Left = 10.000000000000000000
               Position.X = 10.000000000000000000
               Position.Y = 660.000000000000000000
-              Size.Width = 1275.000000000000000000
+              Size.Width = 1228.000000000000000000
               Size.Height = 34.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.Family = 'Roboto'
@@ -327,6 +331,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
+          Locked = True
           IsSelected = False
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
@@ -337,7 +342,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
           object ToolBar2: TToolBar
-            Size.Width = 1285.000000000000000000
+            Size.Width = 1238.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -345,7 +350,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               Align = Client
               Fill.Color = xFFF2F0F4
               Sides = [Top, Left, Right]
-              Size.Width = 1285.000000000000000000
+              Size.Width = 1238.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               object lblTitulo: TLabel
@@ -384,12 +389,13 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Client
             Fill.Color = xFFF2F0F4
             Sides = [Left, Bottom, Right]
-            Size.Width = 1285.000000000000000000
+            Size.Width = 1238.000000000000000000
             Size.Height = 694.000000000000000000
             Size.PlatformDefault = False
             object InfoCadastro: TRectangle
               Align = Center
               Fill.Color = xFFC5D6DB
+              Margins.Top = 50.000000000000000000
               Size.Width = 565.000000000000000000
               Size.Height = 503.000000000000000000
               Size.PlatformDefault = False
@@ -449,9 +455,11 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
                 end
               end
               object RecCPF: TRectangle
@@ -473,9 +481,11 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
                 end
               end
               object RecRG: TRectangle
@@ -497,9 +507,11 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
                 end
               end
               object RecIdade: TRectangle
@@ -521,9 +533,11 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
                 end
               end
               object LblCPF: TLabel
@@ -593,9 +607,11 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
                 end
               end
               object LblAltura: TLabel
@@ -615,31 +631,35 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 TabOrder = 10
               end
             end
-          end
-          object RecProximo1: TRectangle
-            Cursor = crHandPoint
-            Fill.Color = claWhite
-            Position.X = 528.000000000000000000
-            Position.Y = 656.000000000000000000
-            Size.Width = 225.000000000000000000
-            Size.Height = 50.000000000000000000
-            Size.PlatformDefault = False
-            Stroke.Thickness = 3.000000000000000000
-            XRadius = 10.000000000000000000
-            YRadius = 10.000000000000000000
-            OnClick = RecProximo1Click
-            object LblProximo: TLabel
-              Align = Center
-              StyledSettings = [FontColor]
-              Size.Width = 174.000000000000000000
-              Size.Height = 29.000000000000000000
+            object RecProximo1: TRectangle
+              Align = Bottom
+              Cursor = crHandPoint
+              Fill.Color = claWhite
+              Margins.Left = 500.000000000000000000
+              Margins.Right = 500.000000000000000000
+              Margins.Bottom = 50.000000000000000000
+              Position.X = 500.000000000000000000
+              Position.Y = 594.000000000000000000
+              Size.Width = 238.000000000000000000
+              Size.Height = 50.000000000000000000
               Size.PlatformDefault = False
-              TextSettings.Font.Family = 'Roboto'
-              TextSettings.Font.Size = 25.000000000000000000
-              TextSettings.Font.StyleExt = {00070000000000000004000000}
-              TextSettings.HorzAlign = Center
-              Text = 'Pr'#243'ximo'
-              TabOrder = 0
+              Stroke.Thickness = 3.000000000000000000
+              XRadius = 10.000000000000000000
+              YRadius = 10.000000000000000000
+              OnClick = RecProximo1Click
+              object LblProximo: TLabel
+                Align = Center
+                StyledSettings = [FontColor]
+                Size.Width = 174.000000000000000000
+                Size.Height = 29.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 25.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Center
+                Text = 'Pr'#243'ximo'
+                TabOrder = 0
+              end
             end
           end
         end
@@ -657,7 +677,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
           object ToolBar6: TToolBar
-            Size.Width = 1285.000000000000000000
+            Size.Width = 1238.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -665,7 +685,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               Align = Client
               Fill.Color = xFFF2F0F4
               Sides = [Top, Left, Right]
-              Size.Width = 1285.000000000000000000
+              Size.Width = 1238.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               object Label1: TLabel
@@ -688,12 +708,13 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Client
             Fill.Color = xFFF2F0F4
             Sides = [Left, Bottom, Right]
-            Size.Width = 1285.000000000000000000
+            Size.Width = 1238.000000000000000000
             Size.Height = 694.000000000000000000
             Size.PlatformDefault = False
             object Rectangle3: TRectangle
               Align = Center
               Fill.Color = xFFC5D6DB
+              Margins.Top = 50.000000000000000000
               Size.Width = 565.000000000000000000
               Size.Height = 503.000000000000000000
               Size.PlatformDefault = False
@@ -753,9 +774,11 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
                 end
               end
               object RecPeso: TRectangle
@@ -777,9 +800,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Style, FontColor]
                 end
               end
               object RecSangue: TRectangle
@@ -801,9 +827,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Style, FontColor]
                 end
               end
               object LblPeso: TLabel
@@ -873,9 +902,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Style, FontColor]
                 end
               end
               object LblEmail: TLabel
@@ -919,31 +951,36 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'Masculino'
               end
             end
-          end
-          object RecProximo2: TRectangle
-            Cursor = crHandPoint
-            Fill.Color = claWhite
-            Position.X = 528.000000000000000000
-            Position.Y = 656.000000000000000000
-            Size.Width = 225.000000000000000000
-            Size.Height = 50.000000000000000000
-            Size.PlatformDefault = False
-            Stroke.Thickness = 3.000000000000000000
-            XRadius = 10.000000000000000000
-            YRadius = 10.000000000000000000
-            OnClick = RecProximo2Click
-            object LblProximo1: TLabel
-              Align = Center
-              StyledSettings = [FontColor]
-              Size.Width = 174.000000000000000000
-              Size.Height = 29.000000000000000000
+            object RecProximo2: TRectangle
+              Align = Bottom
+              Cursor = crHandPoint
+              Fill.Color = claWhite
+              Locked = True
+              Margins.Left = 500.000000000000000000
+              Margins.Right = 500.000000000000000000
+              Margins.Bottom = 50.000000000000000000
+              Position.X = 500.000000000000000000
+              Position.Y = 594.000000000000000000
+              Size.Width = 238.000000000000000000
+              Size.Height = 50.000000000000000000
               Size.PlatformDefault = False
-              TextSettings.Font.Family = 'Roboto'
-              TextSettings.Font.Size = 25.000000000000000000
-              TextSettings.Font.StyleExt = {00070000000000000004000000}
-              TextSettings.HorzAlign = Center
-              Text = 'Pr'#243'ximo'
-              TabOrder = 0
+              Stroke.Thickness = 3.000000000000000000
+              XRadius = 10.000000000000000000
+              YRadius = 10.000000000000000000
+              OnClick = RecProximo2Click
+              object LblProximo1: TLabel
+                Align = Center
+                StyledSettings = [FontColor]
+                Size.Width = 174.000000000000000000
+                Size.Height = 29.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 25.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Center
+                Text = 'Pr'#243'ximo'
+                TabOrder = 0
+              end
             end
           end
         end
@@ -951,6 +988,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           CustomIcon = <
             item
             end>
+          Locked = True
           IsSelected = False
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
@@ -961,7 +999,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
           object ToolBar7: TToolBar
-            Size.Width = 1285.000000000000000000
+            Size.Width = 1238.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -969,7 +1007,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
               Align = Client
               Fill.Color = xFFF2F0F4
               Sides = [Top, Left, Right]
-              Size.Width = 1285.000000000000000000
+              Size.Width = 1238.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               object Label10: TLabel
@@ -992,12 +1030,13 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
             Align = Client
             Fill.Color = xFFF2F0F4
             Sides = [Left, Bottom, Right]
-            Size.Width = 1285.000000000000000000
+            Size.Width = 1238.000000000000000000
             Size.Height = 694.000000000000000000
             Size.PlatformDefault = False
             object InfoCadastro3: TRectangle
               Align = Center
               Fill.Color = xFFC5D6DB
+              Margins.Top = 50.000000000000000000
               Size.Width = 565.000000000000000000
               Size.Height = 503.000000000000000000
               Size.PlatformDefault = False
@@ -1057,9 +1096,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Style, FontColor]
                 end
               end
               object RecRua: TRectangle
@@ -1081,9 +1123,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Style, FontColor]
                 end
               end
               object RecNumero: TRectangle
@@ -1105,9 +1150,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Style, FontColor]
                 end
               end
               object LblRua: TLabel
@@ -1192,9 +1240,12 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Style, FontColor]
                 end
               end
               object RecSenhaCadastro: TRectangle
@@ -1215,20 +1266,45 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                   Align = Center
                   StyleLookup = 'transparentedit'
                   TabOrder = 0
+                  Password = True
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 25.000000000000000000
                   Size.Width = 520.000000000000000000
                   Size.Height = 36.000000000000000000
                   Size.PlatformDefault = False
+                  StyledSettings = [Style, FontColor]
                 end
               end
             end
-          end
-          object RecFinalizar: TRectangle
-            Position.X = 480.000000000000000000
-            Position.Y = 664.000000000000000000
-            Size.Width = 273.000000000000000000
-            Size.Height = 50.000000000000000000
-            Size.PlatformDefault = False
-            OnClick = RecFinalizarClick
+            object RecFinalizar: TRectangle
+              Align = Bottom
+              Fill.Color = claWhite
+              Margins.Left = 500.000000000000000000
+              Margins.Right = 500.000000000000000000
+              Margins.Bottom = 50.000000000000000000
+              Position.X = 500.000000000000000000
+              Position.Y = 594.000000000000000000
+              Size.Width = 238.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Thickness = 3.000000000000000000
+              XRadius = 10.000000000000000000
+              YRadius = 10.000000000000000000
+              OnClick = RecFinalizarClick
+              object Label2: TLabel
+                Align = Center
+                StyledSettings = [FontColor]
+                Size.Width = 170.000000000000000000
+                Size.Height = 36.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 25.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Center
+                Text = 'Finalizar'
+                TabOrder = 0
+              end
+            end
           end
         end
       end
@@ -1241,8 +1317,8 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       TextSettings.Font.Size = 30.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       StyledSettings = [FontColor]
-      IsSelected = False
-      Size.Width = 320.000000000000000000
+      IsSelected = True
+      Size.Width = 309.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'tabitemcontacts'
@@ -1251,7 +1327,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       object ToolBar3: TToolBar
-        Size.Width = 1285.000000000000000000
+        Size.Width = 1238.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -1259,14 +1335,14 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           Align = Contents
           Fill.Color = xFFF2F0F4
           Sides = [Top, Left, Right]
-          Size.Width = 1285.000000000000000000
+          Size.Width = 1238.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           object TituloConsulta: TLabel
             Align = Fit
             StyledSettings = [FontColor]
-            Size.Width = 1284.999755859375000000
-            Size.Height = 46.976089477539060000
+            Size.Width = 1238.000000000000000000
+            Size.Height = 45.257072448730470000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1282,7 +1358,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Align = Client
         Fill.Color = xFFF2F0F4
         Sides = [Left, Bottom, Right]
-        Size.Width = 1285.000000000000000000
+        Size.Width = 1238.000000000000000000
         Size.Height = 694.000000000000000000
         Size.PlatformDefault = False
         object RecMostrar: TRectangle
@@ -1387,7 +1463,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       StyledSettings = [FontColor]
       IsSelected = False
-      Size.Width = 320.000000000000000000
+      Size.Width = 309.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'tabitemcontacts'
@@ -1396,7 +1472,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       object ToolBar4: TToolBar
-        Size.Width = 1285.000000000000000000
+        Size.Width = 1238.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -1404,14 +1480,14 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           Align = Contents
           Fill.Color = xFFF2F0F4
           Sides = [Top, Left, Right]
-          Size.Width = 1285.000000000000000000
+          Size.Width = 1238.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           object Label19: TLabel
             Align = Fit
             StyledSettings = [FontColor]
-            Size.Width = 1284.999755859375000000
-            Size.Height = 46.976089477539060000
+            Size.Width = 1238.000000000000000000
+            Size.Height = 45.257072448730470000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1427,7 +1503,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Align = Client
         Fill.Color = xFFF2F0F4
         Sides = [Left, Bottom, Right]
-        Size.Width = 1285.000000000000000000
+        Size.Width = 1238.000000000000000000
         Size.Height = 694.000000000000000000
         Size.PlatformDefault = False
       end
@@ -1441,7 +1517,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       StyledSettings = [FontColor]
       IsSelected = False
-      Size.Width = 323.000000000000000000
+      Size.Width = 309.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'tabitemcontacts'
@@ -1450,7 +1526,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
       ExplicitSize.cx = 102.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       object ToolBar5: TToolBar
-        Size.Width = 1285.000000000000000000
+        Size.Width = 1238.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -1458,14 +1534,14 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
           Align = Contents
           Fill.Color = xFFF2F0F4
           Sides = [Top, Left, Right]
-          Size.Width = 1285.000000000000000000
+          Size.Width = 1238.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           object Label20: TLabel
             Align = Fit
             StyledSettings = [FontColor]
-            Size.Width = 1284.999755859375000000
-            Size.Height = 46.976089477539060000
+            Size.Width = 1238.000000000000000000
+            Size.Height = 45.257072448730470000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1481,7 +1557,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
         Align = Client
         Fill.Color = xFFF2F0F4
         Sides = [Left, Bottom, Right]
-        Size.Width = 1285.000000000000000000
+        Size.Width = 1238.000000000000000000
         Size.Height = 694.000000000000000000
         Size.PlatformDefault = False
       end

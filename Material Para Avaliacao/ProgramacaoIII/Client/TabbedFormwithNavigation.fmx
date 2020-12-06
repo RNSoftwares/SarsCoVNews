@@ -890,7 +890,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Margins.Top = 5.000000000000000000
                 Margins.Right = 20.000000000000000000
                 Position.X = 20.000000000000000000
-                Position.Y = 423.000000000000000000
+                Position.Y = 385.000000000000000000
                 Size.Width = 525.000000000000000000
                 Size.Height = 50.000000000000000000
                 Size.PlatformDefault = False
@@ -917,7 +917,7 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Margins.Top = 5.000000000000000000
                 Margins.Right = 20.000000000000000000
                 Position.X = 20.000000000000000000
-                Position.Y = 401.000000000000000000
+                Position.Y = 363.000000000000000000
                 Size.Width = 525.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
@@ -926,29 +926,24 @@ object TabbedwithNavigationForm: TTabbedwithNavigationForm
                 Text = 'E-mail'
                 TabOrder = 10
               end
-              object CheckBox2: TCheckBox
-                Align = Top
-                Margins.Left = 20.000000000000000000
-                Margins.Right = 20.000000000000000000
-                Position.X = 20.000000000000000000
-                Position.Y = 358.000000000000000000
-                Size.Width = 525.000000000000000000
-                Size.Height = 19.000000000000000000
+              object radiomasc: TRadioButton
+                GroupName = 'sexo'
+                Position.X = 32.000000000000000000
+                Position.Y = 83.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 11
-                Text = 'Feminino'
-              end
-              object CheckBox1: TCheckBox
-                Align = Top
-                Margins.Left = 20.000000000000000000
-                Margins.Right = 20.000000000000000000
-                Position.X = 20.000000000000000000
-                Position.Y = 377.000000000000000000
-                Size.Width = 525.000000000000000000
-                Size.Height = 19.000000000000000000
-                Size.PlatformDefault = False
-                TabOrder = 12
                 Text = 'Masculino'
+                OnChange = radiomascChange
+              end
+              object radiosexfem: TRadioButton
+                GroupName = 'sexo'
+                Position.X = 445.000000000000000000
+                Position.Y = 81.000000000000000000
+                TabOrder = 12
+                Text = 'Feminino'
+                OnChange = radiosexfemChange
               end
             end
             object RecProximo2: TRectangle

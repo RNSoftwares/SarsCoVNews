@@ -42,7 +42,7 @@ Coordinates=171,78,67,36
 Coordinates=10,78,61,58
 
 []
-Coordinates=669,386,74,36
+Coordinates=726,78,80,58
 
 [topo]
 Coordinates=81,78,40,36
@@ -68,9 +68,6 @@ Coordinates=726,232,70,36
 [RecLogin]
 Coordinates=726,287,69,36
 
-[CheckBox2]
-Coordinates=726,78,80,58
-
 [Rectangle26]
 Coordinates=340,269,87,36
 
@@ -79,9 +76,6 @@ Coordinates=500,111,66,58
 
 [ToolBar6]
 Coordinates=726,342,67,36
-
-[CheckBox1]
-Coordinates=272,328,80,58
 
 [TabSintomas]
 Coordinates=865,1,90,36

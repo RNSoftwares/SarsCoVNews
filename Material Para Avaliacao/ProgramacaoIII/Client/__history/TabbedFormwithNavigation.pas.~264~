@@ -232,6 +232,7 @@ begin
   if(DataModule1.FDQacesso.RecordCount>0)then
     begin
       TabControl1.ActiveTab:= TabConsultas;
+      showmessage('Logado com Sucesso');
     end
   else
     showmessage('Login ou Senha incorretos')
@@ -286,6 +287,13 @@ begin
   DataModule1.FDQusuario.ParamByName('bairro').Value:= bairro;
   DataModule1.FDQusuario.ExecSQL;
 
+  DataModule1.FDQcidade.SQL.Clear;
+  DataModule1.FDQcidade.SQL.Add('INSERT INTO cidade');
+  DataModule1.FDQcidade.SQL.Add('(nomcid)');
+  DataModule1.FDQcidade.SQL.Add('VALUES (:cidade)');
+  DataModule1.FDQcidade.ParamByName('cidade').Value := cidade;
+  DataModule1.FDQcidade.ExecSQL;
+
   DataModule1.FDQacesso.SQL.Clear;
   DataModule1.FDQacesso.SQL.Add('INSERT INTO acesso');
   DataModule1.FDQacesso.SQL.Add('(logace, pasace, nivace)');
@@ -293,13 +301,6 @@ begin
   DataModule1.FDQacesso.ParamByName('emailCadastro').Value := emailCadastro;
   DataModule1.FDQacesso.ParamByName('senhaCadastro').Value := senhaCadastro;
   DataModule1.FDQacesso.ParamByName('nivace').Value := nivace;
-  DataModule1.FDQacesso.ExecSQL;
-
-  DataModule1.FDQcidade.SQL.Clear;
-  DataModule1.FDQcidade.SQL.Add('INSERT INTO cidade');
-  DataModule1.FDQcidade.SQL.Add('(nomcid)');
-  DataModule1.FDQcidade.SQL.Add('VALUES (:cidade)');
-  DataModule1.FDQcidade.ParamByName('cidade').Value := cidade;
   DataModule1.FDQacesso.ExecSQL;
 
 
