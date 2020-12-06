@@ -77,9 +77,6 @@ Coordinates=500,111,66,58
 [ToolBar6]
 Coordinates=726,342,67,36
 
-[TabSintomas]
-Coordinates=865,1,90,36
-
 [TopoCadastro]
 Coordinates=865,56,96,36
 
@@ -107,9 +104,6 @@ Coordinates=776,499,87,36
 
 [Rectangle1]
 Coordinates=1005,56,80,36
-
-[Rectangle28]
-Coordinates=1005,111,87,36
 
 [RecEsqueciSenha]
 Coordinates=1005,496,120,36
@@ -263,4 +257,10 @@ Coordinates=567,463,47,58
 
 [lblSenhaLogin]
 Coordinates=429,298,51,58
+
+[TabPerfil]
+Coordinates=865,1,90,36
+
+[RecCorpoPerfil]
+Coordinates=1005,111,87,36
 

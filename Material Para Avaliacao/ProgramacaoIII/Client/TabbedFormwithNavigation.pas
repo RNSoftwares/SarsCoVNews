@@ -8,9 +8,10 @@ uses
   FMX.Gestures, System.Actions, FMX.ActnList, FMX.Objects, FMX.Edit,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
   FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
-  FireDAC.Phys, FireDAC.Phys.PG, FireDAC.Phys.PGDef, FireDAC.FMXUI.Wait,
+  FireDAC.Phys, FireDAC.FMXUI.Wait,
   Data.DB, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS,
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, Datasnap.DBClient;
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, Datasnap.DBClient,
+  System.Rtti, FMX.Grid.Style, FMX.Grid, FMX.ScrollBox;
 
 type
   TTabbedwithNavigationForm = class(TForm)
@@ -96,13 +97,12 @@ type
     Rectangle25: TRectangle;
     Label19: TLabel;
     Rectangle26: TRectangle;
-    TabSintomas: TTabItem;
+    TabPerfil: TTabItem;
     ToolBar5: TToolBar;
     Rectangle27: TRectangle;
     Label20: TLabel;
-    Rectangle28: TRectangle;
+    RecCorpoPerfil: TRectangle;
     RecMostrar: TRectangle;
-    SizeGrip1: TSizeGrip;
     RecPesquisar: TRectangle;
     Rectangle30: TRectangle;
     Rectangle32: TRectangle;
@@ -140,6 +140,40 @@ type
     Label2: TLabel;
     radiomasc: TRadioButton;
     radiosexfem: TRadioButton;
+    RecFoto: TRectangle;
+    F: TRectangle;
+    LblPerfil: TLabel;
+    RecObsPerfil: TRectangle;
+    RecEmailPerfil: TRectangle;
+    RecNomePerfil: TRectangle;
+    LblEmailPerfil: TLabel;
+    LblObservacoes: TLabel;
+    LblNomePerfil: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label11: TLabel;
+    LblSintomas: TLabel;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    CheckBox3: TCheckBox;
+    CheckBox4: TCheckBox;
+    Label4: TLabel;
+    Grid1: TGrid;
+    Column1: TColumn;
+    Column2: TColumn;
+    Column3: TColumn;
+    Column4: TColumn;
+    Column5: TColumn;
+    Column6: TColumn;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    BotãoPerfil: TRectangle;
+    Label14: TLabel;
+    BotaoConsulta: TRectangle;
+    Label15: TLabel;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -151,6 +185,9 @@ type
     procedure RecFinalizarClick(Sender: TObject);
     procedure radiomascChange(Sender: TObject);
     procedure radiosexfemChange(Sender: TObject);
+    procedure BotãoPerfilClick(Sender: TObject);
+    procedure BotaoConsultaClick(Sender: TObject);
+
     { Private declarations }
   public
     { Public declarations }
@@ -317,6 +354,16 @@ begin
 
    TabControl2.ActiveTab := Tablogin;
    showmessage('Cadastro realizado com sucesso');
+end;
+
+procedure TTabbedwithNavigationForm.BotaoConsultaClick(Sender: TObject);
+begin
+  TabControl1.ActiveTab := TabConsultas
+end;
+
+procedure TTabbedwithNavigationForm.BotãoPerfilClick(Sender: TObject);
+begin
+  TabControl1.ActiveTab := TabPerfil;
 end;
 
 procedure TTabbedwithNavigationForm.FormClose(Sender: TObject);
