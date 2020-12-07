@@ -11,7 +11,11 @@ uses
   FireDAC.Phys, FireDAC.FMXUI.Wait,
   Data.DB, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS,
   FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, Datasnap.DBClient,
-  System.Rtti, FMX.Grid.Style, FMX.Grid, FMX.ScrollBox;
+  System.Rtti, FMX.Grid.Style, FMX.Grid, FMX.ScrollBox, FMX.Layouts, FMX.ListBox,
+  Data.Bind.Components, Data.Bind.DBScope, Data.Bind.EngExt, Fmx.Bind.DBEngExt,
+  System.Bindings.Outputs, Fmx.Bind.Editors, REST.Types, REST.Response.Adapter,
+  REST.Client, Data.Bind.ObjectScope, FMX.ListView.Types,
+  FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView;
 
 type
   TTabbedwithNavigationForm = class(TForm)
@@ -103,7 +107,7 @@ type
     Label20: TLabel;
     RecCorpoPerfil: TRectangle;
     RecMostrar: TRectangle;
-    RecPesquisar: TRectangle;
+    execute: TRectangle;
     Rectangle30: TRectangle;
     Rectangle32: TRectangle;
     Rectangle33: TRectangle;
@@ -158,13 +162,6 @@ type
     CheckBox3: TCheckBox;
     CheckBox4: TCheckBox;
     Label4: TLabel;
-    Grid1: TGrid;
-    Column1: TColumn;
-    Column2: TColumn;
-    Column3: TColumn;
-    Column4: TColumn;
-    Column5: TColumn;
-    Column6: TColumn;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
@@ -174,6 +171,45 @@ type
     Label14: TLabel;
     BotaoConsulta: TRectangle;
     Label15: TLabel;
+    BindingsList1: TBindingsList;
+    BindSourceDB1: TBindSourceDB;
+    RESTClient2: TRESTClient;
+    RESTRequest2: TRESTRequest;
+    RESTResponse2: TRESTResponse;
+    ADataSet: TRESTResponseDataSetAdapter;
+    FDMemTable1: TFDMemTable;
+    FDMemTable1updated: TWideStringField;
+    FDMemTable1country: TWideStringField;
+    FDMemTable1countryInfo: TWideStringField;
+    FDMemTable1countryInfo_id: TWideStringField;
+    FDMemTable1countryInfoiso2: TWideStringField;
+    FDMemTable1countryInfoiso3: TWideStringField;
+    FDMemTable1countryInfolat: TWideStringField;
+    FDMemTable1countryInfolong: TWideStringField;
+    FDMemTable1countryInfoflag: TWideStringField;
+    FDMemTable1cases: TWideStringField;
+    FDMemTable1todayCases: TWideStringField;
+    FDMemTable1criticalPerOneMillion: TWideStringField;
+    FDMemTable1deaths: TWideStringField;
+    FDMemTable1todayDeaths: TWideStringField;
+    FDMemTable1recovered: TWideStringField;
+    FDMemTable1todayRecovered: TWideStringField;
+    FDMemTable1active: TWideStringField;
+    FDMemTable1critical: TWideStringField;
+    FDMemTable1casesPerOneMillion: TWideStringField;
+    FDMemTable1deathsPerOneMillion: TWideStringField;
+    FDMemTable1tests: TWideStringField;
+    FDMemTable1testsPerOneMillion: TWideStringField;
+    FDMemTable1population: TWideStringField;
+    FDMemTable1continent: TWideStringField;
+    FDMemTable1oneCasePerPeople: TWideStringField;
+    FDMemTable1oneDeathPerPeople: TWideStringField;
+    FDMemTable1oneTestPerPeople: TWideStringField;
+    FDMemTable1activePerOneMillion: TWideStringField;
+    FDMemTable1recoveredPerOneMillion: TWideStringField;
+    ListView1: TListView;
+    BindSourceDB2: TBindSourceDB;
+    LinkFillControlToField1: TLinkFillControlToField;
     procedure GestureDone(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -187,6 +223,7 @@ type
     procedure radiosexfemChange(Sender: TObject);
     procedure BotãoPerfilClick(Sender: TObject);
     procedure BotaoConsultaClick(Sender: TObject);
+    procedure executeClick(Sender: TObject);
 
     { Private declarations }
   public
@@ -284,6 +321,11 @@ begin
     end
   else
     showmessage('Login ou Senha incorretos')
+end;
+
+procedure TTabbedwithNavigationForm.executeClick(Sender: TObject);
+begin
+   RESTRequest2.execute;
 end;
 
 procedure TTabbedwithNavigationForm.RecProximo1Click(Sender: TObject);

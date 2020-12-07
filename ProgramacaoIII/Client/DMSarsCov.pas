@@ -8,7 +8,9 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.FMXUI.Wait,
   FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  FireDAC.Comp.UI, FireDAC.Phys.PG, FireDAC.Phys.PGDef;
+  FireDAC.Comp.UI, FireDAC.Phys.PG, FireDAC.Phys.PGDef, REST.Types, REST.Client,
+  Datasnap.DBClient, REST.Response.Adapter, Data.Bind.Components,
+  Data.Bind.ObjectScope;
 
 type
     TDataModule1 = class(TDataModule)
@@ -57,6 +59,7 @@ implementation
 {%CLASSGROUP 'FMX.Controls.TControl'}
 
 uses TabbedFormwithNavigation;
+
 
 {$R *.dfm}
 

@@ -1,8 +1,8 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Height = 389
-  Width = 578
+  Height = 682
+  Width = 1052
   object FDConnection1: TFDConnection
     Params.Strings = (
       'Database=sarscov'
@@ -10,24 +10,23 @@ object DataModule1: TDataModule1
       'Password=masterkey'
       'Port=5433'
       'DriverID=PG')
-    Connected = True
     LoginPrompt = False
-    Left = 72
-    Top = 48
+    Left = 24
+    Top = 16
   end
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
     VendorHome = 
-      'E:\'#193'rea de Trabalho\SarsCoVNews\Material Para Avaliacao\Programa' +
-      'caoIII\Client\Win32\Debug'
-    Left = 208
-    Top = 48
+      'E:\'#193'rea de Trabalho\SarsCoVNews\ProgramacaoIII\Client\Win32\Debu' +
+      'g'
+    Left = 120
+    Top = 24
   end
   object FDQacesso: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT * FROM acesso;')
-    Left = 192
-    Top = 136
+    Left = 112
+    Top = 88
     object FDQacessologace: TWideStringField
       FieldName = 'logace'
       Origin = 'logace'
@@ -51,15 +50,15 @@ object DataModule1: TDataModule1
   end
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'FMX'
-    Left = 56
-    Top = 136
+    Left = 24
+    Top = 80
   end
   object FDQusuario: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT * FROM usuario')
-    Left = 192
-    Top = 208
+    Left = 96
+    Top = 152
     object FDQusuarioidusu: TIntegerField
       FieldName = 'idusu'
       Origin = 'idusu'
@@ -145,8 +144,8 @@ object DataModule1: TDataModule1
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT * FROM cidade')
-    Left = 128
-    Top = 200
+    Left = 24
+    Top = 144
     object FDQcidadecodcid: TIntegerField
       FieldName = 'codcid'
       Origin = 'codcid'

@@ -1337,7 +1337,7 @@
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1191.999755859375000000
-            Size.Height = 43.575370788574220000
+            Size.Height = 43.575424194335940000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1361,31 +1361,6 @@
           Size.Width = 733.000000000000000000
           Size.Height = 524.000000000000000000
           Size.PlatformDefault = False
-          object Grid1: TGrid
-            CanFocus = True
-            ClipChildren = True
-            Size.Width = 737.000000000000000000
-            Size.Height = 529.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 0
-            Viewport.Width = 717.000000000000000000
-            Viewport.Height = 504.000000000000000000
-            object Column1: TColumn
-              Size.Width = 65.000000000000000000
-            end
-            object Column2: TColumn
-              Size.Width = 175.000000000000000000
-            end
-            object Column3: TColumn
-              Size.Width = 111.000000000000000000
-            end
-            object Column4: TColumn
-            end
-            object Column5: TColumn
-            end
-            object Column6: TColumn
-            end
-          end
         end
         object LblPesquisa: TLabel
           StyledSettings = [FontColor]
@@ -1411,7 +1386,7 @@
           Size.PlatformDefault = False
         end
       end
-      object RecPesquisar: TRectangle
+      object execute: TRectangle
         Cursor = crHandPoint
         Fill.Color = xFFC5D6DB
         Position.X = 56.000000000000000000
@@ -1421,6 +1396,7 @@
         Size.PlatformDefault = False
         XRadius = 10.000000000000000000
         YRadius = 10.000000000000000000
+        OnClick = executeClick
         object Label21: TLabel
           StyledSettings = [FontColor]
           Position.Y = 8.000000000000000000
@@ -1553,6 +1529,19 @@
           TabOrder = 0
         end
       end
+      object ListView1: TListView
+        ItemAppearanceClassName = 'TListItemAppearance'
+        ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        ScrollViewPos = 693.000000000000000000
+        Position.X = 232.000000000000000000
+        Position.Y = 168.000000000000000000
+        Size.Width = 729.000000000000000000
+        Size.Height = 521.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 8
+      end
     end
     object TabDuvidas: TTabItem
       CustomIcon = <
@@ -1587,7 +1576,7 @@
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1191.999755859375000000
-            Size.Height = 43.575370788574220000
+            Size.Height = 43.575424194335940000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1654,7 +1643,7 @@
             Align = Fit
             StyledSettings = [FontColor]
             Size.Width = 1191.999755859375000000
-            Size.Height = 43.575370788574220000
+            Size.Height = 43.575424194335940000
             Size.PlatformDefault = False
             StyleLookup = 'toollabel'
             TextSettings.Font.Family = 'Roboto'
@@ -1825,7 +1814,7 @@
             Size.Height = 29.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Family = 'Roboto'
-            Text = 'NatanTrennepohl@gmail.com'
+            Text = 'individuol@gmail.com'
             TabOrder = 0
           end
         end
@@ -1845,7 +1834,7 @@
             Size.Height = 29.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Family = 'Roboto'
-            Text = 'Natan Trennepohl'
+            Text = 'Nome do Indiv'#237'duo'
             TabOrder = 0
           end
         end
@@ -1974,5 +1963,340 @@
       Category = 'Tab'
       Text = 'Action1'
     end
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ListView1
+      Track = True
+      FillDataSource = BindSourceDB2
+      FillDisplayFieldName = 'cases'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillHeaderFieldName = 'country'
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    ScopeMappings = <>
+    Left = 1072
+    Top = 504
+  end
+  object RESTClient2: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'utf-8, *;q=0.8'
+    BaseURL = 'https://corona.lmao.ninja/v3/covid-19/countries'
+    Params = <>
+    RaiseExceptionOn500 = False
+    Left = 1072
+    Top = 168
+  end
+  object RESTRequest2: TRESTRequest
+    Client = RESTClient2
+    Params = <>
+    Response = RESTResponse2
+    SynchronizedEvents = False
+    Left = 1072
+    Top = 240
+  end
+  object RESTResponse2: TRESTResponse
+    ContentType = 'application/json'
+    Left = 1072
+    Top = 304
+  end
+  object ADataSet: TRESTResponseDataSetAdapter
+    Active = True
+    Dataset = FDMemTable1
+    FieldDefs = <>
+    Response = RESTResponse2
+    NestedElements = True
+    Left = 1072
+    Top = 384
+  end
+  object FDMemTable1: TFDMemTable
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'updated'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'country'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'countryInfo'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'countryInfo._id'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'countryInfo.iso2'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'countryInfo.iso3'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'countryInfo.lat'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'countryInfo.long'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'countryInfo.flag'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'cases'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'todayCases'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'deaths'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'todayDeaths'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'recovered'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'todayRecovered'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'active'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'critical'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'casesPerOneMillion'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'deathsPerOneMillion'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'tests'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'testsPerOneMillion'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'population'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'continent'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'oneCasePerPeople'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'oneDeathPerPeople'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'oneTestPerPeople'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'activePerOneMillion'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'recoveredPerOneMillion'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'criticalPerOneMillion'
+        DataType = ftWideString
+        Size = 255
+      end>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired]
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 1072
+    Top = 440
+    object FDMemTable1updated: TWideStringField
+      FieldName = 'updated'
+      Size = 255
+    end
+    object FDMemTable1country: TWideStringField
+      FieldName = 'country'
+      Size = 255
+    end
+    object FDMemTable1countryInfo: TWideStringField
+      FieldName = 'countryInfo'
+      Size = 255
+    end
+    object FDMemTable1countryInfo_id: TWideStringField
+      FieldName = 'countryInfo._id'
+      Size = 255
+    end
+    object FDMemTable1countryInfoiso2: TWideStringField
+      FieldName = 'countryInfo.iso2'
+      Size = 255
+    end
+    object FDMemTable1countryInfoiso3: TWideStringField
+      FieldName = 'countryInfo.iso3'
+      Size = 255
+    end
+    object FDMemTable1countryInfolat: TWideStringField
+      FieldName = 'countryInfo.lat'
+      Size = 255
+    end
+    object FDMemTable1countryInfolong: TWideStringField
+      FieldName = 'countryInfo.long'
+      Size = 255
+    end
+    object FDMemTable1countryInfoflag: TWideStringField
+      FieldName = 'countryInfo.flag'
+      Size = 255
+    end
+    object FDMemTable1cases: TWideStringField
+      FieldName = 'cases'
+      Size = 255
+    end
+    object FDMemTable1todayCases: TWideStringField
+      FieldName = 'todayCases'
+      Size = 255
+    end
+    object FDMemTable1criticalPerOneMillion: TWideStringField
+      FieldName = 'criticalPerOneMillion'
+      Size = 255
+    end
+    object FDMemTable1deaths: TWideStringField
+      FieldName = 'deaths'
+      Size = 255
+    end
+    object FDMemTable1todayDeaths: TWideStringField
+      FieldName = 'todayDeaths'
+      Size = 255
+    end
+    object FDMemTable1recovered: TWideStringField
+      FieldName = 'recovered'
+      Size = 255
+    end
+    object FDMemTable1todayRecovered: TWideStringField
+      FieldName = 'todayRecovered'
+      Size = 255
+    end
+    object FDMemTable1active: TWideStringField
+      FieldName = 'active'
+      Size = 255
+    end
+    object FDMemTable1critical: TWideStringField
+      FieldName = 'critical'
+      Size = 255
+    end
+    object FDMemTable1casesPerOneMillion: TWideStringField
+      FieldName = 'casesPerOneMillion'
+      Size = 255
+    end
+    object FDMemTable1deathsPerOneMillion: TWideStringField
+      FieldName = 'deathsPerOneMillion'
+      Size = 255
+    end
+    object FDMemTable1tests: TWideStringField
+      FieldName = 'tests'
+      Size = 255
+    end
+    object FDMemTable1testsPerOneMillion: TWideStringField
+      FieldName = 'testsPerOneMillion'
+      Size = 255
+    end
+    object FDMemTable1population: TWideStringField
+      FieldName = 'population'
+      Size = 255
+    end
+    object FDMemTable1continent: TWideStringField
+      FieldName = 'continent'
+      Size = 255
+    end
+    object FDMemTable1oneCasePerPeople: TWideStringField
+      FieldName = 'oneCasePerPeople'
+      Size = 255
+    end
+    object FDMemTable1oneDeathPerPeople: TWideStringField
+      FieldName = 'oneDeathPerPeople'
+      Size = 255
+    end
+    object FDMemTable1oneTestPerPeople: TWideStringField
+      FieldName = 'oneTestPerPeople'
+      Size = 255
+    end
+    object FDMemTable1activePerOneMillion: TWideStringField
+      FieldName = 'activePerOneMillion'
+      Size = 255
+    end
+    object FDMemTable1recoveredPerOneMillion: TWideStringField
+      FieldName = 'recoveredPerOneMillion'
+      Size = 255
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = FDMemTable1
+    ScopeMappings = <>
+    Left = 1064
+    Top = 552
   end
 end
