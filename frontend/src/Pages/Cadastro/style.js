@@ -14,10 +14,11 @@ import styled from 'styled-components';
 
 export const Corpo = styled.div`
     background: url(./images/fundo.png) center center no-repeat fixed; 
-    max-width: 100%;
-    width: 1366px;
-    height: 100vh;
+    max-width: 1920px;
+    width: 100%;
+    height: calc(100vh - 50px);
     display: flex;
+    margin: auto;
 `;
 
 // Input padrão

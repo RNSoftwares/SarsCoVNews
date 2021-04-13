@@ -8,7 +8,7 @@ function inicio(){
         <Fundo>
             <Menu>
                 <List>
-                    <Item href="/">Home</Item>
+                    <Item><a href="/">Home</a></Item>
                     <Item>Procurar</Item>
                     <Item>Estatísticas Nacionais</Item>
                     <Item>Estatísticas Globais</Item>
