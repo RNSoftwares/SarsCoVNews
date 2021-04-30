@@ -1,22 +1,12 @@
 import React from 'react';
-import {Fundo, Menu, List, Item} from './style.js';
+import './style.css';
 
 
 function inicio(){
-
     return(
-        <Fundo>
-            <Menu>
-                <List>
-                    <Item><a href="/">Home</a></Item>
-                    <Item>Procurar</Item>
-                    <Item>Estatísticas Nacionais</Item>
-                    <Item>Estatísticas Globais</Item>
-                    <Item>Relatórios</Item>
-                    <Item>Sobre</Item>
-                </List>
-            </Menu>
-        </Fundo>
+        <div className="body">
+
+        </div>
     )
 
 }

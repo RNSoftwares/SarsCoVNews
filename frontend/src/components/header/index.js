@@ -1,13 +1,21 @@
 import React from 'react';
-import {Topo} from './style.js';
+import './style.css';
 
 function header(){
 
     return(
-            <Topo>
-                teste
-            </Topo>
-
+        <div className="Top">
+            <p className="Title">SarsCovNews</p>
+            <nav>
+                <ul className="Menu">
+                    <li><a href="">Início</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Dados</a></li>
+                    <li><a href="">Estatísticas</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
     )
 
 }
