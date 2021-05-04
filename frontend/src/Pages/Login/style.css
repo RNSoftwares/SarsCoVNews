@@ -2,23 +2,126 @@
   margin: 0;
   font-family: sans-serif;
   background-color: #00FAFA;
+
 }
 
+.body{
+  max-width: 1920px;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(#00FAFA, #43fa65);
+}
 
+.titulo{
+  height: 150px;
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  color: #000;
+}
+
+.titulo span{
+  background-color:transparent;
+}
+
+.corpo {
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+}
 
 .login {
   margin: auto;
-  margin-top: 20px;
-  width: 62.5rem;
-  height: 36.5rem;
+  width: 31.25rem;
+  height: 22rem;
   background-color: #F0F5F5;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10px;
 }
 
-
-.titulo{
-  background-color: #0DF04F;
+.email{
   width: 100%;
-  height: 60px;
-  border-radius: 10px;
+  height: 80px;
+  margin-top: 40px;
+  background-color: #F0F5F5;
+  display: flex;
+  align-items: center;
 }
+
+.icone{
+  width: 35px;
+  height:52px;
+  background-color: #F0F5F5;
+  border-radius: 5px 0 0 5px;
+}
+
+.icone img{
+  width: 30px;
+  height:52px;
+  background-color: #fff;
+  margin-left: 5px;
+  border-radius: 5px 0 0 5px;
+}
+
+.email input{
+  height: 50px;
+  width: 27rem;
+  margin: 0px;
+  border: none;
+  text-decoration: none;
+  background-color: #fff;  
+  font-size: 20px;
+  padding-left: 15px;
+  border-radius: 0 5px 5px 0;
+}
+
+.senha{
+  width: 100%;
+  height: 80px;
+  margin-top: 30px;
+  background-color: #F0F5F5;
+  display: flex;
+  align-items: center;
+}
+
+.senha input{
+  height: 50px;
+  width: 27rem;
+  margin: 0px;
+  border: none;
+  text-decoration: none;
+  background-color: #fff;  
+  font-size: 20px;
+  padding-left: 15px;
+  border-radius: 0 5px 5px 0;
+}
+
+
+.botao{
+  width: 100%;
+  height: 80px;
+  margin-top: 40px;
+  background-color: #F0F5F5;
+  display: flex;
+  justify-content: center;
+}
+
+
+.botao button{
+    width: 200px ;
+    height: 40px;
+    background-color: #6a82f7;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
+
