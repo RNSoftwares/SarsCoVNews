@@ -9,7 +9,7 @@
   max-width: 1920px;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(#00FAFA, #43fa65);
+  background-image: linear-gradient(#00FAFA, #99ffbe);
 }
 
 .titulo{
@@ -54,7 +54,7 @@
 }
 
 .icone{
-  width: 35px;
+  width: 40px;
   height:52px;
   background-color: #F0F5F5;
   border-radius: 5px 0 0 5px;
@@ -64,7 +64,7 @@
   width: 30px;
   height:52px;
   background-color: #fff;
-  margin-left: 5px;
+  margin-left: 10px;
   border-radius: 5px 0 0 5px;
 }
 
@@ -76,8 +76,9 @@
   text-decoration: none;
   background-color: #fff;  
   font-size: 20px;
-  padding-left: 15px;
+  padding-left: 20px;
   border-radius: 0 5px 5px 0;
+  outline: none;
 }
 
 .senha{
@@ -97,8 +98,9 @@
   text-decoration: none;
   background-color: #fff;  
   font-size: 20px;
-  padding-left: 15px;
+  padding-left: 20px;
   border-radius: 0 5px 5px 0;
+  outline: none;
 }
 
 

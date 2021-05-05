@@ -4,7 +4,7 @@ import './style.css';
 
 function inicio(){
     return(
-        <div className="body">
+        <div className="teste">
 
         </div>
     )
