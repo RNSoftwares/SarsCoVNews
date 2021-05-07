@@ -4,8 +4,8 @@ import './style.css';
 
 function inicio(){
     return(
-        <div className="teste">
-
+        <div className="corpoInicio">
+            
         </div>
     )
 
