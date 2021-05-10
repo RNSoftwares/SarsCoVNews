@@ -46,7 +46,11 @@
   height:700px;
   width:100%;
   background-color: #4DA8DA;
-  margin: 0;
 }
 
+.grafico{
+  width: 50%;
+  height: 400px;
+  float: right;
+}
 
