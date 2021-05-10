@@ -2,7 +2,6 @@
 
 *{
   margin: 0;
-  background-color: #fff;
 }
 
 .corpoInicio {
@@ -13,38 +12,41 @@
 }
 
 
-.title{
-  height:700px;
+.dados{
+  height: calc(100vh - 100px);
   width:100%;
-  background-color: #bad6c2;
-  border: 1px solid #000;
+  background-color: #4DA8DA;
   margin: 0;
-  background: url("../../images/foto-1-getty-images.png") no-repeat center/110% fixed;
-  opacity: 70%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  background: url('../../images/foto-1-getty-images.png') no-repeat center/110% fixed;
 }
 
-.dados{
-  height:700px;
-  width:100%;
-  background-color: #bad6c2;
-  border: 1px solid #000;
-  margin: 0;
+.dados h1{
+  font-size: 130px;
+  background-color: #fff;
+  width: 1000px; 
+  border-radius: 10px 10px 0 0;
+}
+
+.dados h2{
+  margin-bottom: 150px;
+  font-size: 40px;
+  width: 1000px;
+  background-color: #fff;
+  height: 60px;
+  border-radius: 0 0 10px 10px;
 }
 
 
 .estats{
   height:700px;
   width:100%;
-  background-color: #bad6c2;
-  border: 1px solid #000;
+  background-color: #4DA8DA;
   margin: 0;
 }
 
-span {
-  background-color: transparent;
-  margin-top: 200px;
-}
 
-.texto{
-  margin-top: 200px;
-}

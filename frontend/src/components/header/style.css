@@ -1,9 +1,15 @@
 *{
   margin: 0;
   font-family: sans-serif;
-  background-color: #c9deff;
+  scroll-behavior: smooth;
 }
 
+.topInv{
+  background-color: #12232E;
+  width: 100%;
+  height: 3.75rem;
+  position: fixed;
+}
 
 .Top {
   display: flex;
@@ -20,7 +26,7 @@
   line-height: 60px;
   font-size: 20px;
   padding-left: 10px;
-  color: #000;
+  color: #EEFBFB;
 }
 
 
@@ -44,9 +50,9 @@ li {
 
 a{
   text-decoration: none;
-  color:#000;
+  color:#EEFBFB;
 }
 
 a:hover {
-  border-bottom: 3px solid #000;  
+  border-bottom: 3px solid #EEFBFB;  
 }

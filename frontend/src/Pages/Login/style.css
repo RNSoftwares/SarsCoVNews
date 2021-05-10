@@ -7,7 +7,7 @@
   max-width: 1920px;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(#00FAFA, #99ffbe);
+  background: linear-gradient(#4DA8DA 65%, #007CC7);
   margin: auto;
 }
 
@@ -26,7 +26,6 @@
 }
 
 .corpo {
-  height: 100vh;
   width: 100%;
   background-color: transparent;
 }
@@ -35,7 +34,7 @@
   margin: auto;
   width: 31.25rem;
   height: 22rem;
-  background-color: #F0F5F5;
+  background-color: #203647;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -47,7 +46,7 @@
   width: 100%;
   height: 80px;
   margin-top: 40px;
-  background-color: #F0F5F5;
+  background-color: #203647;
   display: flex;
   align-items: center;
 }
@@ -55,7 +54,7 @@
 .icone{
   width: 40px;
   height:52px;
-  background-color: #F0F5F5;
+  background-color: #203647;
   border-radius: 5px 0 0 5px;
 }
 
@@ -84,7 +83,7 @@
   width: 100%;
   height: 80px;
   margin-top: 30px;
-  background-color: #F0F5F5;
+  background-color: #203647;
   display: flex;
   align-items: center;
 }
@@ -107,7 +106,7 @@
   width: 100%;
   height: 80px;
   margin-top: 40px;
-  background-color: #F0F5F5;
+  background-color: #203647;
   display: flex;
   justify-content: center;
 }
@@ -122,7 +121,13 @@
     font-size: 18px;
     font-weight: bold;
     border-radius: 10px;
+    border: none;
 }
 
+
+.botao button:hover{
+  background-color: #EEFBFB;
+  color: #12232E;
+}
 
 
