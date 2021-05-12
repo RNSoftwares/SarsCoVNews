@@ -46,11 +46,32 @@
   height:700px;
   width:100%;
   background-color: #4DA8DA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grafico{
-  width: 50%;
-  height: 400px;
-  float: right;
+  width: 550px;
+  height: 550px;
+  margin-left: auto;
+  margin-right: 60px;
+  margin-top: 60px;
+  background-color: #000;
 }
 
+.textStats{
+  width: 650px;
+  height: 300px;
+  margin-top: 60px;
+  margin-left: 20px; 
+  color: #fff; 
+}
+
+.textStats h2 {
+  font-size: 50px;
+}
+
+.textStats p {
+  font-size: 25px;
+}

@@ -2,7 +2,6 @@ import React from 'react';
 import Chart from "react-google-charts";
 import './style.css';
 
-
 function inicio(){
     return(
         <div className="corpoInicio">
@@ -11,26 +10,38 @@ function inicio(){
                     <h2>Sistema de Monitoramento de casos de COVID-19</h2>
             </div>
             <div className="estats">
+                <div className="textStats">
+                    <h2>Estatísticas Globais</h2>
+                    <p>e locais de todos os casos,<br/>
+                        apresentadas em gráficos e mapas<br/>
+                        interativos
+                    </p>
+                </div>
                 <div className="grafico">
-                    <Chart
-                        width={'500px'}
-                        height={'500px'}
+                    <Chart className="teste"
+                        width={'550px'}
+                        height={'550px'}
+                        background-color= {'#000'}
+                        position= {'fixed'}
                         chartType="Bar"
                         loader={<div>Carregando Grafico</div>}
                         data={[
-                            ['Year', 'Sales', 'Expenses', 'Profit'],
-                            ['2014', 1000, 400, 200],
-                            ['2015', 1170, 460, 250],
-                            ['2016', 660, 1120, 300],
-                            ['2017', 1030, 540, 350],
+                            ['Casos', 'Suspeitos', 'Ativos', 'Recuperados'],
+                            ['JAN', 10000, 30000, 45000],
+                            ['FEV', 16578, 5326, 10238],
+                            ['MAR', 25963, 14698, 24659],
+                            ['ABR', 51973, 12677, 35416],
+                            ['MAI', 56327, 1493, 57893],
                         ]}
-                        options={{
-                            // Material design options
+                        options={{  
                             chart: {
-                            title: 'Company Performance',
-                            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+                            title: 'Casos em 2021',
                             },
                         }}
+
+
+                        
+
                         // For tests
                         rootProps={{ 'data-testid': '2' }}
                     />
