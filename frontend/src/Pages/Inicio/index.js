@@ -1,8 +1,31 @@
-import React from 'react';
-import Chart from "react-google-charts";
+import React, { useState } from 'react';
+import {Chart} from "react-google-charts";
 import './style.css';
 
-function inicio(){
+function Inicio(){
+    const [options, setOptions] = useState({
+        title: 'Gráfico de Pizza',
+        display: 'flex',
+        width: '500px',
+        height: '500px',
+      });
+      const [optionsBar, setOptionsBar] = useState({
+        title: 'Gráfico de Barra'
+      });
+      const [data, setData] = useState([
+        ['Linguagens', 'Quantidade'],
+        ['React', 100],
+        ['Angula', 80],
+        ['Vue', 50],
+      ]);
+      const [dataBar, setDataBar] = useState([
+        ['Cidades', '2010 População', '2000 População'],
+        ['New York City, NY', 8175000, 8008000],
+        ['Los Angeles, CA', 3792000, 3694000],
+        ['Chicago, IL', 2695000, 2896000],
+        ['Houston, TX', 2099000, 1953000],
+        ['Philadelphia, PA', 1526000, 1517000],
+      ])
     return(
         <div className="corpoInicio">
             <div className="dados">
@@ -18,32 +41,12 @@ function inicio(){
                     </p>
                 </div>
                 <div className="grafico">
-                    <Chart className="teste"
-                        width={'550px'}
-                        height={'550px'}
-                        background-color= {'#000'}
-                        position= {'fixed'}
-                        chartType="Bar"
-                        loader={<div>Carregando Grafico</div>}
-                        data={[
-                            ['Casos', 'Suspeitos', 'Ativos', 'Recuperados'],
-                            ['JAN', 10000, 30000, 45000],
-                            ['FEV', 16578, 5326, 10238],
-                            ['MAR', 25963, 14698, 24659],
-                            ['ABR', 51973, 12677, 35416],
-                            ['MAI', 56327, 1493, 57893],
-                        ]}
-                        options={{  
-                            chart: {
-                            title: 'Casos em 2021',
-                            },
-                        }}
-
-
-                        
-
-                        // For tests
-                        rootProps={{ 'data-testid': '2' }}
+                    <Chart
+                        width={'500px'}
+                        height={'300px'}
+                        chartType="PieChart"
+                        data={dataBar}
+                        setOptions={options}
                     />
                 </div>
             </div>
@@ -55,4 +58,4 @@ function inicio(){
 
 }
 
-export default inicio;
+export default Inicio;
