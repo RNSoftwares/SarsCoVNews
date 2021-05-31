@@ -29,24 +29,24 @@ function App() {
             <Cadastro/>
           </Route>
 
-          <Route exact path="/login">
+          <Route path="/login">
             <Login/>
           </Route>
-          <Route exact path="/dados">
+          <Route path="/dados">
 
             <Header/>
             <Dados/>
             <Footer/>
 
           </Route>
-          <Route exact path="/estatisticas">
+          <Route path="/estatisticas">
 
             <Header/>
             <Stats/>
             <Footer/>
 
           </Route>
-          <Route exact path="/sobre">
+          <Route path="/sobre">
 
               <Header/>
               <Sobre/>

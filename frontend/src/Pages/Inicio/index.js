@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Chart} from "react-google-charts";
-import './style.css';
+import './inicio.css';
 
 function Inicio(){
     const [options, setOptions] = useState({
@@ -8,6 +8,8 @@ function Inicio(){
         display: 'flex',
         width: '500px',
         height: '500px',
+        chartArea: { width: '90%' },
+        width_units: '%'
       });
       const [optionsBar, setOptionsBar] = useState({
         title: 'Gráfico de Barra'
@@ -33,6 +35,13 @@ function Inicio(){
                     <h2>Sistema de Monitoramento de casos de COVID-19</h2>
             </div>
             <div className="estats">
+                    <Chart
+                        width={'500px'}
+                        height={'300px'}
+                        chartType="PieChart"
+                        data={dataBar}
+                        setOptions={options}
+                    />
                 <div className="textStats">
                     <h2>Estatísticas Globais</h2>
                     <p>e locais de todos os casos,<br/>
@@ -41,13 +50,6 @@ function Inicio(){
                     </p>
                 </div>
                 <div className="grafico">
-                    <Chart
-                        width={'500px'}
-                        height={'300px'}
-                        chartType="PieChart"
-                        data={dataBar}
-                        setOptions={options}
-                    />
                 </div>
             </div>
             <div className="title">
