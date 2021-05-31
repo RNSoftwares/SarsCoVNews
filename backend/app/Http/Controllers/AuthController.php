@@ -39,7 +39,7 @@ class AuthController extends Controller
             $newUser->name = $name;
             $newUser->email = $email;
             $newUser->cpf = $cpf;
-            $newUser->password = $hash;
+            $newUser->password = $password;
             $newUser->save();
 
             $token = auth()->attempt([

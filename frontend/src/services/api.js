@@ -1,4 +1,4 @@
-const baseURL = 'http://127.0.0.1:8000/api';
+const baseUrl = 'http://127.0.0.1:8000/api';
 
 const request = async (method, endpoint, params, token = null) => {
     method = method.toLowerCase();
@@ -33,5 +33,10 @@ const request = async (method, endpoint, params, token = null) => {
 export default {
     register: async () => {
         
+    },
+    login: async (email, password) => {
+        let json = request('post', '/auth/login', {email, password});
+
+        return json;
     }
 };
