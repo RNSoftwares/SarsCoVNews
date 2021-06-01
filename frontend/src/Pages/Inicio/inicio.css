@@ -14,12 +14,11 @@
   height: calc(100vh - 100px);
   width:100%;
   background-color: #4DA8DA;
-  margin: 0;
+  margin: auto;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  align-content: center;
   background: url('../../images/foto-1-getty-images.png') no-repeat center/110% fixed;
 }
 
@@ -28,6 +27,9 @@
   background-color: #fff;
   width: 1000px; 
   border-radius: 10px 10px 0 0;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 0;
 }
 
 .dados h2{
@@ -37,6 +39,9 @@
   background-color: #fff;
   height: 60px;
   border-radius: 0 0 10px 10px;
+  text-align: center;
+  margin: auto;
+  margin-top: 0;
 }
 
 
@@ -50,12 +55,14 @@
 }
 
 .grafico{
-  width: 550px;
-  height: 550px;
-  margin-left: auto;
+  width: 500px;
+  height: 500px;
+  margin: auto;
   margin-right: 60px;
   margin-top: 60px;
-  background-color: #000;
+  background-color: #000 ;
+  display: flex;
+  flex: 1;
 }
 
 .textStats{

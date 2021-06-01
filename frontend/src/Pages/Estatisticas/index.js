@@ -5,8 +5,9 @@ import './estatisticas.css';
 function stats() {
 
   return(
-    <>
-    </>
+    <div className="um">
+
+    </div>
   )
 
 }

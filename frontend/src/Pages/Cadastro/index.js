@@ -6,8 +6,8 @@ import './cadastro.css';
 function Cadastro() {
 
     return(
-        <div className="infos">
-            <div className="dados">
+        <div className="informacoes">
+            <div className="dado">
                 <div className="inf">
                     <p>Nome:</p>
                     <input type="text" id="nome"></input>
@@ -33,7 +33,7 @@ function Cadastro() {
                     <input type="number" id="peso"></input>
                 </div>
             </div>
-            <div  className="dados">
+            <div  className="dado">
                 <div className="inf">
                         <p>Endereço:</p>
                         <input type="text" id="nome"></input>

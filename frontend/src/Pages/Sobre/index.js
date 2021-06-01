@@ -4,8 +4,9 @@ import './sobre.css';
 
 function sobre(){
   return(
-    <>
-    </>
+    <div className="sobri">
+
+    </div>
   )
 }
 

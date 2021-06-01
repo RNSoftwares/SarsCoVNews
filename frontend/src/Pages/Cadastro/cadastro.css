@@ -1,7 +1,7 @@
 
 
 
-.infos{
+.informacoes{
   background-color: #F0F5F5;
   width: 75rem;
   height: 37rem;
@@ -11,7 +11,7 @@
   display: flex;
 }
 
-.dados {
+.dado {
   background-color: transparent;
   flex: 1;
   height: 35rem;

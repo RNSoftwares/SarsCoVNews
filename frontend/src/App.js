@@ -47,11 +47,9 @@ function App() {
 
           </Route>
           <Route path="/sobre">
-
               <Header/>
               <Sobre/>
               <Footer/>
-
           </Route>
         
 
