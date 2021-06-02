@@ -5,55 +5,83 @@ import './cadastro.css';
 
 function Cadastro() {
 
+
     return(
         <div className="informacoes">
-            <div className="dado">
-                <div className="inf">
-                    <p>Nome:</p>
-                    <input type="text" id="nome"></input>
-                </div>
-                <div className="inf">
-                    <p>Idade:</p>
-                    <input type="number" id="idade" required="required"></input>
-                </div>
-                <div className="inf">
-                    <p>CPF:</p>
-                    <input type="number" id="cpf"></input>
-                </div>
-                <div className="inf">
-                    <p>Celular:</p>
-                    <input type="number" id="telefone"></input>
-                </div>
-                <div className="inf">
-                    <p>Altura(cm):</p>
-                    <input type="number" id="altura"></input>
-                </div>
-                <div className="inf">
-                    <p>Peso(Kg):</p>
-                    <input type="number" id="peso"></input>
-                </div>
-            </div>
-            <div  className="dado">
-                <div className="inf">
-                        <p>Endereço:</p>
-                        <input type="text" id="nome"></input>
-                    </div>
-                    <div className="inf">
-                        <p>CEP:</p>
-                        <input type="text" id="idade" required="required" pattern="[0-9]+$"></input>
-                    </div>
-                    <div className="inf">
-                        <p>Sexo:</p>
-                        <input type="number" id="cpf"></input>
-                    </div>
-                    <div className="inf">
-                        <p>Celular  :</p>
-                        <input type="number" id="telefone"></input>
-                    </div>
-                    <div className="botao">
-                        <button>Confirmar</button>
-                    </div>
-            </div>
+           <form className="formulario" action="POST">
+               <label>
+                   <p>Nome</p><br/> 
+                   <input type="text" name="name"/>
+               </label><br/> 
+               <label>
+                   <p>Email</p><br/> 
+                   <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="example@example.com" />
+               </label><br/> 
+               <label>
+                   <p>CPF</p><br/> 
+                   <input type="text" name="cpf" pattern="[0-9]{11}" max="11"  onChange="validarCPF()"/>
+               </label><br/> 
+               <label id="sexo">
+                   <p>Sexo</p><br/>
+                    <label id="lbl_sex" for="male">Masculino</label><br/>
+                    <input type="radio" id="sex" name="gender" value="male"/><br/>
+                    <label id="lbl_sex" for="female">Feminino</label><br/>
+                    <input type="radio" id="sex" name="gender" value="female"/><br/>
+               </label><br/> 
+               <label>
+                   <p>Idade</p><br/> 
+                   <input type="text" name="age"/>
+               </label><br/> 
+               <label>
+                   <p>Peso</p><br/> 
+                   <input type="text" name="weight"/>
+               </label><br/> 
+               <label>
+                   <p>Altura</p><br/> 
+                   <input type="text" name="height"/>
+               </label><br/> 
+               <label>
+                   <p>País</p><br/> 
+                   <input type="text" name="country"/>
+               </label><br/> 
+               <label>
+                   <p>Estado</p><br/> 
+                   <input type="text" name="state"/>
+               </label><br/> 
+               <label>
+                   <p>CEP</p><br/> 
+                   <input type="text" name="zip_code"/>
+               </label><br/> 
+               <label>
+                   <p>Cidade</p><br/> 
+                   <input type="text" name="city"/>
+               </label><br/> 
+               <label>
+                   <p>Endereço</p><br/> 
+                   <input type="text" name="address"/>
+               </label><br/> 
+               <label>
+                   <p>Celular</p><br/> 
+                   <input type="text" name="phone"/>
+               </label><br/> 
+               <label>
+                   <p>Senha</p><br/> 
+                   <input type="password" name="password"/>
+               </label><br/> 
+               <label>
+                   <p>Confirmar Senha</p><br/> 
+                   <input type="password" name="confirm_password"/>
+               </label><br/> 
+               <label>
+                   <p></p><br/> 
+               </label><br/> 
+               <label id="cadastrar">
+                   <button>Confirmar</button>
+               </label><br/> 
+              
+               
+               
+           </form>
         </div>
     );
 }
