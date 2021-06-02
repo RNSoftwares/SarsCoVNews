@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
+use App\Models\Access;
 
 class AuthController extends Controller
 {
@@ -21,29 +22,60 @@ class AuthController extends Controller
 
         $validator = Validator::make($request->all(), [
             'name' => 'required',
-            'email' => 'required|email|unique:users,email',
             'cpf' => 'required|digits:11|unique:users,cpf',
+            'sex' => 'required',
+            'age' => 'required',
+            'weight' => 'required',
+            'height' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'country' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'zip_code' => 'required|digits:8',
+            'email' => 'required|email|unique:accesses,email',
             'password' => 'required',
             'password_confirm' => 'required|same:password'
         ]);
 
         if (!$validator->fails()) {
             $name = $request->input('name');
-            $email = $request->input('email');
             $cpf = $request->input('cpf');
+            $sex = $request->input('sex');
+            $age = $request->input('age');
+            $weight = $request->input('weight');
+            $height = $request->input('height');
+            $city = $request->input('city_id');
+            $phone = $request->input('phone');
+            $address = $request->input('address');
+            $zip_code = $request->input('zip_code');
+            $email = $request->input('email');
             $password = $request->input('password');
-
-            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $password_confirm = $request->input('password_confirm');
 
             $newUser = new User();
             $newUser->name = $name;
-            $newUser->email = $email;
             $newUser->cpf = $cpf;
-            $newUser->password = $password;
+            $newUser->sex = $sex;
+            $newUser->age = $age;
+            $newUser->weight = $weight;
+            $newUser->height = $height;
+            $newUser->city_id = $city;
+            $newUser->phone = $phone;
+            $newUser->address = $address;
+            $newUser->zip_code = $zip_code;
             $newUser->save();
+            
+                if ($newUser->id) {
+                    $newAccess = new Access();
+                    $newAccess->email = $email;
+                    $newAccess->password = $password;
+                    $newAccess->user_id = $newUser->id;
+                    $newAccess->save();
+                }
 
             $token = auth()->attempt([
-                'cpf' => $cpf,
+                'email' => $email,
                 'password' => $password
             ]);
 
