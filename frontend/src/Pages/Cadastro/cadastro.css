@@ -4,7 +4,7 @@
 .informacoes{
   background-color: #203647;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: auto;
   display: flex;
 }
@@ -60,6 +60,7 @@
 #cadastrar {
   margin: auto;
   text-align: center;
+  align-content: center;
 }
 
 

@@ -1,10 +1,12 @@
 import React from 'react';
+import {Chart} from "react-google-charts";
 import './dados.css';
 
 function dados() {
 
   return(
     <div className="CorpoDados">
+      <div className="barraBusca">
       <div className="data">
         <nav>
           <ul className="busca">
@@ -18,12 +20,30 @@ function dados() {
           </nav>
           <hr></hr>
       </div>
+      </div>
       <div className="casos">
-        <div className="casosLista">
+        <div className="casos">
+          <div className="casosLista">
 
-        </div>
-        <div className="casosDados">
-
+          </div>
+          <div className="casosGrafico">
+            <Chart
+              width={'500px'}
+              height={'300px'}
+              chartType="GeoChart"
+              data={[
+                ['Country', 'Popularity'],
+                ['Germany', 200],
+                ['United States', 300],
+                ['Brazil', 400],
+                ['Canada', 500],
+                ['France', 600],
+                ['RU', 700],
+              ]}
+              mapsApiKey="AIzaSyCDDfhiUWrdeiKaPLJZmpVKCcv9N8MdssA"
+              rootProps={{ 'data-testid': '1' }}
+            />
+          </div>
         </div>
       </div>
     </div>

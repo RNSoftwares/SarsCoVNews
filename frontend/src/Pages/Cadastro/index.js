@@ -5,7 +5,6 @@ import './cadastro.css';
 
 function Cadastro() {
 
-
     return(
         <div className="informacoes">
            <form className="formulario" action="POST">
@@ -19,7 +18,7 @@ function Cadastro() {
                </label><br/> 
                <label>
                    <p>CPF</p><br/> 
-                   <input type="text" name="cpf" pattern="[0-9]{11}" max="11"  onChange="validarCPF()"/>
+                   <input type="text" id="cpf" name="cpf" pattern="[0-9]{11}" max="11"/>
                </label><br/> 
                <label id="sexo">
                    <p>Sexo</p><br/>
@@ -30,7 +29,7 @@ function Cadastro() {
                </label><br/> 
                <label>
                    <p>Idade</p><br/> 
-                   <input type="text" name="age"/>
+                   <input type="text" name="age" pattern="[0-9]"/>
                </label><br/> 
                <label>
                    <p>Peso</p><br/> 
