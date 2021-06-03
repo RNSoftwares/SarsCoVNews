@@ -27,7 +27,7 @@ class AuthController extends Controller
             'age' => 'required',
             'weight' => 'required',
             'height' => 'required',
-            'city' => 'required',
+            'city_id' => 'required',
             'state' => 'required',
             'country' => 'required',
             'phone' => 'required',
@@ -45,13 +45,14 @@ class AuthController extends Controller
             $age = $request->input('age');
             $weight = $request->input('weight');
             $height = $request->input('height');
-            $city = $request->input('city_id');
+            $city_id = $request->input('city_id');
             $phone = $request->input('phone');
             $address = $request->input('address');
             $zip_code = $request->input('zip_code');
             $email = $request->input('email');
             $password = $request->input('password');
-            $password_confirm = $request->input('password_confirm');
+
+            $hash = password_hash($password, PASSWORD_DEFAULT);
 
             $newUser = new User();
             $newUser->name = $name;
@@ -60,7 +61,7 @@ class AuthController extends Controller
             $newUser->age = $age;
             $newUser->weight = $weight;
             $newUser->height = $height;
-            $newUser->city_id = $city;
+            $newUser->city_id = $city_id;
             $newUser->phone = $phone;
             $newUser->address = $address;
             $newUser->zip_code = $zip_code;
@@ -69,13 +70,13 @@ class AuthController extends Controller
                 if ($newUser->id) {
                     $newAccess = new Access();
                     $newAccess->email = $email;
-                    $newAccess->password = $password;
+                    $newAccess->password = $hash;
                     $newAccess->user_id = $newUser->id;
                     $newAccess->save();
                 }
 
             $token = auth()->attempt([
-                'email' => $name,
+                'email' => $email,
                 'password' => $password
             ]);
 
@@ -112,7 +113,7 @@ class AuthController extends Controller
             $password = $request->input('password');
 
             $token = auth()->attempt([
-                'name' => $name,
+                'email' => $email,
                 'password' => $password
             ]);
 
