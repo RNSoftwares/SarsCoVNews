@@ -75,12 +75,12 @@ class AuthController extends Controller
                 }
 
             $token = auth()->attempt([
-                'email' => $email,
+                'email' => $name,
                 'password' => $password
             ]);
 
             if (!$token) {
-                $array['error'] = 'Ocorreu um erro interno durante seu registro';
+                $array['error'] = 'Ocorreu um erro interno durante seu registro - ';
 
                 return $array;
             }
@@ -103,7 +103,7 @@ class AuthController extends Controller
         $array = ['error' => ''];
 
         $validator = Validator::make($request->all(), [
-            'email' => 'required|email',
+            'email' => 'required',
             'password' => 'required'
         ]);
 
@@ -112,7 +112,7 @@ class AuthController extends Controller
             $password = $request->input('password');
 
             $token = auth()->attempt([
-                'email' => $email,
+                'name' => $name,
                 'password' => $password
             ]);
 
