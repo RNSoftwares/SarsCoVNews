@@ -1,21 +1,28 @@
 import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 import './login.css';
 import API from '../../services/api';
 
-function Login() {
+const Login = () => {
+
+    const history = useHistory();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const handleLoginButton = async () => {
         if (email && password) {
-            let result = await API.login(email, password);
+            const result = await API.login(email, password);
 
             if (result.error === '') {
-                window.location.href = '/';
+                localStorage.setItem('token', result.token);
+                history.push('/');
             } else {
-                window.location.href = '/login';
+                setError(result.error);
             }
+        } else {
+            setError('Digite os dados');
         }
     }
 
