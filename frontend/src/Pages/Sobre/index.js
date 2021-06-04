@@ -2,7 +2,7 @@ import React from 'react';
 import './sobre.css';
 
 
-function sobre(){
+const Sobre = () => {
   return(
     <div className="sobri">
 
@@ -10,4 +10,4 @@ function sobre(){
   )
 }
 
-export default sobre;
+export default Sobre;

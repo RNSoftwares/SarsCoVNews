@@ -2,7 +2,7 @@ import React from 'react';
 import {Chart} from "react-google-charts";
 import './inicio.css';
 
-function Inicio(){
+const Inicio = () => {
       return(
         <div className="corpoInicio">
             <div className="dados">

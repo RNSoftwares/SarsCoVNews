@@ -2,7 +2,7 @@ import React from 'react';
 import './estatisticas.css';
 
 
-function stats() {
+const Stats = () => {
 
   return(
     <div className="um">
@@ -14,4 +14,4 @@ function stats() {
 
 
 
-export default stats;
+export default Stats;

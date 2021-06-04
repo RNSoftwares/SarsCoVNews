@@ -35,13 +35,13 @@ const Login = () => {
                 <div className="login">
                     <div className="email">
                         <div className="icone">
-                            <img src="./images/login.svg"/>
+                            <img src="./images/login.svg" alt="icone de email"/>
                         </div>
                         <input type="text" placeholder="E-mail" value={email} onChange={e=>{setEmail(e.target.value)}}></input>
                     </div>
                     <div className="senha">
                         <div className="icone">
-                            <img src="./images/padlock.svg"/>
+                            <img src="./images/padlock.svg" alt="icone de cadeado"/>
                         </div>
                         <input type="password" placeholder="Senha" value={password} onChange={e=>{setPassword(e.target.value)}}></input>
                     </div>

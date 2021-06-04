@@ -2,8 +2,7 @@ import React from 'react';
 import {Chart} from "react-google-charts";
 import './dados.css';
 
-function dados() {
-
+const Dados = () => {
   return(
     <div className="CorpoDados">
       <div className="barraBusca">
@@ -48,7 +47,5 @@ function dados() {
       </div>
     </div>
   )
-
 }
-
-export default dados;
+export default Dados;

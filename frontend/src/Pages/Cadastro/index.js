@@ -3,8 +3,7 @@ import './cadastro.css';
 
 
 
-function Cadastro() {
-
+const Cadastro = () => {
     return(
         <div className="informacoes">
            <form className="formulario" action="POST">
@@ -76,10 +75,7 @@ function Cadastro() {
                </label><br/> 
                <label id="cadastrar">
                    <button>Confirmar</button>
-               </label><br/> 
-              
-               
-               
+               </label><br/>
            </form>
         </div>
     );
