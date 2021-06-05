@@ -91,6 +91,12 @@ class AuthController extends Controller
             $user = auth()->user();
             $array['user'] = $user;
 
+            $nameUser = User::select(['name'])
+                ->where('id', $user['user_id'])
+                ->get();
+
+            $array['name'] = $nameUser;
+
         } else {
             $array['error'] = $validator->errors()->first();
 
@@ -126,7 +132,14 @@ class AuthController extends Controller
             $array['token'] = $token;
 
             $user = auth()->user();
+
             $array['user'] = $user;
+
+            $nameUser = User::select(['name'])
+                ->where('id', $user['user_id'])
+                ->get();
+
+            $array['name'] = $nameUser;
 
             return $array;
         } else {

@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import './login.css';
-import API from '../../services/api';
+import useApi from '../../services/api';
 
 const Login = () => {
 
+    const API = useApi();
     const history = useHistory();
 
     const [email, setEmail] = useState('');
@@ -17,12 +18,13 @@ const Login = () => {
 
             if (result.error === '') {
                 localStorage.setItem('token', result.token);
+                localStorage.setItem('user', result.name);
                 history.push('/');
             } else {
-                setError(result.error);
+                setError(result.error)
             }
         } else {
-            setError('Digite os dados');
+            alert('Preencha os campos!!!');
         }
     }
 
@@ -37,16 +39,16 @@ const Login = () => {
                         <div className="icone">
                             <img src="./images/login.svg" alt="icone de email"/>
                         </div>
-                        <input type="text" placeholder="E-mail" value={email} onChange={e=>{setEmail(e.target.value)}}></input>
+                        <input type="text" placeholder="E-mail" value={email} onChange={e=>{setEmail(e.target.value)}} />
                     </div>
                     <div className="senha">
                         <div className="icone">
                             <img src="./images/padlock.svg" alt="icone de cadeado"/>
                         </div>
-                        <input type="password" placeholder="Senha" value={password} onChange={e=>{setPassword(e.target.value)}}></input>
+                        <input type="password" placeholder="Senha" value={password} onChange={e=>{setPassword(e.target.value)}} />
                     </div>
                     <div className="botao">
-                        <button type="submit" onclick={handleLoginButton}>Entrar</button>
+                        <button type="submit" onClick={handleLoginButton}>Entrar</button>
                     </div>
                 </div>
             </div>

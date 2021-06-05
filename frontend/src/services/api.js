@@ -32,8 +32,10 @@ const request = async (method, endpoint, params, token = null) => {
 
 export default () => {
     return {
-        register: async () => {
-        
+        register: async (name, email, cpf, sex, age, height, weight, country, state, zip_code, city_id, address, phone, password, password_confirm) => {
+            let json = request('post', '/auth/register', {name, email, cpf, sex, age, height, weight, country, state, zip_code, city_id, address, phone, password, password_confirm});
+    
+            return json;
         },
         login: async (email, password) => {
             let json = request('post', '/auth/login', {email, password});

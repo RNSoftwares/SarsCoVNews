@@ -1,7 +1,11 @@
 import React from 'react';
+
 import './header.css';
 
-function header(){
+const token = localStorage.getItem('token');
+const user = localStorage.getItem('user');
+
+const Header = () => {
 
     return(
         <div className="topInv">
@@ -13,15 +17,24 @@ function header(){
                         <li><a href="/dados">Dados</a></li>
                         <li><a href="/estatisticas">Estatísticas</a></li>
                         <li><a href="/sobre">Sobre</a></li>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/cadastro">Cadastre-se</a></li>
+                        {!token &&
+                            <ul className="Menu">
+                                <li><a href="/login">Login</a></li>
+                                <li><a href="/cadastro">Cadastre-se</a></li>
+                            </ul>
+                        }
+                        {token &&
+                            <ul className="Menu">
+                                <li><a href="/">Sair</a></li>
+                                <li><a href="">{user}</a></li>
+                            </ul>
+                        }
                     </ul>
                 </nav>
             </div>
         </div>  
     )
-
 }
 
 
-export default header;
+export default Header;
