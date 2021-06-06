@@ -42,6 +42,8 @@ const Cadastro = () => {
         }
     }
 
+    
+
     return(
         <div className="informacoes formulario">
            

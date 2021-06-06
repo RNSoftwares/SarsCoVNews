@@ -49,6 +49,11 @@ export default () => {
             localStorage.removeItem('token');
 
             return json;
+        },
+        getCountries: async () => {
+            let json = await request('get', '/location/states', {});
+
+            return json;
         }
     };
 }
