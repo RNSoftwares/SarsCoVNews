@@ -3,12 +3,14 @@
   height: calc(100vh - 3.75rem);
   padding-top: 60px;
   display: flex;
+  flex-direction: column;
 }
 
 .barraBusca{
   width: 100%;
+  max-width: 1920px;
   height: 3.125rem;
-  margin-right: 50px ;
+  flex: 1;
 }
 
 .data{
@@ -46,23 +48,22 @@ nav {
 /* fim barra de busca */
 
 
-.casos{
+.listas {
   width: 100%;
-  height: calc(100vh - 3.75rem);
-  padding-top: 60px;
+  height: 100vh;
+  flex: 1;
   display: flex;
+  background-color: #0f0;
 }
 
 
+.listaCasos{
+    flex: 1;
+    background-color: #f00;
+    height: 400px;
+}
 
-.casosLista {
+.casosGrafico{
   flex: 1;
+  background-color: #00f;
 }
-
-
-.casosGrafico {
-  margin-top: 300px;
-  flex: 1;
-}
-
-
