@@ -2,21 +2,21 @@ import React from 'react';
 import {Chart} from "react-google-charts";
 import './dados.css';
 
-function apiCasos() {
-
-  fetch("https://covid19-brazil-api.now.sh/api/report/v1/brazil", {
-    "method": "GET"
-    })
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-
-    return 0;
-}
-
-
-
 const Dados = () => {
 
+  function apiCasos() {
+
+    fetch('https://covid19-brazil-api.now.sh/api/report/v1')
+      .then(function(resultado){
+        return resultado.json();
+      })
+      .then(function(json){
+         console.log(json);
+      })
+      .catch(function (error){
+        console.log(error);
+      })
+  }
 
   return(
     <div className="CorpoDados">
@@ -29,7 +29,7 @@ const Dados = () => {
                 <li><a >Ordenar Qntd de Casos</a></li>
                 <li><a >Ordenar Z-A</a></li>
                 <li><input type="text" placeholder="buscar"></input></li>
-                <li><button type="submit">Pesquisa</button></li>
+                <li><button onClick={apiCasos}>Pesquisa</button></li>
             </ul>
           </nav>
           <hr></hr>
