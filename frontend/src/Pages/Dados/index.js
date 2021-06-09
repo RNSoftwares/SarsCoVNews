@@ -4,19 +4,29 @@ import './dados.css';
 
 const Dados = () => {
 
-  function apiCasos() {
+  async function montarCasos(data){
+    let html = '';
 
-    fetch('https://covid19-brazil-api.now.sh/api/report/v1')
-      .then(function(resultado){
-        return resultado.json();
-      })
-      .then(function(json){
-         console.log(json);
-      })
-      .catch(function (error){
-        console.log(error);
-      })
+    for(let i in data){
+        html += '<h3>'+data[i].uf+'</h3>';
+        html += data[i].state+'<br/>';
+        html += '<hr/>';
+    }
+    document.getElementById("listando").innerHTML = html;
   }
+
+ async function apiCasos() {
+    let url = "https://covid19-brazil-api.now.sh/api/report/v1/brazil";
+    document.getElementById("listando").innerHTML = 'Carregando...';
+
+    let req = await fetch(url);
+    let json = await req.json();
+    console.log(json);
+    
+    montarCasos(json);
+  }
+
+
 
   return(
     <div className="CorpoDados">
@@ -36,29 +46,14 @@ const Dados = () => {
         </div>
       </div>
       <div className="listas">
-          <div className="listaCasos">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          <div id="listando" className="listaCasos">
+              
           </div>
           <div className="casosGrafico">
             <Chart
               width={'680px'}
-              height={'400px'}
+              height={'450px'}
+              position={'FixedChar'}
               chartType="GeoChart"
               data={[
                 ['Country', 'Popularity'],
