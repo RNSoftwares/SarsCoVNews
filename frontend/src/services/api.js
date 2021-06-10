@@ -1,4 +1,5 @@
 const baseUrl = 'http://127.0.0.1:8000/api';
+const url = 'https://covid19-brazil-api.now.sh/api/report/v1';
 
 const request = async (method, endpoint, params, token = null) => {
     method = method.toLowerCase();
@@ -52,6 +53,12 @@ export default () => {
         },
         getCountries: async () => {
             let json = await request('get', '/location/states', {});
+
+            return json;
+        },
+
+        getCasos: async () => {
+            let json = await request('get', '/brazil', {});
 
             return json;
         }
