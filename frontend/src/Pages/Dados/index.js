@@ -1,59 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Chart} from "react-google-charts";
 import './dados.css';
 import useApi from '../../services/api';
 
 const Dados = () => {
 
- /*async function apiCasos() {
-    
-    let url = "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/sp";
-    document.getElementById("listando").innerHTML = 'Carregando...';
-
-    let req = await fetch(url);
-    let json = await req.json();
-    console.log(json);
-    
-    montarCasos(json);
-  }
-
-  async function montarCasos(data){
-    let html = '';
-
-    for(let i in data){
-        html += '<h3>'+data[i].uf+'</h3>';
-        html += data[i].state+'<br/>';
-        html += '<hr/>';
-    }
-    document.getElementById("listando").innerHTML = html;
-  }*/
-
   const API = useApi();
+  const [lista, setLista] = useState([]);
 
-  const apiCasos = async() => {
+  const apiCasos = async () => {
+    const result = await API.getCasos();
 
-    const token="fe48d7e2167d8d8ec6b8939ae8d1253163c45497";
+    setLista(result.results);
 
-    const datasetSlug="covid19";
-    const tableName="caso_full";
-
-    const filters = {state: "PR", is_last: "True"};
-
-    const url=`https://api.brasil.io/v1/dataset/covid19/caso/data/?state=&is_last=True`;
-
-    fetch(
-      url,
-      {
-        method: 'get',
-        headers: {
-          Authorization: `Token ${token}`,
-        },
-      }
-    ).then(res => res.json())
-    .then(json => console.log(json));
+    console.log(result.results);
   }
-
-
 
   return(
     <div className="CorpoDados">
@@ -74,7 +35,9 @@ const Dados = () => {
       </div>
       <div className="listas">
           <div id="listando" className="listaCasos">
-            
+              {lista.map(function(key, item){
+                <p key={key}>{item}</p>
+              })}
           </div>
           <div className="casosGrafico">
             <Chart

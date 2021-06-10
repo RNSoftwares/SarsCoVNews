@@ -1,5 +1,7 @@
-const baseUrl = 'http://127.0.0.1:8000/api';
-const url = 'https://covid19-brazil-api.now.sh/api/report/v1';
+//const baseUrl = 'http://127.0.0.1:8000/api';
+const baseUrl = 'https://api.brasil.io/v1/dataset/covid19/caso/data/?state';
+
+const token = 'fe48d7e2167d8d8ec6b8939ae8d1253163c45497';
 
 const request = async (method, endpoint, params, token = null) => {
     method = method.toLowerCase();
@@ -22,7 +24,7 @@ const request = async (method, endpoint, params, token = null) => {
     let headers = {'Content-type': 'application/json'};
 
     if (token) {
-        headers.Authorization = `Bearer ${token}`;
+        headers.Authorization = `Token ${token}`;
     }
 
     let req = await fetch(fullUrl, {method, headers, body});
@@ -58,7 +60,7 @@ export default () => {
         },
 
         getCasos: async () => {
-            let json = await request('get', '/brazil', {});
+            let json = await request('get', '', {}, token);
 
             return json;
         }
