@@ -15,7 +15,7 @@ const Header = () => {
                     <ul className="Menu">
                         <li><a href="/">Início</a></li>
                         <li><a href="/dados">Dados</a></li>
-                        <li><a href="/estatisticas">Estatísticas</a></li>
+                        <li><a href="/estatisticas">Dúvidas</a></li>
                         <li><a href="/sobre">Sobre</a></li>
                         {!token &&
                             <ul className="Menu">
