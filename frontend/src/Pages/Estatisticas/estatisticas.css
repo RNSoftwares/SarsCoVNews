@@ -1,4 +1,39 @@
 .um{
   width: 100%;
   height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.caixa{
+  width: 100%;
+  max-width: 1920px;
+  background-color: #203647;
+  flex: 2;
+  display: flex;
+}
+
+.botaoConfirma{
+  width: 100%;
+  max-width: 1920px;
+  background-color: #203647;
+  flex: 1;
+  display: flex;
+}
+
+.duv{
+  margin: auto;
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+}
+
+
+
+.duvida {
+  width: 700px;
+  height: 300px;
+  margin: auto;
+  margin-top: 90px;
 }

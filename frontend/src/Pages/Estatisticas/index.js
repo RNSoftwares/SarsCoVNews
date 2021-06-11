@@ -6,7 +6,12 @@ const Stats = () => {
 
   return(
     <div className="um">
-
+        <div className="caixa">
+            <input type="text" className="duvida"></input>
+        </div>
+        <div  className="botaoConfirma">
+              <button className="duv">Confirmar</button>
+        </div>
     </div>
   )
 
