@@ -18,8 +18,9 @@ const Login = () => {
 
             if (result.error === '') {
                 localStorage.setItem('token', result.token);
-                localStorage.setItem('user', result.name);
-                history.push('/');
+                localStorage.setItem('user', result.name[0].name);
+                console.log(result.name[0].name);
+                window.location.href = '/';
             } else {
                 setError(result.error)
             }

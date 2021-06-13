@@ -1,11 +1,20 @@
 import React from 'react';
 
 import './header.css';
+import useApi from '../../services/api';
 
 const token = localStorage.getItem('token');
 const user = localStorage.getItem('user');
 
 const Header = () => {
+
+    const API = useApi();
+
+    const handleLoggout = async () => {
+        let token = localStorage.getItem('token');
+        await API.logout(token);
+        window.location.href = '/';
+    }
 
     return(
         <div className="topInv">
@@ -25,7 +34,7 @@ const Header = () => {
                         }
                         {token &&
                             <ul className="Menu">
-                                <li><a href="/">Sair</a></li>
+                                <li><button onClick={handleLoggout}>Sair</button></li>
                                 <li><a href="">{user}</a></li>
                             </ul>
                         }

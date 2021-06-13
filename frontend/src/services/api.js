@@ -1,5 +1,5 @@
-//const baseUrl = 'http://127.0.0.1:8000/api';
-const baseUrl = 'https://api.brasil.io/v1/dataset/covid19/caso/data/?state';
+const baseUrl = 'http://127.0.0.1:8000/api';
+//const baseUrl = 'https://api.brasil.io/v1/dataset/covid19/caso/data/?state';
 
 const token = 'fe48d7e2167d8d8ec6b8939ae8d1253163c45497';
 
@@ -45,8 +45,7 @@ export default () => {
     
             return json;
         },
-        logout: async () => {
-            let token = localStorage.getItem('token');
+        logout: async (token) => {
             let json = await request('post', '/auth/logout', {}, token);
 
             localStorage.removeItem('token');

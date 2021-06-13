@@ -50,9 +50,14 @@ li {
   font-weight: bold;
 }
 
-a{
+a, button{
   text-decoration: none;
   color:#EEFBFB;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  font-size: 18px;
 }
 
 a:hover {
