@@ -15,7 +15,6 @@ const Dados = () => {
 
     console.log(result.results);
   }
-
   return(
     <div className="CorpoDados">
       <div className="barraBusca">
@@ -35,7 +34,7 @@ const Dados = () => {
       </div>
       <div className="listas">
           <div id="listando" className="listaCasos">
-              {lista.map(function(key, item){
+             {lista.map(function(key, item){
                 <p key={key}>{item}</p>
               })}
           </div>
@@ -62,4 +61,5 @@ const Dados = () => {
     </div>
   )
 }
+
 export default Dados;
