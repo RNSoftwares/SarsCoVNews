@@ -14,6 +14,7 @@ Route::post('/auth/register', [AuthController::class, 'register']);
 Route::post('/auth/login', [AuthController::class, 'login']);
 Route::get('/location/country', [LocationController::class, 'getAllCountries']);
 Route::get('/location/state', [LocationController::class, 'getAllStates']);
+Route::get('/location/city', [LocationController::class, 'getAllCities']);
 
 Route::middleware('auth:api')->group(function () {
     Route::post('/auth/validate', [AuthController::class, 'validateToken']);

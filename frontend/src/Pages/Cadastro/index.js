@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
 
 import './cadastro.css';
@@ -25,6 +25,25 @@ const Cadastro = () => {
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [password_confirm, setConfirmPassword] = useState('');
+    const [City, SetCity] = useState([]);
+    const [State, SetState] = useState([]);
+    const [selectValue, setSelectValue] = useState('');
+
+    useEffect(() => {
+        getStates();
+        getCities();
+      }, []);
+
+    const getStates = async () => {
+        let result = await API.getStates();
+        SetState(result.states);
+    }
+    
+    const getCities = async () => {
+        let result = await API.getCities(selectValue);
+        alert(selectValue);
+        SetCity(result.cities);
+    }
 
     const handleRegisterButton = async () => {
         if (name && email && cpf && sex && age && height && weight && country  && state && zip_code && city_id && address && phone && password && password_confirm) {
@@ -84,16 +103,24 @@ const Cadastro = () => {
                </label><br/> 
                <label>
                    <p>Estado</p><br/> 
-                   <input type="text" name="state" value={state} onChange={e=>{setState(e.target.value)}} />
+                   <select name="state" value={selectValue} onChange={e => setSelectValue(e.target.value)}>
+                        {State.map((state, index) => (
+                            <option key={index} value={state.id}>{state.name}</option>
+                        ))}
+                   </select>
+               </label><br/>  
+               <label>
+                   <p>Cidade {selectValue}</p><br/>
+                   <select name="city_id">
+                        {City.map((city, index) => (
+                            <option key={index} value={city.id}>{city.name}</option>
+                        ))}
+                   </select>
                </label><br/> 
                <label>
                    <p>CEP</p><br/> 
                    <input type="text" name="zip_code" value={zip_code} onChange={e=>{setZipCode(e.target.value)}} />
-               </label><br/> 
-               <label>
-                   <p>Cidade</p><br/> 
-                   <input type="text" name="city_id" value={city_id} onChange={e=>{setCity(e.target.value)}} />
-               </label><br/> 
+               </label><br/>
                <label>
                    <p>Endereço</p><br/> 
                    <input type="text" name="address" value={address} onChange={e=>{setAddress(e.target.value)}} />

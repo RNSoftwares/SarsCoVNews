@@ -30,4 +30,16 @@ class LocationController extends Controller
 
         return $array;
     }
+
+    public function getAllCities(Request $request) {
+        $array = ['error' => ''];
+
+        $idState = $request->all();
+
+        $states = City::where('state_id', $idState)->orderBy('name', 'asc')->get();
+
+        $array['cities'] = $states;
+
+        return $array;
+    }
 }

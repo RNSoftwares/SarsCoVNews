@@ -50,10 +50,15 @@ export default () => {
 
             return json;
         },
-        getCountries: async () => {
-            let json = await request('get', '/location/states', {});
+        getStates: async () => {
+            let json = await request('get', '/location/state', {});
 
             return json;
         },
+        getCities: async (id) => {
+            let json = await request('get', '/location/city', {id});
+
+            return json;
+        }
     };
 }
