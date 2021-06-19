@@ -1,7 +1,5 @@
 const baseUrl = 'http://127.0.0.1:8000/api';
-//const baseUrl = 'https://api.brasil.io/v1/dataset/covid19/caso/data/?state';
 
-const token = 'fe48d7e2167d8d8ec6b8939ae8d1253163c45497';
 
 const request = async (method, endpoint, params, token = null) => {
     method = method.toLowerCase();
@@ -57,11 +55,5 @@ export default () => {
 
             return json;
         },
-
-        getCasos: async () => {
-            let json = await request('get', '', {}, token);
-
-            return json;
-        }
     };
 }
