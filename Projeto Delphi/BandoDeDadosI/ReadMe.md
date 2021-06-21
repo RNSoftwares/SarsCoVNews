@@ -1,1 +1,0 @@
-Pasta reservada para avaliação do conteudo de Banco de Dados I

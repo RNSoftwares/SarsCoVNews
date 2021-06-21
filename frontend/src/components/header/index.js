@@ -34,8 +34,8 @@ const Header = () => {
                         }
                         {token &&
                             <ul className="Menu">
-                                <li><button onClick={handleLoggout}>Sair</button></li>
                                 <li><a href="">{user}</a></li>
+                                <li><button onClick={handleLoggout}>Sair</button></li>
                             </ul>
                         }
                     </ul>

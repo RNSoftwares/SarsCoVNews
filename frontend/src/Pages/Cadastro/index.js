@@ -30,6 +30,7 @@ const Cadastro = () => {
         setState(12);
         getStates(state);
         setCity(1200013);
+        setCountry(76);
         getCities(city);
     }, []);
 
@@ -53,7 +54,7 @@ const Cadastro = () => {
 
             if (result.error === '') {
                 localStorage.setItem('token', result.token);
-                window.location('/');
+                window.location.href = '/';
             } else {
                 setError(result.error);
                 alert(result.error);
@@ -62,6 +63,8 @@ const Cadastro = () => {
             alert('Preencha todos os campos!!!');
         }
     }
+
+
     return(
         <div className="informacoes formulario">
             <label>
@@ -97,11 +100,11 @@ const Cadastro = () => {
             </label><br/> 
             <label>
                 <p>País</p><br/> 
-                <input type="text" name="country" value={country} onChange={e=>{setCountry(e.target.value)}} />
+                <input type="text" name="country" disabled value="Brasil" onChange={e=>{setCountry(e.target.value)}} />
             </label><br/> 
             <label>
                 <p>Estado</p><br/> 
-                <select name="state" value={state} onChange={e => setState(e.target.value)}>
+                <select className="selecao" name="state" value={state} onChange={e => setState(e.target.value)}>
                     {stateList.map((state, index) => (
                         <option key={index} value={state.id}>{state.name}</option>
                     ))}
@@ -109,7 +112,7 @@ const Cadastro = () => {
             </label><br/>  
             <label>
                 <p>Cidade</p><br/>
-                <select name="city_id" onChange={e => setCity(e.target.value)}>
+                <select className="selecao" name="city_id" onChange={e => setCity(e.target.value)}>
                     {cityList.map((city, index) => (
                         <option key={index} value={city.id}>{city.name}</option>
                     ))}

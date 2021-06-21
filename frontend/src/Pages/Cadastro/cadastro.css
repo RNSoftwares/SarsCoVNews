@@ -76,3 +76,9 @@
   cursor: pointer;
   color: #fff;
 }
+
+.selecao {
+  width: 25rem;
+  height: 40px;
+  font-size: 20px;
+}
