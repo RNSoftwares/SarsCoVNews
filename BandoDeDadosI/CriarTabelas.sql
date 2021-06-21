@@ -74,6 +74,9 @@ CREATE TABLE monitorings (
     timestamps timestamp(255) NOT NULL,
     user_id int8 NOT NULL,
     sympton_id int8 NOT NULL,
+    created_at timestamp NOT NULL,
+    updated_at timestamp,
+    status int4 NOT NULL,
     PRIMARY KEY (id)
 );
 
