@@ -1,0 +1,15 @@
+1) Relacione o código e nome de pacientes com idades entre 60 e 70 anos, que apresentaram febre. Relacione a consulta em ordem ascendente de nome
+
+SELECT u.id, u.name, u.age, m.symptomid, m.user_id FROM u users INNER JOIN m monitoring WHERE (u.id = m.user_id) AND (m.simptom_id = 1) AND (u.age >=60) AND (u.age <= 70) ORDER BY u.name ASC;
+
+2) Relacione o nome do paciente, nome da cidade de residência de pacientes do sexo feminino, residentes nos municípios de Maravilha, Descanso, Pinhalzinho, Chapecó e Itapiranga que apresentaram sintomas e não foram positivados com covid. Relacione o relatório pelo nome da cidade ascendente e o nome do paciente descendente;
+
+SELECT u.name, u.city_id, u.sex, c.name, m.user_id, m.status FROM u users INNER JOIN c cities INNER JOIN m monitoring WHERE (u.sex = 'F') AND (m.user_id != null) AND ((city_id = 4204202) OR (city_id = 4204905) OR (city_id = 4208401) OR (city_id = 4210506) OR (city_id = 4212908)) AND (m.status = 1) ORDER BY c.name ASC, u.name = DESC;
+
+3) Relacione o código da cidade, nome da cidade, quantidade de casos suspeitos de covid para todas as cidades. Ordene o relatório da cidade com mais casos suspeitos para a cidade com menos casos suspeitos;
+
+---
+
+4) Relacione a idade e quantidade de casos positivos de covid por idade, registrados no período agosto a outubro de 2020. Ordene o relatório pela idade com mais casos para a idade com menos casos.
+
+SELECT u.id, u.age, m.status, m.created_at, m.user_id FROM u users INNER JOIN m monitoring WHERE (u.id = m.user_id) AND (m.status = 2) AND (m.created_at >= '2121/08/01' AND m.created_at <= '2121/10/31');
