@@ -1,3 +1,1 @@
---Criar DataBase SarsCov News
-
-Create database SarsCov
+CREATE DATABASE sarscov;
