@@ -1,0 +1,42 @@
+create procedure bemvindo(nome varchar)
+as
+$body$
+	begin
+		raise notice 'Seja bem-vindo %', nome;
+	end
+$body$
+language plpgsql;
+
+CREATE TABLE AUDITORIA (
+	ID SERIAL NOT NULL PRIMARY KEY,
+	TABELA VARCHAR(50) NOT NULL,
+	USUARIO VARCHAR(50) NOT NULL,
+	DATA TIMESTAMP NOT NULL,
+	OPERACAO  VARCHAR(1)   NOT  NULL,
+	NEWREG TEXT,
+	OLDREG TEXT
+):
+
+CREATE OR REPLACE FUNCTION Auditoria() RETURNS TRIGGER AS
+$body$
+	BEGIN
+		IF (TG_OP = 'DELETE') THEN
+			INSERT INTO auditoria(tabela, usuario, data, operacao,oldreg) SELECT TG_RELNAME, user, current_timestamp, 'E', OLD::text;
+			RETURN OLD;
+		ELSIF (TG_OP = 'UPDATE') THEN
+			INSERT INTO auditoria(tabela, usuario, data, operacao,newreg,oldreg) SELECT TG_RELNAME, user, current_timestamp, 'A',NEW::text,OLD::text;
+			RETURN NEW;
+		ELSIF (TG_OP = 'INSERT') THEN
+			INSERT INTO auditoria(tabela, usuario, data, operacao,newreg) SELECT TG_RELNAME, user, current_timestamp, 'I',NEW::text;
+			RETURN NEW;
+		END IF;
+	RETURN NULL;
+	END;
+$body$
+LANGUAGE plpgsql;
+
+CREATE TRIGGER users_audit AFTER INSERT OR UPDATE OR DELETE ON users FOR EACH ROW EXECUTE PROCEDURE Auditoria();
+
+CREATE TRIGGER accesses_audit AFTER INSERT OR UPDATE OR DELETE ON accesses FOR EACH ROW EXECUTE PROCEDURE Auditoria();
+
+
