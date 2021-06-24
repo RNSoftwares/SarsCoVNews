@@ -52,16 +52,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 .grafico{
-  width: 500px;
-  height: 500px;
+  width: 100px;
+  height: 300px;
   margin: auto;
-  margin-right: 60px;
+  padding-left: 500px;
   margin-top: 60px;
-  background-color: #000 ;
   display: flex;
+  flex: 1;
   flex: 1;
 }
 
@@ -71,6 +72,7 @@
   margin-top: 60px;
   margin-left: 20px; 
   color: #fff; 
+  flex: 1;
 }
 
 .textStats h2 {

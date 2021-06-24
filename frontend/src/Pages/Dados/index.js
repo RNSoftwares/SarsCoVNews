@@ -15,9 +15,7 @@ const Dados = () => {
 
     const listarCasos = async() => {
       let result = await api.getGlobal();
-      console.log(result.Global);
       setCasesCountry([]);
-
       setTotalDeaths(result.Global.TotalDeaths);
       setTotalConfirmed(result.Global.TotalConfirmed);
       setTotalRecovered(result.Global.TotalRecovered);
@@ -26,7 +24,6 @@ const Dados = () => {
 
     const paisCasos = async() => {
       let result = await api.getProvinces();
-      console.log(typeof result.Countries);
       setTotalDeaths('');
       setTotalConfirmed('');
       setTotalRecovered('');

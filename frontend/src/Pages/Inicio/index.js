@@ -26,7 +26,7 @@ const Inicio = () => {
                     loader={<div>Loading Chart</div>}
                     data={[
                       ['País', 'Casos Ativos', 'Casos Recuperados'],
-                      ['Brasil', 8175000, 8008000],
+                      ['Brasil', 8175000, 808000],
                       ['Estados Unidos', 3792000, 3694000],
                       ['Alemanha', 2695000, 2896000],
                       ['China', 2099000, 1953000],
